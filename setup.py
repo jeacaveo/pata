@@ -1,7 +1,7 @@
 import setuptools
 
 with open("README.rst", "r") as fh:
-    long_description = fh.read()
+    LONG_DESCRIPTION = fh.read()
 
 setuptools.setup(
     name="pata_jeacaveo",
@@ -11,7 +11,7 @@ setuptools.setup(
     description="Library in charge of loading, "
     "maintaining and refining data and databases "
     "related to Prismata (strategy game).",
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type="text/x-rst; charset=UTF-8",
     url="https://github.com/jeacaveo/pata",
     packages=setuptools.find_packages(),
@@ -25,6 +25,7 @@ setuptools.setup(
     python_requires=">=3.6",
     install_requires=[],
     extras_require={
+        "dev": ["pycodestyle", "pylint", "mypy"],
         "test": ["mock", "coverage"],
         },
     )
