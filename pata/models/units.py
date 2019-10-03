@@ -13,7 +13,7 @@ from pata.config import BASE
 from pata.models.utils import AuditMixin
 
 
-class Units(BASE, AuditMixin):
+class Units(BASE, AuditMixin):  # type: ignore
     """ Units model. """
     __tablename__ = "units"
 
@@ -30,12 +30,12 @@ class Units(BASE, AuditMixin):
         "UnitChanges",
         order_by="desc(UnitChanges.day)", back_populates="unit")
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """ String representation of model. """
         return f"{self.id} - {self.name}"
 
 
-class UnitVersions(BASE, AuditMixin):
+class UnitVersions(BASE, AuditMixin):  # type: ignore
     """ UnitVersions model. """
     __tablename__ = "unit_versions"
 
@@ -64,12 +64,12 @@ class UnitVersions(BASE, AuditMixin):
 
     unit = relationship("Units", back_populates="versions")
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """ String representation of model. """
         return f"Version {self.id} for {self.unit.id} - {self.unit.name}"
 
 
-class UnitChanges(BASE, AuditMixin):
+class UnitChanges(BASE, AuditMixin):  # type: ignore
     """ UnitChanges model. """
     __tablename__ = "unit_changes"
 
@@ -80,6 +80,6 @@ class UnitChanges(BASE, AuditMixin):
 
     unit = relationship("Units", back_populates="changes")
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """ String representation of model. """
         return f"Change to {self.unit.id} - {self.unit.name} for {self.day}"
