@@ -2,6 +2,7 @@
 from sqlalchemy import (
     Boolean,
     Column,
+    Date,
     Integer,
     ForeignKey,
     String,
@@ -25,6 +26,13 @@ class Units(BASE, AuditMixin):
     versions = relationship(
         "UnitVersions",
         order_by="desc(UnitVersions.id)", back_populates="unit")
+    changes = relationship(
+        "UnitChanges",
+        order_by="desc(UnitChanges.day)", back_populates="unit")
+
+    def __repr__(self):
+        """ String representation of model. """
+        return f"{self.id} - {self.name}"
 
 
 class UnitVersions(BASE, AuditMixin):
@@ -55,3 +63,23 @@ class UnitVersions(BASE, AuditMixin):
     abilities = Column(String(256), nullable=True)
 
     unit = relationship("Units", back_populates="versions")
+
+    def __repr__(self):
+        """ String representation of model. """
+        return f"Version {self.id} for {self.unit.id} - {self.unit.name}"
+
+
+class UnitChanges(BASE, AuditMixin):
+    """ UnitChanges model. """
+    __tablename__ = "unit_changes"
+
+    id = Column(Integer, primary_key=True)
+    unit_id = Column(Integer, ForeignKey("units.id"))
+    day = Column(Date)
+    description = Column(String(1024))
+
+    unit = relationship("Units", back_populates="changes")
+
+    def __repr__(self):
+        """ String representation of model. """
+        return f"Change to {self.unit.id} - {self.unit.name} for {self.day}"
