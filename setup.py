@@ -23,7 +23,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         ],
     python_requires=">=3.6",
-    install_requires=[],
+    install_requires=["SQLAlchemy==1.3.8", "alembic==1.2.1"],
     extras_require={
         "dev": ["pycodestyle", "pylint", "mypy"],
         "test": ["mock", "coverage"],
