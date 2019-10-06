@@ -1,11 +1,16 @@
 """ Command line tool to migrate data into pata.models.units models """
 import sys
-from argparse import ArgumentParser
+from argparse import (
+    ArgumentParser,
+    Namespace,
+    )
 
-from typing import List
+from typing import (
+    List,
+    )
 
 
-def create_parser(args: List[str]) -> ArgumentParser:
+def create_parser(args: List[str]) -> Namespace:
     """
     Create parser to call units migrations from the command line.
 
