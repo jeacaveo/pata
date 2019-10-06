@@ -32,3 +32,16 @@ Development environment
 3. Run linters:
 
     ./runlinters.sh
+
+Databases configuration
+-----------------------
+
+- Read alembic/README.rst for more details (like using multiple engines) on migration configuration.
+
+- To generate a new migration:
+
+  alembic revision -m "message for migration" --autogenerate
+
+- Apply everything until latest migration:
+
+  alembic upgrade head
