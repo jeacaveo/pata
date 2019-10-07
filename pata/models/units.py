@@ -1,4 +1,7 @@
 """ Unit related model """
+from typing import (
+    Dict,
+    )
 from sqlalchemy import (
     Boolean,
     Column,
@@ -33,6 +36,44 @@ class Units(BASE, AuditMixin):  # type: ignore
     def __repr__(self) -> str:
         """ String representation of model. """
         return f"{self.id} - {self.name}"
+
+    def diff(self, obj: "Units") -> Dict[str, Dict[str, str]]:
+        """
+        Compare with another object.
+
+        Parameters
+        ----------
+        obj : pata.models.units.Units
+            Object to copmare with.
+
+        Returns
+        -------
+        dict
+
+        Example
+        -------
+        output:
+            {
+                "field_name": {"old": 0, "new": 1},
+                ...
+            }
+
+        """
+        result = {}
+        column_names = [
+            column.name
+            for column in self.metadata.tables["units"].columns
+            if column.name not in [
+                "id", "created_by", "created_at", "modified_by", "modified_at"]
+            ]
+
+        for column_name in column_names:
+            old_value = getattr(self, column_name)
+            new_value = getattr(obj, column_name)
+            if old_value != new_value:
+                result[column_name] = {"old": old_value, "new": new_value}
+
+        return result
 
 
 class UnitVersions(BASE, AuditMixin):  # type: ignore

@@ -1,6 +1,8 @@
 """ Test for pata.models module. """
 import unittest
 
+from datetime import datetime
+
 from pata.models.units import (
     UnitChanges,
     UnitVersions,
@@ -48,6 +50,43 @@ class UnitsTests(unittest.TestCase):
 
         # Then
         self.assertEqual(str(obj), expected_result)
+
+    def test_diff_same(self):
+        """ Test no difference with another object. """
+        # Given
+        other_obj = Units()
+        expected_result = {}
+
+        # When
+        result = Units().diff(other_obj)
+
+        # Then
+        self.assertEqual(result, expected_result)
+
+    def test_diff(self):
+        """ Test difference with another object. """
+        # Given
+        other_obj = Units(image_url="new image", panel_url="new panel")
+        expected_result = {
+            "image_url": {
+                "old": "old image", "new": "new image"},
+            "panel_url": {
+                "old": "old panel", "new": "new panel"},
+            }
+
+        # When
+        result = Units(
+            id=1,
+            image_url="old image",
+            panel_url="old panel",
+            created_by="",
+            created_at=datetime.now(),
+            modified_by="",
+            modified_at=datetime.now(),
+            ).diff(other_obj)
+
+        # Then
+        self.assertEqual(result, expected_result)
 
 
 class UnitVersionsTests(unittest.TestCase):
