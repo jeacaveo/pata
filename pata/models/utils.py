@@ -15,10 +15,10 @@ from sqlalchemy import (
 
 class AuditMixin():  # pylint: disable=too-few-public-methods
     """ Class for audit fields. """
-    created_by = Column(String(64))
-    created_at = Column(TIMESTAMP(timezone=True))
-    modified_by = Column(String(64))
-    modified_at = Column(TIMESTAMP(timezone=True))
+    created_by = Column(String(64), nullable=False)
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False)
+    modified_by = Column(String(64), nullable=False)
+    modified_at = Column(TIMESTAMP(timezone=True), nullable=False)
 
 
 def compare_models(

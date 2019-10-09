@@ -26,10 +26,10 @@ class Units(BASE, AuditMixin):  # type: ignore
     __tablename__ = "units"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(64))
-    wiki_path = Column(String(64), nullable=True)
-    image_url = Column(String(128), nullable=True)
-    panel_url = Column(String(128), nullable=True)
+    name = Column(String(64), nullable=False, unique=True)
+    wiki_path = Column(String(64))
+    image_url = Column(String(128))
+    panel_url = Column(String(128))
 
     versions = relationship(
         "UnitVersions",
@@ -80,27 +80,27 @@ class UnitVersions(BASE, AuditMixin):  # type: ignore
     __tablename__ = "unit_versions"
 
     id = Column(Integer, primary_key=True)
-    unit_id = Column(Integer, ForeignKey("units.id"))
-    gold = Column(Integer)
-    green = Column(Integer)
-    blue = Column(Integer)
-    red = Column(Integer)
-    energy = Column(Integer)
-    attack = Column(Integer)
-    health = Column(Integer)
-    supply = Column(Integer)
-    unit_spell = Column(String(32))
-    frontline = Column(Boolean)
-    fragile = Column(Boolean)
-    blocker = Column(Boolean)
-    prompt = Column(Boolean)
-    stamina = Column(Integer)
-    lifespan = Column(Integer)
-    build_time = Column(Integer)
-    exhaust_turn = Column(Integer)
-    exhaust_ability = Column(Integer)
+    unit_id = Column(Integer, ForeignKey("units.id"), nullable=False)
+    gold = Column(Integer, nullable=False)
+    green = Column(Integer, nullable=False)
+    blue = Column(Integer, nullable=False)
+    red = Column(Integer, nullable=False)
+    energy = Column(Integer, nullable=False)
+    attack = Column(Integer, nullable=False)
+    health = Column(Integer, nullable=False)
+    supply = Column(Integer, nullable=False)
+    unit_spell = Column(String(32), nullable=False)
+    frontline = Column(Boolean, nullable=False)
+    fragile = Column(Boolean, nullable=False)
+    blocker = Column(Boolean, nullable=False)
+    prompt = Column(Boolean, nullable=False)
+    stamina = Column(Integer, nullable=False)
+    lifespan = Column(Integer, nullable=False)
+    build_time = Column(Integer, nullable=False)
+    exhaust_turn = Column(Integer, nullable=False)
+    exhaust_ability = Column(Integer, nullable=False)
     position = Column(String(32))
-    abilities = Column(String(256), nullable=True)
+    abilities = Column(String(256))
 
     unit = relationship("Units", back_populates="versions")
 
@@ -152,9 +152,9 @@ class UnitChanges(BASE, AuditMixin):  # type: ignore
     __tablename__ = "unit_changes"
 
     id = Column(Integer, primary_key=True)
-    unit_id = Column(Integer, ForeignKey("units.id"))
-    day = Column(Date)
-    description = Column(String(1024))
+    unit_id = Column(Integer, ForeignKey("units.id"), nullable=False)
+    day = Column(Date, nullable=False)
+    description = Column(String(1024), nullable=False)
 
     unit = relationship("Units", back_populates="changes")
 
