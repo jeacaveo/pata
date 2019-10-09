@@ -132,6 +132,28 @@ class UnitVersionsTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
+    @patch("pata.models.units.compare_models")
+    def test_diff(self, compare_mock):
+        """ Test call to comparison function. """
+        # Given
+        other_obj = UnitVersions()
+        expected_result = {}
+
+        compare_mock.return_value = expected_result
+
+        # When
+        base_obj = UnitVersions()
+        result = base_obj.diff(other_obj)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        compare_mock.assert_called_once_with(
+            "unit_versions", base_obj, other_obj,
+            exclude=(
+                "id", "unit_id",
+                "created_by", "created_at", "modified_by", "modified_at")
+            )
+
 
 class UnitChangesTests(unittest.TestCase):
     """ Tests for pata.models.UnitChanges model. """
