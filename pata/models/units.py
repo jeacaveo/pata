@@ -112,8 +112,8 @@ class UnitVersions(BASE, AuditMixin):  # type: ignore
             f"{self.unit and self.unit.name}")
 
     def diff(
-            self, obj: "UnitVersions"
-            ) -> Dict[str, Dict[str, Union[str, int]]]:
+            self, obj: "UnitVersions") -> Dict[
+                str, Dict[str, Union[str, int]]]:
         """
         Compare with another object.
 
@@ -161,3 +161,38 @@ class UnitChanges(BASE, AuditMixin):  # type: ignore
     def __repr__(self) -> str:
         """ String representation of model. """
         return f"Change to {self.unit.id} - {self.unit.name} for {self.day}"
+
+    def diff(
+            self, obj: "UnitChanges") -> Dict[
+                str, Dict[str, Union[str, int]]]:
+        """
+        Compare with another object.
+
+        Parameters
+        ----------
+        obj : pata.models.units.UnitChanges
+            Object to copmare with.
+
+        Returns
+        -------
+        dict
+
+        Example
+        -------
+        output:
+            {
+                "field_name": {"old": 0, "new": 1},
+                ...
+            }
+
+        """
+        return compare_models(
+            "unit_changes", self, obj,
+            exclude=(
+                "id",
+                "unit_id",
+                "created_by",
+                "created_at",
+                "modified_by",
+                "modified_at",
+                ))
