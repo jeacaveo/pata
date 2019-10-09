@@ -1,7 +1,7 @@
 """ Test for pata.models module. """
 import unittest
 
-from datetime import datetime
+from mock import patch
 
 from pata.models.units import (
     UnitChanges,
@@ -51,42 +51,26 @@ class UnitsTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    def test_diff_same(self):
-        """ Test no difference with another object. """
+    @patch("pata.models.units.compare_models")
+    def test_diff(self, compare_mock):
+        """ Test call to comparison function. """
         # Given
         other_obj = Units()
         expected_result = {}
 
+        compare_mock.return_value = expected_result
+
         # When
-        result = Units().diff(other_obj)
+        base_obj = Units()
+        result = base_obj.diff(other_obj)
 
         # Then
         self.assertEqual(result, expected_result)
-
-    def test_diff(self):
-        """ Test difference with another object. """
-        # Given
-        other_obj = Units(image_url="new image", panel_url="new panel")
-        expected_result = {
-            "image_url": {
-                "old": "old image", "new": "new image"},
-            "panel_url": {
-                "old": "old panel", "new": "new panel"},
-            }
-
-        # When
-        result = Units(
-            id=1,
-            image_url="old image",
-            panel_url="old panel",
-            created_by="",
-            created_at=datetime.now(),
-            modified_by="",
-            modified_at=datetime.now(),
-            ).diff(other_obj)
-
-        # Then
-        self.assertEqual(result, expected_result)
+        compare_mock.assert_called_once_with(
+            "units", base_obj, other_obj,
+            exclude=(
+                "id", "created_by", "created_at", "modified_by", "modified_at")
+            )
 
 
 class UnitVersionsTests(unittest.TestCase):

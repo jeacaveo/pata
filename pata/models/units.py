@@ -1,7 +1,9 @@
 """ Unit related model """
 from typing import (
     Dict,
+    Union,
     )
+
 from sqlalchemy import (
     Boolean,
     Column,
@@ -13,7 +15,10 @@ from sqlalchemy import (
 from sqlalchemy.orm import relationship
 
 from pata.config import BASE
-from pata.models.utils import AuditMixin
+from pata.models.utils import (
+    AuditMixin,
+    compare_models,
+    )
 
 
 class Units(BASE, AuditMixin):  # type: ignore
@@ -37,7 +42,7 @@ class Units(BASE, AuditMixin):  # type: ignore
         """ String representation of model. """
         return f"{self.id} - {self.name}"
 
-    def diff(self, obj: "Units") -> Dict[str, Dict[str, str]]:
+    def diff(self, obj: "Units") -> Dict[str, Dict[str, Union[str, int]]]:
         """
         Compare with another object.
 
@@ -59,21 +64,15 @@ class Units(BASE, AuditMixin):  # type: ignore
             }
 
         """
-        result = {}
-        column_names = [
-            column.name
-            for column in self.metadata.tables["units"].columns
-            if column.name not in [
-                "id", "created_by", "created_at", "modified_by", "modified_at"]
-            ]
-
-        for column_name in column_names:
-            old_value = getattr(self, column_name)
-            new_value = getattr(obj, column_name)
-            if old_value != new_value:
-                result[column_name] = {"old": old_value, "new": new_value}
-
-        return result
+        return compare_models(
+            "units", self, obj,
+            exclude=(
+                "id",
+                "created_by",
+                "created_at",
+                "modified_by",
+                "modified_at",
+                ))
 
 
 class UnitVersions(BASE, AuditMixin):  # type: ignore
