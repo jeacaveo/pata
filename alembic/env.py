@@ -10,8 +10,7 @@ from alembic import context
 import os
 import sys
 sys.path.append(os.getcwd())
-from pata.models import *  # noqa
-from pata.config import BASE  # noqa
+from pata.models.units import BASE as units_base  # noqa
 
 USE_TWOPHASE = False
 
@@ -41,11 +40,11 @@ db_names = config.get_main_option("databases")
 #       'engine2':mymodel.metadata2
 # }
 target_metadata = {
-    "sqlite": BASE.metadata,
-    "postgres": BASE.metadata,
-    "mysql": BASE.metadata,
-    "sqlserver": BASE.metadata,
-    "oracle": BASE.metadata,
+    "sqlite": [units_base.metadata],
+    "postgres": [units_base.metadata],
+    "mysql": [units_base.metadata],
+    "sqlserver": [units_base.metadata],
+    "oracle": [units_base.metadata],
     }
 
 # other values from the config, defined by the needs of env.py,
