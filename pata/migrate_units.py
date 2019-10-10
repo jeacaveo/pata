@@ -1,4 +1,6 @@
 """ Command line tool to migrate data into pata.models.units models """
+import json
+import os
 import sys
 from argparse import (
     ArgumentParser,
@@ -6,7 +8,11 @@ from argparse import (
     )
 
 from typing import (
+    Any,
+    Dict,
     List,
+    Tuple,
+    Union,
     )
 
 
@@ -45,6 +51,30 @@ def create_parser(args: List[str]) -> Namespace:
         help="Only update new units (no inserts)")
 
     return parser_obj.parse_args(args)
+
+
+def load_version(
+        path: str) -> Tuple[bool, Dict[str, Union[str, Dict[str, Any]]]]:
+    """
+    Load information for units from JSON file.
+
+    Parameters
+    ----------
+    path : str
+        List of commands to parse.
+
+    Returns
+    -------
+    tuple(bool, dict)
+
+    """
+    if not os.path.isfile(path):
+        return False, {"message": "File doesn't exist"}
+
+    try:
+        return True, json.loads(path)
+    except json.decoder.JSONDecodeError:
+        return False, {"message": "Invalid format"}
 
 
 # Executed when run from the command line.
