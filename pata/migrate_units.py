@@ -6,13 +6,21 @@ from argparse import (
     ArgumentParser,
     Namespace,
     )
+from collections import defaultdict
 
 from typing import (
     Any,
     Dict,
     List,
+    Mapping,
     Tuple,
     Union,
+    )
+
+from pata.models.units import (
+    UnitChanges,
+    Units,
+    UnitVersions,
     )
 
 
@@ -75,6 +83,76 @@ def load_version(
         return True, json.loads(path)
     except json.decoder.JSONDecodeError:
         return False, {"message": "Invalid format"}
+
+
+def load_to_models(
+        data: Dict[str, Dict[str, Any]]
+        ) -> Dict[
+            str, Dict[str, Union[Units, UnitVersions, List[UnitChanges]]]]:
+    """
+    Load data into pata.models.units models.
+
+    Parameters
+    ----------
+    data : dict
+        Units data (from JSON).
+
+    Returns
+    -------
+    dict
+
+    """
+    result: Mapping[
+        str, Dict[str, Union[Units, UnitVersions, List[UnitChanges]]]
+        ] = defaultdict(dict)
+    for name, values in data.items():
+        # Units
+        links = values.get("links") or {}
+        unit = Units(
+            name=name,
+            wiki_path=links.get("path"),
+            image_url=links.get("image"),
+            panel_url=links.get("panel"),
+            )
+        result[name]["unit"] = unit
+        # UnitVersions
+        stats = values.get("stats") or {}
+        costs = values.get("costs") or {}
+        attributes = values.get("attributes") or {}
+        result[name]["unit_version"] = UnitVersions(
+            unit=unit,
+            attack=stats.get("attack"),
+            health=stats.get("health"),
+            gold=costs.get("gold"),
+            green=costs.get("green"),
+            blue=costs.get("blue"),
+            red=costs.get("red"),
+            energy=costs.get("energy"),
+            supply=attributes.get("supply"),
+            frontline=attributes.get("frontline"),
+            fragile=attributes.get("fragile"),
+            blocker=attributes.get("blocker"),
+            prompt=attributes.get("prompt"),
+            stamina=attributes.get("stamina"),
+            lifespan=attributes.get("lifespan"),
+            build_time=attributes.get("build_time"),
+            exhaust_turn=attributes.get("exhaust_turn"),
+            exhaust_ability=attributes.get("exhaust_ability"),
+            unit_spell=values.get("unit_spell"),
+            position=values.get("position"),
+            abilities=values.get("abilities"),
+            )
+        # UnitChanges
+        result[name]["unit_changes"] = [
+            UnitChanges(
+                unit=unit,
+                day=day,
+                description=change,
+                )
+            for day, items in values.get("change_history", {}).items()
+            for change in items
+            ]
+    return dict(result)
 
 
 # Executed when run from the command line.
