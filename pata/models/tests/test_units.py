@@ -10,8 +10,8 @@ from pata.models.units import (
     )
 
 
-class UnitsTests(unittest.TestCase):
-    """ Tests for pata.models.Units model. """
+class UnitsCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.models.Units model. """
 
     def test_fields(self):
         """ Tests database fields. """
@@ -73,8 +73,8 @@ class UnitsTests(unittest.TestCase):
             )
 
 
-class UnitVersionsTests(unittest.TestCase):
-    """ Tests for pata.models.UnitVersions model. """
+class UnitVersionsCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.models.UnitVersions model. """
 
     def test_fields(self):
         """ Tests database fields. """
@@ -155,8 +155,8 @@ class UnitVersionsTests(unittest.TestCase):
             )
 
 
-class UnitChangesTests(unittest.TestCase):
-    """ Tests for pata.models.UnitChanges model. """
+class UnitChangesCleanTests(unittest.TestCase):
+    """ Tests sucess cases for pata.models.UnitChanges model. """
 
     def test_fields(self):
         """ Tests database fields. """

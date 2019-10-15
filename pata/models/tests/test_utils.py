@@ -12,8 +12,8 @@ from pata.models.utils import (
     )
 
 
-class AuditMixinTests(unittest.TestCase):
-    """ Tests for pata.models.utils.AuditMixin mixin. """
+class AuditMixinCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.models.utils.AuditMixin mixin. """
 
     def test_fields(self):
         """ Tests fields. """
@@ -27,8 +27,8 @@ class AuditMixinTests(unittest.TestCase):
         self.assertTrue(hasattr(mixin_obj, "modified_at"))
 
 
-class CompareModelsTests(unittest.TestCase):
-    """ Tests for pata.models.utils.compare_models. """
+class CompareModelsCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.models.utils.compare_models. """
 
     def test_diff_same(self):
         """ Test no difference with another object. """

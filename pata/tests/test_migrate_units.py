@@ -15,8 +15,8 @@ from pata.models.units import (
     )
 
 
-class ParserTests(unittest.TestCase):
-    """  Tests for pata.migrate_units.create_parser """
+class ParserCleanTests(unittest.TestCase):
+    """ Tests success case for pata.migrate_units.create_parser """
 
     def test_defaults(self):
         """ Test state when no optional flags are sent. """
@@ -49,8 +49,8 @@ class ParserTests(unittest.TestCase):
         self.assertTrue(result.update)
 
 
-class LoadVersionTests(unittest.TestCase):
-    """  Tests for pata.migrate_units.load_version """
+class LoadVersionDirtyTests(unittest.TestCase):
+    """ Tests error cases for pata.migrate_units.load_version """
 
     @patch("pata.migrate_units.os.path.isfile")
     def test_not_exist(self, isfile_mock):
@@ -87,6 +87,10 @@ class LoadVersionTests(unittest.TestCase):
         isfile_mock.assert_called_once_with(file_path)
         json_mock.assert_called_once_with(file_path)
 
+
+class LoadVersionCleanTests(unittest.TestCase):
+    """ Tests success case for pata.migrate_units.load_version """
+
     @patch("pata.migrate_units.json.loads")
     @patch("pata.migrate_units.os.path.isfile")
     def test_success(self, isfile_mock, json_mock):
@@ -108,8 +112,8 @@ class LoadVersionTests(unittest.TestCase):
         json_mock.assert_called_once_with(file_path)
 
 
-class LoadToModelsTests(unittest.TestCase):
-    """  Tests for pata.migrate_units.load_to_models """
+class LoadToModelsCleanTests(unittest.TestCase):
+    """  Tests success cases for pata.migrate_units.load_to_models """
 
     def test_empty(self):
         """ Test result when no data is available. """
