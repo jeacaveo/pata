@@ -155,6 +155,56 @@ def load_to_models(
     return dict(result)
 
 
+def models_diff(
+        base: Units, unit: Units, version: UnitVersions, changes: UnitChanges
+        ) -> Dict[str, Dict[str, Union[str, int]]]:
+    """
+    Get all differences for a unit and its related models.
+
+    (Only differences with existing records, doesn't consider missing or new.
+
+    Parameters
+    ----------
+    base : pata.models.units.Units
+        Units objects (old/current state).
+    unit : pata.models.units.Units
+        Units objects (new state).
+    version : pata.models.units.UnitVersions
+        Latest UnitVersions for unit.
+    changes : list(pata.models.units.UnitChanges)
+        List of all changes (doesn't consider missing or new records)
+
+    Returns
+    -------
+    dict
+
+    Example
+    -------
+    output:
+        {
+            "column1": "change1",
+            "column2": "change2",
+            "2000-01-01": {"column3": "change3"},
+            ...
+        }
+
+    """
+    result = {}
+    result.update(base.diff(unit))
+    result.update(base.versions[0].diff(version))
+    for base_change in base.changes:
+        day = base_change.day
+        result.update({
+            day:
+            base_change.diff(
+                next(
+                    (change for change in changes if change.day == day),
+                    base_change)
+                )
+            })
+    return result
+
+
 # Executed when run from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])

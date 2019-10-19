@@ -3,12 +3,16 @@
 import unittest
 from json.decoder import JSONDecodeError
 
-from mock import patch
+from mock import (
+    MagicMock,
+    patch,
+    )
 
 from pata.migrate_units import (
     create_parser,
     load_to_models,
     load_version,
+    models_diff,
     )
 from pata.models.units import (
     UnitChanges, Units, UnitVersions,
@@ -89,7 +93,7 @@ class LoadVersionDirtyTests(unittest.TestCase):
 
 
 class LoadVersionCleanTests(unittest.TestCase):
-    """ Tests success case for pata.migrate_units.load_version """
+    """ Tests success case for pata.migrate_units.load_to_models """
 
     @patch("pata.migrate_units.json.loads")
     @patch("pata.migrate_units.os.path.isfile")
@@ -323,3 +327,104 @@ class LoadToModelsCleanTests(unittest.TestCase):
             result["unit2"]["unit_changes"][1].diff(
                 expected_result["unit2"]["unit_changes"][1]),
             {})
+
+
+class ModelsDiffCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.migrate_units.models_diff """
+
+    def test_no_changes(self):
+        """ Test result when models are the same. """
+        # Given
+        base_unit = MagicMock()
+        unit = MagicMock()
+        version = MagicMock()
+        changes = []
+        expected_result = {}
+
+        # When
+        result = models_diff(base_unit, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+
+    def test_unit_only(self):
+        """ Test result when only changes in Units model. """
+        # Given
+        base_unit = MagicMock()
+        unit = MagicMock()
+        version = MagicMock()
+        changes = []
+        expected_result = {"column1": "change1"}
+
+        base_unit.diff.return_value = expected_result
+
+        # When
+        result = models_diff(base_unit, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        base_unit.diff.assert_called_once_with(unit)
+
+    def test_unit_version_only(self):
+        """ Test result when only changes in Units and UnitVersions models. """
+        # Given
+        base_version = MagicMock()
+        base_unit = MagicMock(versions=[base_version])
+        unit = MagicMock()
+        version = MagicMock()
+        changes = []
+        expected_result = {
+            "column1": "change1",
+            "column2": "change2",
+            }
+
+        base_unit.diff.return_value = {"column1": "change1"}
+        base_version.diff.return_value = {"column2": "change2"}
+
+        # When
+        result = models_diff(base_unit, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        base_unit.diff.assert_called_once_with(unit)
+        base_version.diff.assert_called_once_with(version)
+
+    def test_all(self):
+        """
+        Test result with changes in Units, UnitVersions and UnitChanges models.
+
+        """
+        # Given
+        base_change1 = MagicMock(day="day1")
+        base_change2 = MagicMock(day="day2")
+        base_version = MagicMock()
+        base_unit = MagicMock(
+            versions=[base_version],
+            changes=[base_change1, base_change2],
+            )
+        unit = MagicMock()
+        version = MagicMock()
+        change1 = MagicMock(day="day1")
+        change2 = MagicMock(day="day2")
+        changes = [change1, change2]
+        expected_result = {
+            "column1": "change1",
+            "column2": "change2",
+            change1.day: {"column3": "change3"},
+            change2.day: {"column4": "change4"},
+            }
+
+        base_unit.diff.return_value = {"column1": "change1"}
+        base_version.diff.return_value = {"column2": "change2"}
+        base_change1.diff.return_value = {"column3": "change3"}
+        base_change2.diff.return_value = {"column4": "change4"}
+
+        # When
+        result = models_diff(base_unit, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        base_unit.diff.assert_called_once_with(unit)
+        base_version.diff.assert_called_once_with(version)
+        base_change1.diff.assert_called_once_with(change1)
+        base_change2.diff.assert_called_once_with(change2)
