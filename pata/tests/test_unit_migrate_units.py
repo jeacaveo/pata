@@ -227,7 +227,7 @@ class LoadToModelsCleanTests(unittest.TestCase):
         expected_result = {
             "unit1": {
                 "unit": unit1,
-                "unit_version": UnitVersions(
+                "version": UnitVersions(
                     unit=unit1,
                     attack=1,
                     health=1,
@@ -250,7 +250,7 @@ class LoadToModelsCleanTests(unittest.TestCase):
                     position="Top",
                     abilities="ability X",
                     ),
-                "unit_changes": [
+                "changes": [
                     UnitChanges(
                         unit=unit1, day="2000-01-01", description="Change 1"),
                     UnitChanges(
@@ -259,7 +259,7 @@ class LoadToModelsCleanTests(unittest.TestCase):
                 },
             "unit2": {
                 "unit": unit2,
-                "unit_version": UnitVersions(
+                "version": UnitVersions(
                     unit=unit2,
                     attack=2,
                     health=2,
@@ -282,7 +282,7 @@ class LoadToModelsCleanTests(unittest.TestCase):
                     position="Bottom",
                     abilities="ability Y",
                     ),
-                "unit_changes": [
+                "changes": [
                     UnitChanges(
                         unit=unit2, day="2000-02-02", description="Change 3"),
                     UnitChanges(
@@ -300,32 +300,32 @@ class LoadToModelsCleanTests(unittest.TestCase):
                 expected_result["unit1"]["unit"]),
             {})
         self.assertEqual(
-            result["unit1"]["unit_version"].diff(
-                expected_result["unit1"]["unit_version"]),
+            result["unit1"]["version"].diff(
+                expected_result["unit1"]["version"]),
             {})
         self.assertEqual(
-            result["unit1"]["unit_changes"][0].diff(
-                expected_result["unit1"]["unit_changes"][0]),
+            result["unit1"]["changes"][0].diff(
+                expected_result["unit1"]["changes"][0]),
             {})
         self.assertEqual(
-            result["unit1"]["unit_changes"][1].diff(
-                expected_result["unit1"]["unit_changes"][1]),
+            result["unit1"]["changes"][1].diff(
+                expected_result["unit1"]["changes"][1]),
             {})
         self.assertEqual(
             result["unit2"]["unit"].diff(
                 expected_result["unit2"]["unit"]),
             {})
         self.assertEqual(
-            result["unit2"]["unit_version"].diff(
-                expected_result["unit2"]["unit_version"]),
+            result["unit2"]["version"].diff(
+                expected_result["unit2"]["version"]),
             {})
         self.assertEqual(
-            result["unit2"]["unit_changes"][0].diff(
-                expected_result["unit2"]["unit_changes"][0]),
+            result["unit2"]["changes"][0].diff(
+                expected_result["unit2"]["changes"][0]),
             {})
         self.assertEqual(
-            result["unit2"]["unit_changes"][1].diff(
-                expected_result["unit2"]["unit_changes"][1]),
+            result["unit2"]["changes"][1].diff(
+                expected_result["unit2"]["changes"][1]),
             {})
 
 

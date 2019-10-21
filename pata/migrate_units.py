@@ -119,7 +119,7 @@ def load_to_models(
         stats = values.get("stats") or {}
         costs = values.get("costs") or {}
         attributes = values.get("attributes") or {}
-        result[name]["unit_version"] = UnitVersions(
+        result[name]["version"] = UnitVersions(
             unit=unit,
             attack=stats.get("attack"),
             health=stats.get("health"),
@@ -143,7 +143,7 @@ def load_to_models(
             abilities=values.get("abilities"),
             )
         # UnitChanges
-        result[name]["unit_changes"] = [
+        result[name]["changes"] = [
             UnitChanges(
                 unit=unit,
                 day=day,
