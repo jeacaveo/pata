@@ -1,4 +1,5 @@
 """ Utility models """
+from datetime import datetime
 from typing import (
     Any,
     Dict,
@@ -15,10 +16,12 @@ from sqlalchemy import (
 
 class AuditMixin():  # pylint: disable=too-few-public-methods
     """ Class for audit fields. """
-    created_by = Column(String(64), nullable=False)
-    created_at = Column(TIMESTAMP(timezone=True), nullable=False)
-    modified_by = Column(String(64), nullable=False)
-    modified_at = Column(TIMESTAMP(timezone=True), nullable=False)
+    created_by = Column(String(64), nullable=False, default="python")
+    created_at = Column(
+        TIMESTAMP(timezone=True), nullable=False, default=datetime.now)
+    modified_by = Column(String(64), nullable=False, default="python")
+    modified_at = Column(
+        TIMESTAMP(timezone=True), nullable=False, default=datetime.now)
 
 
 def compare_models(
