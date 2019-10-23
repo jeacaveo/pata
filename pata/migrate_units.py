@@ -6,13 +6,11 @@ from argparse import (
     ArgumentParser,
     Namespace,
     )
-from collections import defaultdict
 
 from typing import (
     Any,
     Dict,
     List,
-    Mapping,
     Tuple,
     Union,
     )
@@ -62,7 +60,15 @@ def create_parser(args: List[str]) -> Namespace:
 
 
 def load_version(
-        path: str) -> Tuple[bool, Dict[str, Union[str, Dict[str, Any]]]]:
+        path: str
+        ) -> Tuple[
+            bool,
+            Dict[
+                str,
+                Union[
+                    str,
+                    int,
+                    Dict[str, Union[str, int, bool, List[str]]]]]]:
     """
     Load information for units from JSON file.
 
@@ -86,9 +92,8 @@ def load_version(
 
 
 def load_to_models(
-        data: Dict[str, Dict[str, Any]]
-        ) -> Dict[
-            str, Dict[str, Union[Units, UnitVersions, List[UnitChanges]]]]:
+        data: Dict[str, Any]
+        ) -> Tuple[Units, UnitVersions, List[UnitChanges]]:
     """
     Load data into pata.models.units models.
 
@@ -99,60 +104,98 @@ def load_to_models(
 
     Returns
     -------
-    dict
+    tuple(Units, UnitVersions, list(UnitChanges))
+
+    Example
+    -------
+    input:
+        {
+            "name": "unit1",
+            "position": "Top",
+            "type": 4,
+            "unit_spell": "Unit",
+            "abilities": "ability X",
+            "attributes": {
+                "blocker": False,
+                "fragile": True,
+                "frontline": False,
+                "prompt": True,
+                "build_time": 0,
+                "exhaust_ability": 1,
+                "exhaust_turn": 0,
+                "lifespan": 1,
+                "stamina": 0,
+                "supply": 1,
+                },
+            "change_history": {
+                "2000-01-01": ["Change 1", "Change 2"],
+                },
+            "costs": {
+                "blue": 3,
+                "energy": 0,
+                "gold": 13,
+                "green": 0,
+                "red": 0,
+                },
+            "links": {
+                "image": "image X",
+                "panel": "panel X",
+                "path": "path X",
+                },
+            "stats": {
+                "attack": 1,
+                "health": 1,
+                },
+        }
 
     """
-    result: Mapping[
-        str, Dict[str, Union[Units, UnitVersions, List[UnitChanges]]]
-        ] = defaultdict(dict)
-    for name, values in data.items():
-        # Units
-        links = values.get("links") or {}
-        unit = Units(
-            name=name,
-            wiki_path=links.get("path"),
-            image_url=links.get("image"),
-            panel_url=links.get("panel"),
-            )
-        result[name]["unit"] = unit
-        # UnitVersions
-        stats = values.get("stats") or {}
-        costs = values.get("costs") or {}
-        attributes = values.get("attributes") or {}
-        result[name]["version"] = UnitVersions(
+    # Units
+    links = data.get("links") or {}
+    unit = Units(
+        name=data.get("name"),
+        wiki_path=links.get("path"),
+        image_url=links.get("image"),
+        panel_url=links.get("panel"),
+        )
+    # UnitVersions
+    stats = data.get("stats") or {}
+    costs = data.get("costs") or {}
+    attributes = data.get("attributes") or {}
+    version = UnitVersions(
+        unit=unit,
+        attack=stats.get("attack"),
+        health=stats.get("health"),
+        gold=costs.get("gold"),
+        green=costs.get("green"),
+        blue=costs.get("blue"),
+        red=costs.get("red"),
+        energy=costs.get("energy"),
+        supply=attributes.get("supply"),
+        frontline=attributes.get("frontline"),
+        fragile=attributes.get("fragile"),
+        blocker=attributes.get("blocker"),
+        prompt=attributes.get("prompt"),
+        stamina=attributes.get("stamina"),
+        lifespan=attributes.get("lifespan"),
+        build_time=attributes.get("build_time"),
+        exhaust_turn=attributes.get("exhaust_turn"),
+        exhaust_ability=attributes.get("exhaust_ability"),
+        unit_spell=data.get("unit_spell"),
+        position=data.get("position"),
+        abilities=data.get("abilities"),
+        )
+    # UnitChanges
+    changes = [
+        UnitChanges(
             unit=unit,
-            attack=stats.get("attack"),
-            health=stats.get("health"),
-            gold=costs.get("gold"),
-            green=costs.get("green"),
-            blue=costs.get("blue"),
-            red=costs.get("red"),
-            energy=costs.get("energy"),
-            supply=attributes.get("supply"),
-            frontline=attributes.get("frontline"),
-            fragile=attributes.get("fragile"),
-            blocker=attributes.get("blocker"),
-            prompt=attributes.get("prompt"),
-            stamina=attributes.get("stamina"),
-            lifespan=attributes.get("lifespan"),
-            build_time=attributes.get("build_time"),
-            exhaust_turn=attributes.get("exhaust_turn"),
-            exhaust_ability=attributes.get("exhaust_ability"),
-            unit_spell=values.get("unit_spell"),
-            position=values.get("position"),
-            abilities=values.get("abilities"),
+            day=day,
+            description=change,
             )
-        # UnitChanges
-        result[name]["changes"] = [
-            UnitChanges(
-                unit=unit,
-                day=day,
-                description=change,
-                )
-            for day, items in values.get("change_history", {}).items()
-            for change in items
-            ]
-    return dict(result)
+        for day, items in data.get("change_history", {}).items()
+        for change in items
+        ]
+
+    return unit, version, changes
 
 
 def models_diff(

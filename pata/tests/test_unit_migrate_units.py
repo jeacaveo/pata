@@ -93,7 +93,7 @@ class LoadVersionDirtyTests(unittest.TestCase):
 
 
 class LoadVersionCleanTests(unittest.TestCase):
-    """ Tests success case for pata.migrate_units.load_to_models """
+    """ Tests success case for pata.migrate_units.load_verson """
 
     @patch("pata.migrate_units.json.loads")
     @patch("pata.migrate_units.os.path.isfile")
@@ -123,210 +123,103 @@ class LoadToModelsCleanTests(unittest.TestCase):
         """ Test result when no data is available. """
         # Given
         data = {}
-        expected_result = {}
 
         # When
         result = load_to_models(data)
 
         # Then
-        self.assertEqual(result, expected_result)
+        self.assertEqual(result[0].name, None)
+        self.assertEqual(result[1].unit.name, None)
+        self.assertEqual(result[2], [])
 
     def test_data(self):
         """ Test result when data is available. """
         # Given
         data = {
-            "unit1": {
-                "name": "unit1",
-                "position": "Top",
-                "type": 4,
-                "unit_spell": "Unit",
-                "abilities": "ability X",
-                "attributes": {
-                    "blocker": False,
-                    "fragile": True,
-                    "frontline": False,
-                    "prompt": True,
-                    "build_time": 0,
-                    "exhaust_ability": 1,
-                    "exhaust_turn": 0,
-                    "lifespan": 1,
-                    "stamina": 0,
-                    "supply": 1,
-                    },
-                "change_history": {
-                    "2000-01-01": ["Change 1", "Change 2"],
-                    },
-                "costs": {
-                    "blue": 3,
-                    "energy": 0,
-                    "gold": 13,
-                    "green": 0,
-                    "red": 0,
-                    },
-                "links": {
-                    "image": "image X",
-                    "panel": "panel X",
-                    "path": "path X",
-                    },
-                "stats": {
-                    "attack": 1,
-                    "health": 1,
-                    },
+            "name": "unit1",
+            "position": "Top",
+            "type": 4,
+            "unit_spell": "Unit",
+            "abilities": "ability X",
+            "attributes": {
+                "blocker": False,
+                "fragile": True,
+                "frontline": False,
+                "prompt": True,
+                "build_time": 0,
+                "exhaust_ability": 1,
+                "exhaust_turn": 0,
+                "lifespan": 1,
+                "stamina": 0,
+                "supply": 1,
                 },
-            "unit2": {
-                "name": "unit2",
-                "position": "Bottom",
-                "type": 1,
-                "unit_spell": "Spell",
-                "abilities": "ability Y",
-                "attributes": {
-                    "blocker": True,
-                    "fragile": False,
-                    "frontline": True,
-                    "prompt": False,
-                    "build_time": 1,
-                    "exhaust_ability": 0,
-                    "exhaust_turn": 1,
-                    "lifespan": 0,
-                    "stamina": 1,
-                    "supply": 0,
-                    },
-                "change_history": {
-                    "2000-02-02": ["Change 3", "Change 4"],
-                    },
-                "costs": {
-                    "blue": 2,
-                    "energy": 1,
-                    "gold": 3,
-                    "green": 1,
-                    "red": 1,
-                    },
-                "links": {
-                    "image": "image Y",
-                    "panel": "panel Y",
-                    "path": "path Y",
-                    },
-                "stats": {
-                    "attack": 2,
-                    "health": 2,
-                    },
+            "change_history": {
+                "2000-01-01": ["Change 1", "Change 2"],
+                },
+            "costs": {
+                "blue": 3,
+                "energy": 0,
+                "gold": 13,
+                "green": 0,
+                "red": 0,
+                },
+            "links": {
+                "image": "image X",
+                "panel": "panel X",
+                "path": "path X",
+                },
+            "stats": {
+                "attack": 1,
+                "health": 1,
                 },
             }
-        unit1 = Units(
+        unit = Units(
             name="unit1",
             wiki_path="path X",
             image_url="image X",
             panel_url="panel X",
             )
-        unit2 = Units(
-            name="unit2",
-            wiki_path="path Y",
-            image_url="image Y",
-            panel_url="panel Y",
+        expected_result = (
+            unit,
+            UnitVersions(
+                unit=unit,
+                attack=1,
+                health=1,
+                gold=13,
+                green=0,
+                blue=3,
+                red=0,
+                energy=0,
+                supply=1,
+                unit_spell="Unit",
+                frontline=False,
+                fragile=True,
+                blocker=False,
+                prompt=True,
+                stamina=0,
+                lifespan=1,
+                build_time=0,
+                exhaust_turn=0,
+                exhaust_ability=1,
+                position="Top",
+                abilities="ability X",
+                ),
+            [
+                UnitChanges(
+                    unit=unit, day="2000-01-01", description="Change 1"),
+                UnitChanges(
+                    unit=unit, day="2000-01-01", description="Change 2"),
+            ]
             )
-        expected_result = {
-            "unit1": {
-                "unit": unit1,
-                "version": UnitVersions(
-                    unit=unit1,
-                    attack=1,
-                    health=1,
-                    gold=13,
-                    green=0,
-                    blue=3,
-                    red=0,
-                    energy=0,
-                    supply=1,
-                    unit_spell="Unit",
-                    frontline=False,
-                    fragile=True,
-                    blocker=False,
-                    prompt=True,
-                    stamina=0,
-                    lifespan=1,
-                    build_time=0,
-                    exhaust_turn=0,
-                    exhaust_ability=1,
-                    position="Top",
-                    abilities="ability X",
-                    ),
-                "changes": [
-                    UnitChanges(
-                        unit=unit1, day="2000-01-01", description="Change 1"),
-                    UnitChanges(
-                        unit=unit1, day="2000-01-01", description="Change 2"),
-                    ]
-                },
-            "unit2": {
-                "unit": unit2,
-                "version": UnitVersions(
-                    unit=unit2,
-                    attack=2,
-                    health=2,
-                    gold=3,
-                    green=1,
-                    blue=2,
-                    red=1,
-                    energy=1,
-                    supply=0,
-                    unit_spell="Spell",
-                    frontline=True,
-                    fragile=False,
-                    blocker=True,
-                    prompt=False,
-                    stamina=1,
-                    lifespan=0,
-                    build_time=1,
-                    exhaust_turn=1,
-                    exhaust_ability=0,
-                    position="Bottom",
-                    abilities="ability Y",
-                    ),
-                "changes": [
-                    UnitChanges(
-                        unit=unit2, day="2000-02-02", description="Change 3"),
-                    UnitChanges(
-                        unit=unit2, day="2000-02-02", description="Change 4"),
-                    ]
-                },
-            }
 
         # When
         result = load_to_models(data)
 
         # Then
-        self.assertEqual(
-            result["unit1"]["unit"].diff(
-                expected_result["unit1"]["unit"]),
-            {})
-        self.assertEqual(
-            result["unit1"]["version"].diff(
-                expected_result["unit1"]["version"]),
-            {})
-        self.assertEqual(
-            result["unit1"]["changes"][0].diff(
-                expected_result["unit1"]["changes"][0]),
-            {})
-        self.assertEqual(
-            result["unit1"]["changes"][1].diff(
-                expected_result["unit1"]["changes"][1]),
-            {})
-        self.assertEqual(
-            result["unit2"]["unit"].diff(
-                expected_result["unit2"]["unit"]),
-            {})
-        self.assertEqual(
-            result["unit2"]["version"].diff(
-                expected_result["unit2"]["version"]),
-            {})
-        self.assertEqual(
-            result["unit2"]["changes"][0].diff(
-                expected_result["unit2"]["changes"][0]),
-            {})
-        self.assertEqual(
-            result["unit2"]["changes"][1].diff(
-                expected_result["unit2"]["changes"][1]),
-            {})
+        self.assertEqual(result[0].diff(expected_result[0]), {})
+        self.assertEqual(result[1].diff(expected_result[1]), {})
+        self.assertEqual(result[2][0].diff(expected_result[2][0]), {})
+        self.assertEqual(result[2][1].diff(expected_result[2][1]), {})
 
 
 class ModelsDiffCleanTests(unittest.TestCase):
