@@ -4,6 +4,7 @@ import unittest
 from json.decoder import JSONDecodeError
 
 from mock import (
+    call,
     MagicMock,
     patch,
     )
@@ -73,14 +74,20 @@ class LoadVersionDirtyTests(unittest.TestCase):
         isfile_mock.assert_called_once_with(file_path)
 
     @patch("pata.migrate_units.json.loads")
+    @patch("builtins.open")
     @patch("pata.migrate_units.os.path.isfile")
-    def test_invalid_format(self, isfile_mock, json_mock):
+    def test_invalid_format(self, isfile_mock, open_mock, json_mock):
         """ Test error message when file has invalid format. """
         # Given
         file_path = "/path/to/file"
+        file_mock = MagicMock()
+        file_content = MagicMock()
         expected_result = False, {"message": "Invalid format"}
 
         isfile_mock.return_value = True
+        open_mock.return_value = open_mock
+        open_mock.__enter__.return_value = file_mock
+        file_mock.read.return_value = file_content
         json_mock.side_effect = JSONDecodeError("", "", 0)
 
         # When
@@ -89,22 +96,34 @@ class LoadVersionDirtyTests(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_result)
         isfile_mock.assert_called_once_with(file_path)
-        json_mock.assert_called_once_with(file_path)
+        open_mock.assert_has_calls([
+            call(file_path, "r"),
+            call.__enter__(),
+            call.__enter__().read(),
+            call.__exit__(None, None, None),
+            ])
+        json_mock.assert_called_once_with(file_content)
 
 
 class LoadVersionCleanTests(unittest.TestCase):
     """ Tests success case for pata.migrate_units.load_verson """
 
     @patch("pata.migrate_units.json.loads")
+    @patch("builtins.open")
     @patch("pata.migrate_units.os.path.isfile")
-    def test_success(self, isfile_mock, json_mock):
+    def test_success(self, isfile_mock, open_mock, json_mock):
         """ Test . """
         # Given
         file_path = "/path/to/file"
+        file_mock = MagicMock()
+        file_content = MagicMock()
         expected_json = {"key": "val"}
         expected_result = True, expected_json
 
         isfile_mock.return_value = True
+        open_mock.return_value = open_mock
+        open_mock.__enter__.return_value = file_mock
+        file_mock.read.return_value = file_content
         json_mock.return_value = expected_json
 
         # When
@@ -113,7 +132,13 @@ class LoadVersionCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_result)
         isfile_mock.assert_called_once_with(file_path)
-        json_mock.assert_called_once_with(file_path)
+        open_mock.assert_has_calls([
+            call(file_path, "r"),
+            call.__enter__(),
+            call.__enter__().read(),
+            call.__exit__(None, None, None),
+            ])
+        json_mock.assert_called_once_with(file_content)
 
 
 class LoadToModelsCleanTests(unittest.TestCase):

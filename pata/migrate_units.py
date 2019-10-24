@@ -86,8 +86,10 @@ def load_version(
         return False, {"message": "File doesn't exist"}
 
     try:
-        return True, json.loads(path)
-    except json.decoder.JSONDecodeError:
+        with open(path, "r") as data_file:
+            data = data_file.read()
+        return True, json.loads(data)
+    except json.decoder.JSONDecodeError as exc:
         return False, {"message": "Invalid format"}
 
 
@@ -248,6 +250,6 @@ def models_diff(
     return result
 
 
-# Executed when run from the command line.
+# Executed when ran from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])
