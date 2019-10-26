@@ -2,11 +2,12 @@
 import json
 import os
 import sys
+
 from argparse import (
     ArgumentParser,
     Namespace,
     )
-
+from pprint import pprint
 from typing import (
     Any,
     Dict,
@@ -14,6 +15,10 @@ from typing import (
     Tuple,
     Union,
     )
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm.session import Session
 
 from pata.models.units import (
     UnitChanges,
@@ -89,7 +94,7 @@ def load_version(
         with open(path, "r") as data_file:
             data = data_file.read()
         return True, json.loads(data)
-    except json.decoder.JSONDecodeError as exc:
+    except json.decoder.JSONDecodeError:
         return False, {"message": "Invalid format"}
 
 
@@ -201,7 +206,8 @@ def load_to_models(
 
 
 def models_diff(
-        base: Units, unit: Units, version: UnitVersions, changes: UnitChanges
+        base: Units,
+        unit: Units, version: UnitVersions, changes: List[UnitChanges]
         ) -> Dict[str, Dict[str, Union[str, int]]]:
     """
     Get all differences for a unit and its related models.
@@ -247,6 +253,64 @@ def models_diff(
                     base_change)
                 )
             })
+    return result
+
+
+def process_transaction(  # pylint: disable=too-many-arguments
+        session: Session,
+        unit: Units, version: UnitVersions, changes: List[UnitChanges],
+        insert: bool = False, update: bool = False
+        ) -> Dict[str, Dict[str, Dict[str, Union[str, int]]]]:
+    """
+    Apply all changes based on the parameters received.
+
+    Parameters
+    ----------
+    session : sqlalchemy.orm.session.Session
+        SQLAlchemy session object.
+    unit : pata.models.units.Units
+        Units objects.
+    version : pata.models.units.UnitVersions
+        Latest UnitVersions for unit.
+    changes : list(pata.models.units.UnitChanges)
+        List of all changes.
+    insert : bool, optional
+        Process inserts. Defaults to False.
+    update : bool, optional
+        Process updates. Defaults to False.
+
+    Returns
+    -------
+    dict
+
+    Example
+    -------
+    output:
+        {
+            "update":
+                {
+                    "column1": "change1",
+                    "column2": "change2",
+                    "2000-01-01": {"column3": "change3"},
+                    ...
+                }
+        }
+
+    """
+    existing = session.query(Units).filter_by(name=unit.name).first()
+    result: Dict[str, Dict[str, Dict[str, Union[str, int]]]] = {}
+
+    if not existing:
+        result.update({"insert": {}})
+        # insert
+    else:
+        diff = models_diff(existing, unit, version, changes)
+        if not diff:
+            result.update({"nochange": {}})
+        else:
+            result.update({"update": diff})
+            # update
+
     return result
 
 

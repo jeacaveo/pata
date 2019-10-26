@@ -6,6 +6,7 @@ from json.decoder import JSONDecodeError
 from mock import (
     call,
     MagicMock,
+    Mock,
     patch,
     )
 
@@ -14,6 +15,7 @@ from pata.migrate_units import (
     load_to_models,
     load_version,
     models_diff,
+    process_transaction,
     )
 from pata.models.units import (
     UnitChanges, Units, UnitVersions,
@@ -346,3 +348,90 @@ class ModelsDiffCleanTests(unittest.TestCase):
         base_version.diff.assert_called_once_with(version)
         base_change1.diff.assert_called_once_with(change1)
         base_change2.diff.assert_called_once_with(change2)
+
+
+class ProcessTransactionCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.migrate_units.process_transaction """
+
+    def test_insert(self):
+        """ Test result when models doesn't exist. """
+        # Given
+        session = MagicMock()
+        unit = Mock()
+        unit.configure_mock(name="unit name")
+        version = MagicMock()
+        changes = []
+        expected_result = {"insert": {}}
+
+        session.query.return_value = session
+        session.filter_by.return_value = session
+        session.first.return_value = None
+
+        # When
+        result = process_transaction(session, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        session.assert_has_calls([
+            call.query(Units),
+            call.filter_by(name=unit.name),
+            call.first(),
+            ])
+
+    @patch("pata.migrate_units.models_diff")
+    def test_no_change(self, diff_mock):
+        """ Test result when models exists but no changes exist. """
+        # Given
+        session = MagicMock()
+        unit = Mock()
+        unit.configure_mock(name="unit name")
+        version = MagicMock()
+        changes = []
+        existing = MagicMock()
+        expected_result = {"nochange": {}}
+
+        session.query.return_value = session
+        session.filter_by.return_value = session
+        session.first.return_value = existing
+        diff_mock.return_value = {}
+
+        # When
+        result = process_transaction(session, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        session.assert_has_calls([
+            call.query(Units),
+            call.filter_by(name=unit.name),
+            call.first(),
+            ])
+        diff_mock.assert_called_once_with(existing, unit, version, changes)
+
+    @patch("pata.migrate_units.models_diff")
+    def test_update(self, diff_mock):
+        """ Test result when models exists but no changes exist. """
+        # Given
+        session = MagicMock()
+        unit = Mock()
+        unit.configure_mock(name="unit name")
+        version = MagicMock()
+        changes = []
+        existing = MagicMock()
+        expected_result = {"update": {"key": "val"}}
+
+        session.query.return_value = session
+        session.filter_by.return_value = session
+        session.first.return_value = existing
+        diff_mock.return_value = expected_result.get("update")
+
+        # When
+        result = process_transaction(session, unit, version, changes)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        session.assert_has_calls([
+            call.query(Units),
+            call.filter_by(name=unit.name),
+            call.first(),
+            ])
+        diff_mock.assert_called_once_with(existing, unit, version, changes)
