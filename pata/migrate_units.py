@@ -98,9 +98,7 @@ def load_version(
         return False, {"message": "Invalid format"}
 
 
-def load_to_models(
-        data: Dict[str, Any]
-        ) -> Tuple[Units, UnitVersions, List[UnitChanges]]:
+def load_to_models(data: Dict[str, Any]) -> Units:
     """
     Load data into pata.models.units models.
 
@@ -202,12 +200,11 @@ def load_to_models(
         for change in items
         ]
 
-    return unit, version, changes
+    return unit
 
 
 def models_diff(
-        base: Units,
-        unit: Units, version: UnitVersions, changes: List[UnitChanges]
+        base: Units, unit: Units
         ) -> Dict[str, Dict[str, Union[str, int]]]:
     """
     Get all differences for a unit and its related models.
@@ -242,23 +239,22 @@ def models_diff(
     """
     result = {}
     result.update(base.diff(unit))
-    result.update(base.versions[0].diff(version))
+    unit.versions and result.update(base.versions[0].diff(unit.versions[0]))
     for base_change in base.changes:
         day = base_change.day
         result.update({
             day:
             base_change.diff(
                 next(
-                    (change for change in changes if change.day == day),
+                    (change for change in unit.changes if change.day == day),
                     base_change)
                 )
             })
     return result
 
 
-def process_transaction(  # pylint: disable=too-many-arguments
-        session: Session,
-        unit: Units, version: UnitVersions, changes: List[UnitChanges],
+def process_transaction(
+        session: Session, unit: Units,
         insert: bool = False, update: bool = False
         ) -> Dict[str, Dict[str, Dict[str, Union[str, int]]]]:
     """
@@ -304,7 +300,7 @@ def process_transaction(  # pylint: disable=too-many-arguments
         result.update({"insert": {}})
         # insert
     else:
-        diff = models_diff(existing, unit, version, changes)
+        diff = models_diff(existing, unit)
         if not diff:
             result.update({"nochange": {}})
         else:

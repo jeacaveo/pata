@@ -155,9 +155,9 @@ class LoadToModelsCleanTests(unittest.TestCase):
         result = load_to_models(data)
 
         # Then
-        self.assertEqual(result[0].name, None)
-        self.assertEqual(result[1].unit.name, None)
-        self.assertEqual(result[2], [])
+        self.assertEqual(result.name, None)
+        self.assertEqual(result.versions[0].unit.name, None)
+        self.assertEqual(result.changes, [])
 
     def test_data(self):
         """ Test result when data is available. """
@@ -206,47 +206,48 @@ class LoadToModelsCleanTests(unittest.TestCase):
             image_url="image X",
             panel_url="panel X",
             )
-        expected_result = (
-            unit,
-            UnitVersions(
-                unit=unit,
-                attack=1,
-                health=1,
-                gold=13,
-                green=0,
-                blue=3,
-                red=0,
-                energy=0,
-                supply=1,
-                unit_spell="Unit",
-                frontline=False,
-                fragile=True,
-                blocker=False,
-                prompt=True,
-                stamina=0,
-                lifespan=1,
-                build_time=0,
-                exhaust_turn=0,
-                exhaust_ability=1,
-                position="Top",
-                abilities="ability X",
-                ),
-            [
-                UnitChanges(
-                    unit=unit, day="2000-01-01", description="Change 1"),
-                UnitChanges(
-                    unit=unit, day="2000-01-01", description="Change 2"),
-            ]
-            )
+        UnitVersions(
+            unit=unit,
+            attack=1,
+            health=1,
+            gold=13,
+            green=0,
+            blue=3,
+            red=0,
+            energy=0,
+            supply=1,
+            unit_spell="Unit",
+            frontline=False,
+            fragile=True,
+            blocker=False,
+            prompt=True,
+            stamina=0,
+            lifespan=1,
+            build_time=0,
+            exhaust_turn=0,
+            exhaust_ability=1,
+            position="Top",
+            abilities="ability X",
+            ),
+        [
+            UnitChanges(
+                unit=unit, day="2000-01-01", description="Change 1"),
+            UnitChanges(
+                unit=unit, day="2000-01-01", description="Change 2"),
+        ]
+        expected_result = unit
 
         # When
         result = load_to_models(data)
 
         # Then
-        self.assertEqual(result[0].diff(expected_result[0]), {})
-        self.assertEqual(result[1].diff(expected_result[1]), {})
-        self.assertEqual(result[2][0].diff(expected_result[2][0]), {})
-        self.assertEqual(result[2][1].diff(expected_result[2][1]), {})
+        self.assertEqual(result.diff(expected_result), {})
+        self.assertEqual(
+            result.versions[0].diff(expected_result.versions[0]), {})
+        self.assertEqual(
+            result.changes[0].diff(expected_result.changes[0]), {})
+        self.assertEqual(
+            result.changes[1].diff(expected_result.changes[1]), {})
 
 
 class ModelsDiffCleanTests(unittest.TestCase):
@@ -256,13 +257,14 @@ class ModelsDiffCleanTests(unittest.TestCase):
         """ Test result when models are the same. """
         # Given
         base_unit = MagicMock()
-        unit = MagicMock()
-        version = MagicMock()
-        changes = []
+        unit = MagicMock(
+            versions=[],
+            changes=[]
+            )
         expected_result = {}
 
         # When
-        result = models_diff(base_unit, unit, version, changes)
+        result = models_diff(base_unit, unit)
 
         # Then
         self.assertEqual(result, expected_result)
@@ -271,15 +273,16 @@ class ModelsDiffCleanTests(unittest.TestCase):
         """ Test result when only changes in Units model. """
         # Given
         base_unit = MagicMock()
-        unit = MagicMock()
-        version = MagicMock()
-        changes = []
+        unit = MagicMock(
+            versions=[MagicMock()],
+            changes=[],
+            )
         expected_result = {"column1": "change1"}
 
         base_unit.diff.return_value = expected_result
 
         # When
-        result = models_diff(base_unit, unit, version, changes)
+        result = models_diff(base_unit, unit)
 
         # Then
         self.assertEqual(result, expected_result)
@@ -290,9 +293,10 @@ class ModelsDiffCleanTests(unittest.TestCase):
         # Given
         base_version = MagicMock()
         base_unit = MagicMock(versions=[base_version])
-        unit = MagicMock()
-        version = MagicMock()
-        changes = []
+        unit = MagicMock(
+            versions=[MagicMock()],
+            changes=[],
+            )
         expected_result = {
             "column1": "change1",
             "column2": "change2",
@@ -302,12 +306,12 @@ class ModelsDiffCleanTests(unittest.TestCase):
         base_version.diff.return_value = {"column2": "change2"}
 
         # When
-        result = models_diff(base_unit, unit, version, changes)
+        result = models_diff(base_unit, unit)
 
         # Then
         self.assertEqual(result, expected_result)
         base_unit.diff.assert_called_once_with(unit)
-        base_version.diff.assert_called_once_with(version)
+        base_version.diff.assert_called_once_with(unit.versions[0])
 
     def test_all(self):
         """
@@ -322,16 +326,15 @@ class ModelsDiffCleanTests(unittest.TestCase):
             versions=[base_version],
             changes=[base_change1, base_change2],
             )
-        unit = MagicMock()
-        version = MagicMock()
-        change1 = MagicMock(day="day1")
-        change2 = MagicMock(day="day2")
-        changes = [change1, change2]
+        unit = MagicMock(
+            versions=[MagicMock()],
+            changes=[MagicMock(day="day1"), MagicMock(day="day2")]
+            )
         expected_result = {
             "column1": "change1",
             "column2": "change2",
-            change1.day: {"column3": "change3"},
-            change2.day: {"column4": "change4"},
+            unit.changes[0].day: {"column3": "change3"},
+            unit.changes[1].day: {"column4": "change4"},
             }
 
         base_unit.diff.return_value = {"column1": "change1"}
@@ -340,14 +343,14 @@ class ModelsDiffCleanTests(unittest.TestCase):
         base_change2.diff.return_value = {"column4": "change4"}
 
         # When
-        result = models_diff(base_unit, unit, version, changes)
+        result = models_diff(base_unit, unit)
 
         # Then
         self.assertEqual(result, expected_result)
         base_unit.diff.assert_called_once_with(unit)
-        base_version.diff.assert_called_once_with(version)
-        base_change1.diff.assert_called_once_with(change1)
-        base_change2.diff.assert_called_once_with(change2)
+        base_version.diff.assert_called_once_with(unit.versions[0])
+        base_change1.diff.assert_called_once_with(unit.changes[0])
+        base_change2.diff.assert_called_once_with(unit.changes[1])
 
 
 class ProcessTransactionCleanTests(unittest.TestCase):
@@ -357,10 +360,11 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         """ Test result when models doesn't exist. """
         # Given
         session = MagicMock()
-        unit = Mock()
+        unit = Mock(
+            versions=[MagicMock()],
+            changes=[]
+            )
         unit.configure_mock(name="unit name")
-        version = MagicMock()
-        changes = []
         expected_result = {"insert": {}}
 
         session.query.return_value = session
@@ -368,7 +372,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         session.first.return_value = None
 
         # When
-        result = process_transaction(session, unit, version, changes)
+        result = process_transaction(session, unit)
 
         # Then
         self.assertEqual(result, expected_result)
@@ -383,10 +387,11 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         """ Test result when models exists but no changes exist. """
         # Given
         session = MagicMock()
-        unit = Mock()
+        unit = Mock(
+            versions=[MagicMock()],
+            changes=[]
+            )
         unit.configure_mock(name="unit name")
-        version = MagicMock()
-        changes = []
         existing = MagicMock()
         expected_result = {"nochange": {}}
 
@@ -396,7 +401,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         diff_mock.return_value = {}
 
         # When
-        result = process_transaction(session, unit, version, changes)
+        result = process_transaction(session, unit)
 
         # Then
         self.assertEqual(result, expected_result)
@@ -405,7 +410,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             call.filter_by(name=unit.name),
             call.first(),
             ])
-        diff_mock.assert_called_once_with(existing, unit, version, changes)
+        diff_mock.assert_called_once_with(existing, unit)
 
     @patch("pata.migrate_units.models_diff")
     def test_update(self, diff_mock):
@@ -413,9 +418,11 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         # Given
         session = MagicMock()
         unit = Mock()
+        unit = Mock(
+            versions=[MagicMock()],
+            changes=[]
+            )
         unit.configure_mock(name="unit name")
-        version = MagicMock()
-        changes = []
         existing = MagicMock()
         expected_result = {"update": {"key": "val"}}
 
@@ -425,7 +432,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         diff_mock.return_value = expected_result.get("update")
 
         # When
-        result = process_transaction(session, unit, version, changes)
+        result = process_transaction(session, unit)
 
         # Then
         self.assertEqual(result, expected_result)
@@ -434,4 +441,4 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             call.filter_by(name=unit.name),
             call.first(),
             ])
-        diff_mock.assert_called_once_with(existing, unit, version, changes)
+        diff_mock.assert_called_once_with(existing, unit)
