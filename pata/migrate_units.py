@@ -166,7 +166,7 @@ def load_to_models(data: Dict[str, Any]) -> Units:
     stats = data.get("stats") or {}
     costs = data.get("costs") or {}
     attributes = data.get("attributes") or {}
-    version = UnitVersions(
+    UnitVersions(
         unit=unit,
         attack=stats.get("attack"),
         health=stats.get("health"),
@@ -190,15 +190,13 @@ def load_to_models(data: Dict[str, Any]) -> Units:
         abilities=data.get("abilities"),
         )
     # UnitChanges
-    changes = [
-        UnitChanges(
-            unit=unit,
-            day=day,
-            description=change,
-            )
-        for day, items in data.get("change_history", {}).items()
-        for change in items
-        ]
+    for day, items in data.get("change_history", {}).items():
+        for change in items:
+            UnitChanges(
+                unit=unit,
+                day=day,
+                description=change,
+                )
 
     return unit
 
@@ -217,10 +215,6 @@ def models_diff(
         Units objects (old/current state).
     unit : pata.models.units.Units
         Units objects (new state).
-    version : pata.models.units.UnitVersions
-        Latest UnitVersions for unit.
-    changes : list(pata.models.units.UnitChanges)
-        List of all changes (doesn't consider missing or new records)
 
     Returns
     -------
@@ -239,7 +233,8 @@ def models_diff(
     """
     result = {}
     result.update(base.diff(unit))
-    unit.versions and result.update(base.versions[0].diff(unit.versions[0]))
+    if unit.versions:
+        result.update(base.versions[0].diff(unit.versions[0]))
     for base_change in base.changes:
         day = base_change.day
         result.update({
@@ -266,10 +261,6 @@ def process_transaction(
         SQLAlchemy session object.
     unit : pata.models.units.Units
         Units objects.
-    version : pata.models.units.UnitVersions
-        Latest UnitVersions for unit.
-    changes : list(pata.models.units.UnitChanges)
-        List of all changes.
     insert : bool, optional
         Process inserts. Defaults to False.
     update : bool, optional

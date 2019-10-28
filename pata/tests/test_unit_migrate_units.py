@@ -228,13 +228,11 @@ class LoadToModelsCleanTests(unittest.TestCase):
             exhaust_ability=1,
             position="Top",
             abilities="ability X",
-            ),
-        [
-            UnitChanges(
-                unit=unit, day="2000-01-01", description="Change 1"),
-            UnitChanges(
-                unit=unit, day="2000-01-01", description="Change 2"),
-        ]
+            )
+        UnitChanges(
+            unit=unit, day="2000-01-01", description="Change 1")
+        UnitChanges(
+            unit=unit, day="2000-01-01", description="Change 2")
         expected_result = unit
 
         # When
