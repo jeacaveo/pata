@@ -397,3 +397,5 @@ def run_command(
 # Executed when ran from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])
+    pprint(
+        run_command(PARSER.source, PARSER.diff, PARSER.insert, PARSER.update))
