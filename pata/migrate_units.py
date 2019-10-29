@@ -364,6 +364,36 @@ def run(
     return diff_result
 
 
+def run_command(
+        path: str,
+        diff: bool = False, insert: bool = False, update: bool = False
+        ) -> Dict[str, Any]:
+    """
+    Execute command.
+
+    Parameters
+    ----------
+    path : str
+        Path to file to load data from.
+    diff : bool, optional
+        Show diff result. Defaults to False.
+    insert : bool, optional
+        Process inserts. Defaults to False.
+    update : bool, optional
+        Process updates. Defaults to False.
+
+    Returns
+    -------
+    dict
+
+    """
+    is_valid, data = load_version(path)
+    if is_valid:
+        result = run(data, insert=insert, update=update)
+        return result if diff else {}
+    return data
+
+
 # Executed when ran from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])

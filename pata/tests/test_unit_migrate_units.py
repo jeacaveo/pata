@@ -17,6 +17,7 @@ from pata.migrate_units import (
     models_diff,
     process_transaction,
     run,
+    run_command,
     )
 from pata.models.units import (
     UnitChanges, Units, UnitVersions,
@@ -449,7 +450,7 @@ class RunDirtyTests(unittest.TestCase):
     @patch("pata.migrate_units.load_to_models")
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
-    def test_rollback(self, engine_mock, make_session_mock, load_mock):
+    def test_rollback(self, engine_mock, make_session_mock, model_mock):
         """
         Test result when when exception is raised.
 
@@ -464,7 +465,7 @@ class RunDirtyTests(unittest.TestCase):
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
-        load_mock.side_effect = Exception()
+        model_mock.side_effect = Exception()
 
         # When
         result = run(data)
@@ -513,7 +514,7 @@ class RunCleanTests(unittest.TestCase):
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
     def test_diff(
-            self, engine_mock, make_session_mock, load_mock, process_mock):
+            self, engine_mock, make_session_mock, model_mock, process_mock):
         """ Test result when no insert or update. """
         # Given
         data = {
@@ -531,7 +532,7 @@ class RunCleanTests(unittest.TestCase):
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
-        load_mock.side_effect = [unit1, unit2]
+        model_mock.side_effect = [unit1, unit2]
         process_mock.side_effect = [{"nochange": {}}, {"nochange": {}}]
 
         # When
@@ -545,7 +546,7 @@ class RunCleanTests(unittest.TestCase):
             call(),
             call().close(),
             ])
-        load_mock.assert_has_calls([
+        model_mock.assert_has_calls([
             call("val1"),
             call("val2"),
             ])
@@ -559,7 +560,7 @@ class RunCleanTests(unittest.TestCase):
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
     def test_changes(
-            self, engine_mock, make_session_mock, load_mock, process_mock):
+            self, engine_mock, make_session_mock, model_mock, process_mock):
         """ Test result when insert or update are required. """
         # Given
         data = {
@@ -577,7 +578,7 @@ class RunCleanTests(unittest.TestCase):
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
-        load_mock.side_effect = [unit1, unit2]
+        model_mock.side_effect = [unit1, unit2]
         process_mock.side_effect = [{"insert": {}}, {"update": {}}]
 
         # When
@@ -592,7 +593,7 @@ class RunCleanTests(unittest.TestCase):
             call().commit(),
             call().close(),
             ])
-        load_mock.assert_has_calls([
+        model_mock.assert_has_calls([
             call("val1"),
             call("val2"),
             ])
@@ -600,3 +601,68 @@ class RunCleanTests(unittest.TestCase):
             call(session(), unit1, True, True),
             call(session(), unit2, True, True),
             ])
+
+
+class RunCommandDirtyTests(unittest.TestCase):
+    """ Tests fail cases for pata.migrate_units.run_command """
+
+    @patch("pata.migrate_units.load_version")
+    def test_invalid(self, version_mock):
+        """ Test error when loading version. """
+        # Given
+        path = "/path/to/file"
+        expected_result = {"message": "error message"}
+
+        version_mock.return_value = False, expected_result
+
+        # When
+        result = run_command(path)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        version_mock.assert_called_once_with(path)
+
+
+class RunCommandCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.migrate_units.run_command """
+
+    @patch("pata.migrate_units.run")
+    @patch("pata.migrate_units.load_version")
+    def test_no_diff(self, version_mock, run_mock):
+        """ Test when diff param is not passed. """
+        # Given
+        path = "/path/to/file"
+        data = MagicMock()
+        expected_result = {}
+
+        version_mock.return_value = True, data
+        run_mock.return_value = MagicMock()
+
+        # When
+        result = run_command(path)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        version_mock.assert_called_once_with(path)
+        run_mock.assert_called_once_with(data, insert=False, update=False)
+
+    @patch("pata.migrate_units.run")
+    @patch("pata.migrate_units.load_version")
+    def test_diff(self, version_mock, run_mock):
+        """ Test when diff param is passed. """
+        # Given
+        path = "/path/to/file"
+        data = MagicMock()
+        diff = MagicMock()
+        expected_result = diff
+
+        version_mock.return_value = True, data
+        run_mock.return_value = diff
+
+        # When
+        result = run_command(path, True, True, True)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        version_mock.assert_called_once_with(path)
+        run_mock.assert_called_once_with(data, insert=True, update=True)
