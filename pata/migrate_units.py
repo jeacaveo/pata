@@ -17,6 +17,7 @@ from typing import (
     )
 
 from sqlalchemy import create_engine
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 
@@ -356,8 +357,9 @@ def run(
         if set(["insert", "update"]).intersection(
                 list(diff_result.values() or [{}])[0].keys()):
             session.commit()
-    except Exception:
+    except SQLAlchemyError:
         session.rollback()
+        diff_result = {"message": "DB error. Rolling back."}
     finally:
         session.close()
 

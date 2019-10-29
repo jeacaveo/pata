@@ -9,6 +9,7 @@ from mock import (
     Mock,
     patch,
     )
+from sqlalchemy.exc import SQLAlchemyError
 
 from pata.migrate_units import (
     create_parser,
@@ -461,11 +462,11 @@ class RunDirtyTests(unittest.TestCase):
         data = {"key1": "val1"}
         engine = MagicMock()
         session = MagicMock()
-        expected_result = {}
+        expected_result = {"message": "DB error. Rolling back."}
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
-        model_mock.side_effect = Exception()
+        model_mock.side_effect = SQLAlchemyError()
 
         # When
         result = run(data)
