@@ -359,7 +359,7 @@ def run(
             session.commit()
     except SQLAlchemyError:
         session.rollback()
-        diff_result = {"message": "DB error. Rolling back."}
+        diff_result = {"error": {"message": "DB error. Rolling back."}}
     finally:
         session.close()
 

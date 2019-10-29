@@ -462,7 +462,7 @@ class RunDirtyTests(unittest.TestCase):
         data = {"key1": "val1"}
         engine = MagicMock()
         session = MagicMock()
-        expected_result = {"message": "DB error. Rolling back."}
+        expected_result = {"error": {"message": "DB error. Rolling back."}}
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
