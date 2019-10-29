@@ -301,6 +301,69 @@ def process_transaction(
     return result
 
 
+def run(
+        data: Dict[str, Any],
+        insert: bool = False, update: bool = False
+        ) -> Dict[str, Dict[str, Any]]:
+    """
+    Insert/Update information in data into the database.
+
+    Returns the summary of changes.
+
+    Parameters
+    ----------
+    data : dict
+        Information to insert/update.
+    unit : pata.models.units.Units
+        Units objects.
+    insert : bool, optional
+        Process inserts. Defaults to False.
+    update : bool, optional
+        Process updates. Defaults to False.
+
+    Returns
+    -------
+    dict
+
+    Example
+    -------
+    output:
+        {
+            "unit1":
+                {
+                    "update":
+                        {
+                            "column1": "change1",
+                            "column2": "change2",
+                            "2000-01-01": {"column3": "change3"},
+                            ...
+                        }
+                },
+            ...
+        }
+
+    """
+    engine = create_engine("sqlite:///pata.sqlite")
+    session_class = sessionmaker(bind=engine)
+    session = session_class()
+    try:
+        diff_result = {}
+        for unit_name, unit_data in data.items():
+            unit = load_to_models(unit_data)
+            diff_result[unit_name] = process_transaction(
+                session, unit, insert, update)
+
+        if set(["insert", "update"]).intersection(
+                list(diff_result.values() or [{}])[0].keys()):
+            session.commit()
+    except Exception:
+        session.rollback()
+    finally:
+        session.close()
+
+    return diff_result
+
+
 # Executed when ran from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])

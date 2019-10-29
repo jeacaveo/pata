@@ -16,6 +16,7 @@ from pata.migrate_units import (
     load_version,
     models_diff,
     process_transaction,
+    run,
     )
 from pata.models.units import (
     UnitChanges, Units, UnitVersions,
@@ -57,11 +58,11 @@ class ParserCleanTests(unittest.TestCase):
 
 
 class LoadVersionDirtyTests(unittest.TestCase):
-    """ Tests error cases for pata.migrate_units.load_version """
+    """ Tests fail cases for pata.migrate_units.load_version """
 
     @patch("pata.migrate_units.os.path.isfile")
     def test_not_exist(self, isfile_mock):
-        """ Test error message when file doesn't exist. """
+        """ Test fail message when file doesn't exist. """
         # Given
         file_path = "/path/to/file"
         expected_result = False, {"message": "File doesn't exist"}
@@ -79,7 +80,7 @@ class LoadVersionDirtyTests(unittest.TestCase):
     @patch("builtins.open")
     @patch("pata.migrate_units.os.path.isfile")
     def test_invalid_format(self, isfile_mock, open_mock, json_mock):
-        """ Test error message when file has invalid format. """
+        """ Test fail message when file has invalid format. """
         # Given
         file_path = "/path/to/file"
         file_mock = MagicMock()
@@ -440,3 +441,162 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             call.first(),
             ])
         diff_mock.assert_called_once_with(existing, unit)
+
+
+class RunDirtyTests(unittest.TestCase):
+    """ Tests fail cases for pata.migrate_units.run """
+
+    @patch("pata.migrate_units.load_to_models")
+    @patch("pata.migrate_units.sessionmaker")
+    @patch("pata.migrate_units.create_engine")
+    def test_rollback(self, engine_mock, make_session_mock, load_mock):
+        """
+        Test result when when exception is raised.
+
+        The side effect class must be first one inside the try/except block.
+
+        """
+        # Given
+        data = {"key1": "val1"}
+        engine = MagicMock()
+        session = MagicMock()
+        expected_result = {}
+
+        engine_mock.return_value = engine
+        make_session_mock.return_value = session
+        load_mock.side_effect = Exception()
+
+        # When
+        result = run(data)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
+        make_session_mock.assert_called_once_with(bind=engine)
+        session.assert_has_calls([
+            call(),
+            call().rollback(),
+            call().close(),
+            ])
+
+
+class RunCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.migrate_units.run """
+
+    @patch("pata.migrate_units.sessionmaker")
+    @patch("pata.migrate_units.create_engine")
+    def test_empty(self, engine_mock, make_session_mock):
+        """ Test result when data is empty. """
+        # Given
+        data = {}
+        engine = MagicMock()
+        session = MagicMock()
+        expected_result = {}
+
+        engine_mock.return_value = engine
+        make_session_mock.return_value = session
+
+        # When
+        result = run(data)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
+        make_session_mock.assert_called_once_with(bind=engine)
+        session.assert_has_calls([
+            call(),
+            call().close(),
+            ])
+
+    @patch("pata.migrate_units.process_transaction")
+    @patch("pata.migrate_units.load_to_models")
+    @patch("pata.migrate_units.sessionmaker")
+    @patch("pata.migrate_units.create_engine")
+    def test_diff(
+            self, engine_mock, make_session_mock, load_mock, process_mock):
+        """ Test result when no insert or update. """
+        # Given
+        data = {
+            "key1": "val1",
+            "key2": "val2",
+            }
+        engine = MagicMock()
+        session = MagicMock()
+        unit1 = MagicMock()
+        unit2 = MagicMock()
+        expected_result = {
+            "key1": {"nochange": {}},
+            "key2": {"nochange": {}},
+            }
+
+        engine_mock.return_value = engine
+        make_session_mock.return_value = session
+        load_mock.side_effect = [unit1, unit2]
+        process_mock.side_effect = [{"nochange": {}}, {"nochange": {}}]
+
+        # When
+        result = run(data)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
+        make_session_mock.assert_called_once_with(bind=engine)
+        session.assert_has_calls([
+            call(),
+            call().close(),
+            ])
+        load_mock.assert_has_calls([
+            call("val1"),
+            call("val2"),
+            ])
+        process_mock.assert_has_calls([
+            call(session(), unit1, False, False),
+            call(session(), unit2, False, False),
+            ])
+
+    @patch("pata.migrate_units.process_transaction")
+    @patch("pata.migrate_units.load_to_models")
+    @patch("pata.migrate_units.sessionmaker")
+    @patch("pata.migrate_units.create_engine")
+    def test_changes(
+            self, engine_mock, make_session_mock, load_mock, process_mock):
+        """ Test result when insert or update are required. """
+        # Given
+        data = {
+            "key1": "val1",
+            "key2": "val2",
+            }
+        engine = MagicMock()
+        session = MagicMock()
+        unit1 = MagicMock()
+        unit2 = MagicMock()
+        expected_result = {
+            "key1": {"insert": {}},
+            "key2": {"update": {}},
+            }
+
+        engine_mock.return_value = engine
+        make_session_mock.return_value = session
+        load_mock.side_effect = [unit1, unit2]
+        process_mock.side_effect = [{"insert": {}}, {"update": {}}]
+
+        # When
+        result = run(data, True, True)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
+        make_session_mock.assert_called_once_with(bind=engine)
+        session.assert_has_calls([
+            call(),
+            call().commit(),
+            call().close(),
+            ])
+        load_mock.assert_has_calls([
+            call("val1"),
+            call("val2"),
+            ])
+        process_mock.assert_has_calls([
+            call(session(), unit1, True, True),
+            call(session(), unit2, True, True),
+            ])
