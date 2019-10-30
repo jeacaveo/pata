@@ -7,6 +7,7 @@ from argparse import (
     ArgumentParser,
     Namespace,
     )
+from datetime import date
 from pprint import pprint
 from typing import (
     Any,
@@ -195,7 +196,7 @@ def load_to_models(data: Dict[str, Any]) -> Units:
         for change in items:
             UnitChanges(
                 unit=unit,
-                day=day,
+                day=date.fromisoformat(day),
                 description=change,
                 )
 
@@ -287,10 +288,12 @@ def process_transaction(
     """
     existing = session.query(Units).filter_by(name=unit.name).first()
     if not existing:
+        insert and session.add(unit)  # pylint: disable=expression-not-assigned
         return {"insert": {}}
 
     diff = models_diff(existing, unit)
     if diff:
+        update and session.add(unit)  # pylint: disable=expression-not-assigned
         return {"update": diff}
     return {"nochange": {}}
 
@@ -350,9 +353,11 @@ def run(
         if set(["insert", "update"]).intersection(
                 list(diff_result.values() or [{}])[0].keys()):
             session.commit()
-    except SQLAlchemyError:
+    except SQLAlchemyError as exc:
         session.rollback()
-        diff_result = {"error": {"message": "DB error. Rolling back."}}
+        diff_result = {
+            "error": {
+                "message": f"{exc}\nDB error. Rolling back."}}
     finally:
         session.close()
 

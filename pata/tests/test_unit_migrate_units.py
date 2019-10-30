@@ -1,6 +1,8 @@
 """ Tests for pata.migrate_units """
 # pylint: disable=protected-access
 import unittest
+
+from datetime import date
 from json.decoder import JSONDecodeError
 
 from mock import (
@@ -233,9 +235,13 @@ class LoadToModelsCleanTests(unittest.TestCase):
             abilities="ability X",
             )
         UnitChanges(
-            unit=unit, day="2000-01-01", description="Change 1")
+            unit=unit,
+            day=date.fromisoformat("2000-01-01"),
+            description="Change 1")
         UnitChanges(
-            unit=unit, day="2000-01-01", description="Change 2")
+            unit=unit,
+            day=date.fromisoformat("2000-01-01"),
+            description="Change 2")
         expected_result = unit
 
         # When
@@ -357,7 +363,7 @@ class ModelsDiffCleanTests(unittest.TestCase):
 class ProcessTransactionCleanTests(unittest.TestCase):
     """ Tests success cases for pata.migrate_units.process_transaction """
 
-    def test_insert(self):
+    def test_insert_diff(self):
         """ Test result when models doesn't exist. """
         # Given
         session = MagicMock()
@@ -414,7 +420,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         diff_mock.assert_called_once_with(existing, unit)
 
     @patch("pata.migrate_units.models_diff")
-    def test_update(self, diff_mock):
+    def test_update_diff(self, diff_mock):
         """ Test result when models exists but no changes exist. """
         # Given
         session = MagicMock()
@@ -444,6 +450,66 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             ])
         diff_mock.assert_called_once_with(existing, unit)
 
+    def test_insert(self):
+        """ Test result when models doesn't exist. """
+        # Given
+        session = MagicMock()
+        unit = Mock(
+            versions=[MagicMock()],
+            changes=[]
+            )
+        unit.configure_mock(name="unit name")
+        expected_result = {"insert": {}}
+
+        session.query.return_value = session
+        session.filter_by.return_value = session
+        session.first.return_value = None
+
+        # When
+        result = process_transaction(session, unit, insert=True)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        session.assert_has_calls([
+            call.query(Units),
+            call.filter_by(name=unit.name),
+            call.first(),
+            call.add(unit),
+            ])
+
+    @patch("pata.migrate_units.models_diff")
+    def test_update(self, diff_mock):
+        """ Test result when models exists but no changes exist. """
+        # Given
+        session = MagicMock()
+        unit = Mock()
+        unit = Mock(
+            versions=[MagicMock()],
+            changes=[]
+            )
+        unit.configure_mock(name="unit name")
+        existing = MagicMock()
+        expected_result = {"update": {"key": "val"}}
+
+        session.query.return_value = session
+        session.filter_by.return_value = session
+        session.first.return_value = existing
+        diff_mock.return_value = expected_result.get("update")
+
+        # When
+        result = process_transaction(session, unit, update=True)
+
+        # Then
+        self.assertEqual(result, expected_result)
+        session.assert_has_calls([
+            call.query(Units),
+            call.filter_by(name=unit.name),
+            call.first(),
+            call.first().__bool__(),
+            call.add(unit),
+            ])
+        diff_mock.assert_called_once_with(existing, unit)
+
 
 class RunDirtyTests(unittest.TestCase):
     """ Tests fail cases for pata.migrate_units.run """
@@ -462,7 +528,7 @@ class RunDirtyTests(unittest.TestCase):
         data = {"key1": "val1"}
         engine = MagicMock()
         session = MagicMock()
-        expected_result = {"error": {"message": "DB error. Rolling back."}}
+        expected_result = {"error": {"message": "()\nDB error. Rolling back."}}
 
         engine_mock.return_value = engine
         make_session_mock.return_value = session
