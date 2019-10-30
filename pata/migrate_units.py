@@ -286,20 +286,13 @@ def process_transaction(
 
     """
     existing = session.query(Units).filter_by(name=unit.name).first()
-    result: Dict[str, Dict[str, Dict[str, Union[str, int]]]] = {}
-
     if not existing:
-        result.update({"insert": {}})
-        # insert
-    else:
-        diff = models_diff(existing, unit)
-        if not diff:
-            result.update({"nochange": {}})
-        else:
-            result.update({"update": diff})
-            # update
+        return {"insert": {}}
 
-    return result
+    diff = models_diff(existing, unit)
+    if diff:
+        return {"update": diff}
+    return {"nochange": {}}
 
 
 def run(
