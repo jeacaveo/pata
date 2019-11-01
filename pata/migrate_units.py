@@ -209,7 +209,10 @@ def models_diff(
     """
     Get all differences for a unit and its related models.
 
-    (Only differences with existing records, doesn't consider missing or new.
+    Doesn't take under consideration missing/deleted/new records
+    for Untis and UnitVersions.
+
+    For UnitChanges, doesn't look for differences, only for new records.
 
     Parameters
     ----------
@@ -237,16 +240,11 @@ def models_diff(
     result.update(base.diff(unit))
     if unit.versions:
         result.update(base.versions[0].diff(unit.versions[0]))
-    for base_change in base.changes:
-        day = base_change.day
-        result.update({
-            day:
-            base_change.diff(
-                next(
-                    (change for change in unit.changes if change.day == day),
-                    base_change)
-                )
-            })
+
+    base_days = [base_change.day for base_change in base.changes]
+    for change in unit.changes:
+        if change.day not in base_days:
+            result.update({change.day: UnitChanges().diff(change)})
     return result
 
 
@@ -292,10 +290,9 @@ def process_transaction(
         return {"insert": {}}
 
     diff = models_diff(existing, unit)
-    if diff:
-        update and session.add(unit)  # pylint: disable=expression-not-assigned
-        return {"update": diff}
-    return {"nochange": {}}
+    if update:
+        session.add(unit)
+    return {"update": diff} if diff else {"nochange": {}}
 
 
 def run(
