@@ -268,7 +268,7 @@ class ModelsDiffCleanTests(unittest.TestCase):
             versions=[],
             changes=[]
             )
-        expected_result = {}
+        expected_result = {"units": {}}
 
         # When
         result = models_diff(base_unit, unit)
@@ -281,12 +281,14 @@ class ModelsDiffCleanTests(unittest.TestCase):
         # Given
         base_unit = MagicMock()
         unit = MagicMock(
-            versions=[MagicMock()],
+            versions=[],
             changes=[],
             )
-        expected_result = {"column1": "change1"}
+        expected_result = {
+            "units": {"column1": "change1"},
+            }
 
-        base_unit.diff.return_value = expected_result
+        base_unit.diff.return_value = {"column1": "change1"}
 
         # When
         result = models_diff(base_unit, unit)
@@ -305,8 +307,8 @@ class ModelsDiffCleanTests(unittest.TestCase):
             changes=[],
             )
         expected_result = {
-            "column1": "change1",
-            "column2": "change2",
+            "units": {"column1": "change1"},
+            "unit_versions": {"column2": "change2"},
             }
 
         base_unit.diff.return_value = {"column1": "change1"}
@@ -339,9 +341,9 @@ class ModelsDiffCleanTests(unittest.TestCase):
             changes=[MagicMock(day="day1"), MagicMock(day="day3")]
             )
         expected_result = {
-            "column1": "change1",
-            "column2": "change2",
-            unit.changes[1].day: {"column3": "change3"},
+            "units": {"column1": "change1"},
+            "unit_versions": {"column2": "change2"},
+            "unit_changes": {1: {"column3": "change3"}},
             }
 
         base_unit.diff.return_value = {"column1": "change1"}

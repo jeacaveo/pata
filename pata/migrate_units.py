@@ -7,6 +7,7 @@ from argparse import (
     ArgumentParser,
     Namespace,
     )
+from collections import defaultdict
 from datetime import date
 from pprint import pprint
 from typing import (
@@ -205,7 +206,7 @@ def load_to_models(data: Dict[str, Any]) -> Units:
 
 def models_diff(
         base: Units, unit: Units
-        ) -> Dict[str, Dict[str, Union[str, int]]]:
+        ) -> Dict[str, Any]:
     """
     Get all differences for a unit and its related models.
 
@@ -228,24 +229,38 @@ def models_diff(
     Example
     -------
     output:
-        {
-            "column1": "change1",
-            "column2": "change2",
-            "2000-01-01": {"column3": "change3"},
-            ...
-        }
+    {
+        "units":
+            {
+                "column1": "change1",
+                ...
+            },
+        "unit_versions":
+            {
+                "column2": "change2",
+                ...
+            },
+        "unit_changes":
+            {
+                0: {"day": "change3", "description": "change4"},
+                ...
+            },
+    }
 
     """
-    result = {}
-    result.update(base.diff(unit))
+    result: Dict[str, Any] = defaultdict(dict)
+    result["units"].update(base.diff(unit))
+
     if unit.versions:
-        result.update(base.versions[0].diff(unit.versions[0]))
+        result["unit_versions"].update(base.versions[0].diff(unit.versions[0]))
 
     base_days = [base_change.day for base_change in base.changes]
-    for change in unit.changes:
+    for index, change in enumerate(unit.changes):
         if change.day not in base_days:
-            result.update({change.day: UnitChanges().diff(change)})
-    return result
+            result["unit_changes"].update({
+                index: UnitChanges().diff(change)})
+
+    return dict(result)
 
 
 def process_transaction(
