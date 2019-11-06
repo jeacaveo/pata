@@ -4,75 +4,80 @@ import unittest
 from mock import (
     MagicMock,
     Mock,
+    patch,
     )
 
-from pata.models.utils import (
-    AuditMixin,
-    compare_models,
-    )
+from pata.models.utils import CommonMixin
 
 
-class AuditMixinCleanTests(unittest.TestCase):
-    """ Tests success cases for pata.models.utils.AuditMixin mixin. """
+class CommonMixinCleanTests(unittest.TestCase):
+    """ Tests success cases for pata.models.utils.CommonMixin mixin. """
 
     def test_fields(self):
         """ Tests fields. """
         # When
-        mixin_obj = AuditMixin()
+        mixin_obj = CommonMixin()
 
         # Then
         self.assertTrue(hasattr(mixin_obj, "created_by"))
         self.assertTrue(hasattr(mixin_obj, "created_at"))
         self.assertTrue(hasattr(mixin_obj, "modified_by"))
         self.assertTrue(hasattr(mixin_obj, "modified_at"))
+        self.assertEqual(mixin_obj.__tablename__, "")
+        self.assertEqual(mixin_obj.reserved_fields, ())
 
-
-class CompareModelsCleanTests(unittest.TestCase):
-    """ Tests success cases for pata.models.utils.compare_models. """
-
-    def test_diff_same(self):
-        """ Test no difference with another object. """
+    def test_columns(self):
+        """ Test columns property. """
         # Given
+        column_name = "field2"
         column1 = Mock()
         column1.configure_mock(name="field1")
+        column2 = Mock()
+        column2.configure_mock(name=column_name)
+        mixin_obj = CommonMixin()
+        mixin_obj.__tablename__ = "testname"
+        mixin_obj.reserved_fields = ("field1",)
+        mixin_obj.metadata = MagicMock(
+            tables={
+                mixin_obj.__tablename__:
+                MagicMock(columns=[column1, column2])}
+            )
 
-        model = "model1"
-        base_obj = MagicMock(
-            field1="same",
-            metadata=MagicMock(
-                tables={model: MagicMock(columns=[column1])}
-            ))
+        expected_result = (column_name,)
+
+        # When
+        result = mixin_obj.get_columns()
+
+        # Then
+        self.assertEqual(list(result), list(expected_result))
+
+    @patch("pata.models.utils.CommonMixin.get_columns")
+    def test_compare_models_diff_same(self, columns_mock):
+        """ Test no difference with another object. """
+        # Given
+        mixin_obj = CommonMixin()
+        mixin_obj.field1 = "same"
         target_obj = MagicMock(field1="same")
         expected_result = {}
 
+        columns_mock.return_value = ("field1",)
+
         # When
-        result = compare_models(model, base_obj, target_obj)
+        result = mixin_obj.compare_models(target_obj)
 
         # Then
         self.assertEqual(result, expected_result)
 
-    def test_diff(self):
+    @patch("pata.models.utils.CommonMixin.get_columns")
+    def test_compare_models_diff(self, columns_mock):
         """ Test difference with another object. """
-        column1 = Mock()
-        column1.configure_mock(name="id")
-        column2 = Mock()
-        column2.configure_mock(name="field1")
-        column3 = Mock()
-        column3.configure_mock(name="field2")
-        column4 = Mock()
-        column4.configure_mock(name="field3")
-
-        model = "model1"
-        base_obj = MagicMock(
-            id=9, field1="old value", field2=0, field3="same",
-            metadata=MagicMock(
-                tables={
-                    model: MagicMock(
-                        columns=[column1, column2, column3, column4])}
-            ))
+        mixin_obj = CommonMixin()
+        mixin_obj.field1 = "old value"
+        mixin_obj.field2 = 0
+        mixin_obj.field3 = "same"
         target_obj = MagicMock(
             field1="new value", field2=1, field3="same")
-        expected_result = {}
+
         expected_result = {
             "field1": {
                 "old": "old value", "new": "new value"},
@@ -80,9 +85,10 @@ class CompareModelsCleanTests(unittest.TestCase):
                 "old": 0, "new": 1},
             }
 
+        columns_mock.return_value = ("field1", "field2", "field3")
+
         # When
-        result = compare_models(
-            model, base_obj, target_obj, exclude=("id",))
+        result = mixin_obj.compare_models(target_obj)
 
         # Then
         self.assertEqual(result, expected_result)

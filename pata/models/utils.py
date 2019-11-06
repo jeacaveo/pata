@@ -14,8 +14,8 @@ from sqlalchemy import (
     )
 
 
-class AuditMixin():  # pylint: disable=too-few-public-methods
-    """ Class for audit fields. """
+class CommonMixin():  # pylint: disable=too-few-public-methods
+    """ Mixin for common fields/attributes/methods for all models. """
     created_by = Column(String(64), nullable=False, default="python")
     created_at = Column(
         TIMESTAMP(timezone=True), nullable=False, default=datetime.now)
@@ -23,50 +23,56 @@ class AuditMixin():  # pylint: disable=too-few-public-methods
     modified_at = Column(
         TIMESTAMP(timezone=True), nullable=False, default=datetime.now)
 
+    __tablename__: str = ""
+    reserved_fields: Tuple[str, ...] = ()
 
-def compare_models(
-        model: str, base: Any, target: Any, exclude: Tuple[str, ...] = ()
-        ) -> Dict[str, Dict[str, Union[str, int]]]:
-    """
-    Compare two models.
+    def get_columns(self) -> Tuple[str, ...]:
+        """
+        Get all columns for model (self).
 
-    Expected type for both objects is the same sqlalchemy.orm.model.
+        Returns
+        -------
+        tuple(str)
 
-    Parameters
-    ----------
-    model : str
-        Name of model for objects.
-    base : sqlalchemy.orm.model
-        Object to copmare.
-    target : sqlalchemy.orm.model
-        Object to compare to.
-    exclude : tuple
-        List of fields to exclude.
+        """
+        return (
+            column.name
+            for column in self.metadata.tables[self.__tablename__].columns
+            if column.name not in self.reserved_fields
+            )
 
-    Returns
-    -------
-    dict
+    def compare_models(
+            self, target: Any
+            ) -> Dict[str, Dict[str, Union[str, int]]]:
+        """
+        Compare current model obj with another.
 
-    Example
-    -------
-    output:
-        {
-            "field_name": {"old": 0, "new": 1},
-            ...
-        }
+        Expected type for both objects is the same sqlalchemy.orm.model.
 
-    """
-    result = {}
-    column_names = [
-        column.name
-        for column in base.metadata.tables[model].columns
-        if column.name not in exclude
-        ]
+        Parameters
+        ----------
+        target : sqlalchemy.orm.model
+            Object to compare to.
 
-    for column_name in column_names:
-        old_value = getattr(base, column_name)
-        new_value = getattr(target, column_name)
-        if old_value != new_value:
-            result[column_name] = {"old": old_value, "new": new_value}
+        Returns
+        -------
+        dict
 
-    return result
+        Example
+        -------
+        output:
+            {
+                "field_name": {"old": 0, "new": 1},
+                ...
+            }
+
+        """
+        result = {}
+
+        for column in self.get_columns():
+            old_value = getattr(self, column)
+            new_value = getattr(target, column)
+            if old_value != new_value:
+                result[column] = {"old": old_value, "new": new_value}
+
+        return result
