@@ -74,3 +74,18 @@ class CommonMixin():  # pylint: disable=too-few-public-methods
                 result[column] = {"old": old_value, "new": new_value}
 
         return result
+
+    def copy(self) -> Any:
+        """
+        Return a new object (of the same type) that's a
+        copy of the current object, but without the reserved_fields.
+
+        Returns
+        -------
+        pata.models.*
+
+        """
+        obj = type(self)()
+        for column in self.get_columns():
+            setattr(obj, column, getattr(self, column))
+        return obj

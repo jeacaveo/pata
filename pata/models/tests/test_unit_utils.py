@@ -92,3 +92,20 @@ class CommonMixinCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
+
+    @patch("pata.models.utils.CommonMixin.get_columns")
+    def test_copy(self, columns_mock):
+        """ Test generating a copy of a model. """
+        mixin_obj = CommonMixin()
+        mixin_obj.valid_field = "valid"
+        mixin_obj.invalid_field = "invalid"
+
+        columns_mock.return_value = ("valid_field",)
+
+        # When
+        result = mixin_obj.copy()
+
+        # Then
+        self.assertEqual(type(result), type(mixin_obj))
+        self.assertEqual(result.valid_field, mixin_obj.valid_field)
+        self.assertFalse(hasattr(result, "invalid_field"))
