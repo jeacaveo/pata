@@ -51,7 +51,7 @@ class UnitsCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    @patch("pata.models.units.compare_models")
+    @patch("pata.models.units.Units.compare_models")
     def test_diff(self, compare_mock):
         """ Test call to comparison function. """
         # Given
@@ -61,13 +61,12 @@ class UnitsCleanTests(unittest.TestCase):
         compare_mock.return_value = expected_result
 
         # When
-        base_obj = Units()
-        result = base_obj.diff(other_obj)
+        result = Units().diff(other_obj)
 
         # Then
         self.assertEqual(result, expected_result)
         compare_mock.assert_called_once_with(
-            "units", base_obj, other_obj,
+            other_obj,
             exclude=(
                 "id", "created_by", "created_at", "modified_by", "modified_at")
             )
@@ -132,7 +131,7 @@ class UnitVersionsCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    @patch("pata.models.units.compare_models")
+    @patch("pata.models.units.UnitVersions.compare_models")
     def test_diff(self, compare_mock):
         """ Test call to comparison function. """
         # Given
@@ -142,13 +141,12 @@ class UnitVersionsCleanTests(unittest.TestCase):
         compare_mock.return_value = expected_result
 
         # When
-        base_obj = UnitVersions()
-        result = base_obj.diff(other_obj)
+        result = UnitVersions().diff(other_obj)
 
         # Then
         self.assertEqual(result, expected_result)
         compare_mock.assert_called_once_with(
-            "unit_versions", base_obj, other_obj,
+            other_obj,
             exclude=(
                 "id", "unit_id",
                 "created_by", "created_at", "modified_by", "modified_at")
@@ -198,7 +196,7 @@ class UnitChangesCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    @patch("pata.models.units.compare_models")
+    @patch("pata.models.units.UnitChanges.compare_models")
     def test_diff(self, compare_mock):
         """ Test call to comparison function. """
         # Given
@@ -208,13 +206,12 @@ class UnitChangesCleanTests(unittest.TestCase):
         compare_mock.return_value = expected_result
 
         # When
-        base_obj = UnitChanges()
-        result = base_obj.diff(other_obj)
+        result = UnitChanges().diff(other_obj)
 
         # Then
         self.assertEqual(result, expected_result)
         compare_mock.assert_called_once_with(
-            "unit_changes", base_obj, other_obj,
+            other_obj,
             exclude=(
                 "id", "unit_id",
                 "created_by", "created_at", "modified_by", "modified_at")

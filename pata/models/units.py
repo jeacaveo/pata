@@ -15,13 +15,10 @@ from sqlalchemy import (
 from sqlalchemy.orm import relationship
 
 from pata.config import BASE
-from pata.models.utils import (
-    AuditMixin,
-    compare_models,
-    )
+from pata.models.utils import CommonMixin
 
 
-class Units(BASE, AuditMixin):  # type: ignore
+class Units(BASE, CommonMixin):  # type: ignore
     """ Units model. """
     __tablename__ = "units"
 
@@ -64,8 +61,8 @@ class Units(BASE, AuditMixin):  # type: ignore
             }
 
         """
-        return compare_models(
-            "units", self, obj,
+        return self.compare_models(
+            obj,
             exclude=(
                 "id",
                 "created_by",
@@ -75,7 +72,7 @@ class Units(BASE, AuditMixin):  # type: ignore
                 ))
 
 
-class UnitVersions(BASE, AuditMixin):  # type: ignore
+class UnitVersions(BASE, CommonMixin):  # type: ignore
     """ UnitVersions model. """
     __tablename__ = "unit_versions"
 
@@ -135,8 +132,8 @@ class UnitVersions(BASE, AuditMixin):  # type: ignore
             }
 
         """
-        return compare_models(
-            "unit_versions", self, obj,
+        return self.compare_models(
+            obj,
             exclude=(
                 "id",
                 "unit_id",
@@ -147,7 +144,7 @@ class UnitVersions(BASE, AuditMixin):  # type: ignore
                 ))
 
 
-class UnitChanges(BASE, AuditMixin):  # type: ignore
+class UnitChanges(BASE, CommonMixin):  # type: ignore
     """ UnitChanges model. """
     __tablename__ = "unit_changes"
 
@@ -186,8 +183,8 @@ class UnitChanges(BASE, AuditMixin):  # type: ignore
             }
 
         """
-        return compare_models(
-            "unit_changes", self, obj,
+        return self.compare_models(
+            obj,
             exclude=(
                 "id",
                 "unit_id",
