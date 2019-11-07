@@ -65,11 +65,7 @@ class UnitsCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(
-            other_obj,
-            exclude=(
-                "id", "created_by", "created_at", "modified_by", "modified_at")
-            )
+        compare_mock.assert_called_once_with(other_obj)
 
 
 class UnitVersionsCleanTests(unittest.TestCase):
@@ -145,12 +141,7 @@ class UnitVersionsCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(
-            other_obj,
-            exclude=(
-                "id", "unit_id",
-                "created_by", "created_at", "modified_by", "modified_at")
-            )
+        compare_mock.assert_called_once_with(other_obj)
 
 
 class UnitChangesCleanTests(unittest.TestCase):
@@ -210,9 +201,4 @@ class UnitChangesCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(
-            other_obj,
-            exclude=(
-                "id", "unit_id",
-                "created_by", "created_at", "modified_by", "modified_at")
-            )
+        compare_mock.assert_called_once_with(other_obj)

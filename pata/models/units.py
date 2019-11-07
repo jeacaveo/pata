@@ -35,6 +35,14 @@ class Units(BASE, CommonMixin):  # type: ignore
         "UnitChanges",
         order_by="desc(UnitChanges.day)", back_populates="unit")
 
+    reserved_fields = (
+        "id",
+        "created_by",
+        "created_at",
+        "modified_by",
+        "modified_at",
+        )
+
     def __repr__(self) -> str:
         """ String representation of model. """
         return f"{self.id} - {self.name}"
@@ -61,15 +69,7 @@ class Units(BASE, CommonMixin):  # type: ignore
             }
 
         """
-        return self.compare_models(
-            obj,
-            exclude=(
-                "id",
-                "created_by",
-                "created_at",
-                "modified_by",
-                "modified_at",
-                ))
+        return self.compare_models(obj)
 
 
 class UnitVersions(BASE, CommonMixin):  # type: ignore
@@ -100,6 +100,15 @@ class UnitVersions(BASE, CommonMixin):  # type: ignore
     abilities = Column(String(256))
 
     unit = relationship("Units", back_populates="versions")
+
+    reserved_fields = (
+        "id",
+        "unit_id",
+        "created_by",
+        "created_at",
+        "modified_by",
+        "modified_at",
+        )
 
     def __repr__(self) -> str:
         """ String representation of model. """
@@ -132,16 +141,7 @@ class UnitVersions(BASE, CommonMixin):  # type: ignore
             }
 
         """
-        return self.compare_models(
-            obj,
-            exclude=(
-                "id",
-                "unit_id",
-                "created_by",
-                "created_at",
-                "modified_by",
-                "modified_at",
-                ))
+        return self.compare_models(obj)
 
 
 class UnitChanges(BASE, CommonMixin):  # type: ignore
@@ -154,6 +154,15 @@ class UnitChanges(BASE, CommonMixin):  # type: ignore
     description = Column(String(1024), nullable=False)
 
     unit = relationship("Units", back_populates="changes")
+
+    reserved_fields = (
+        "id",
+        "unit_id",
+        "created_by",
+        "created_at",
+        "modified_by",
+        "modified_at",
+        )
 
     def __repr__(self) -> str:
         """ String representation of model. """
@@ -183,13 +192,4 @@ class UnitChanges(BASE, CommonMixin):  # type: ignore
             }
 
         """
-        return self.compare_models(
-            obj,
-            exclude=(
-                "id",
-                "unit_id",
-                "created_by",
-                "created_at",
-                "modified_by",
-                "modified_at",
-                ))
+        return self.compare_models(obj)
