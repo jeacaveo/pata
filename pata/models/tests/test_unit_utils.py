@@ -52,7 +52,7 @@ class CommonMixinCleanTests(unittest.TestCase):
         self.assertEqual(list(result), list(expected_result))
 
     @patch("pata.models.utils.CommonMixin.get_columns")
-    def test_compare_models_diff_same(self, columns_mock):
+    def test_diff_same(self, columns_mock):
         """ Test no difference with another object. """
         # Given
         mixin_obj = CommonMixin()
@@ -63,13 +63,13 @@ class CommonMixinCleanTests(unittest.TestCase):
         columns_mock.return_value = ("field1",)
 
         # When
-        result = mixin_obj.compare_models(target_obj)
+        result = mixin_obj.diff(target_obj)
 
         # Then
         self.assertEqual(result, expected_result)
 
     @patch("pata.models.utils.CommonMixin.get_columns")
-    def test_compare_models_diff(self, columns_mock):
+    def test_diff(self, columns_mock):
         """ Test difference with another object. """
         mixin_obj = CommonMixin()
         mixin_obj.field1 = "old value"
@@ -88,7 +88,7 @@ class CommonMixinCleanTests(unittest.TestCase):
         columns_mock.return_value = ("field1", "field2", "field3")
 
         # When
-        result = mixin_obj.compare_models(target_obj)
+        result = mixin_obj.diff(target_obj)
 
         # Then
         self.assertEqual(result, expected_result)

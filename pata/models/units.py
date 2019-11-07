@@ -47,30 +47,6 @@ class Units(BASE, CommonMixin):  # type: ignore
         """ String representation of model. """
         return f"{self.id} - {self.name}"
 
-    def diff(self, obj: "Units") -> Dict[str, Dict[str, Union[str, int]]]:
-        """
-        Compare with another object.
-
-        Parameters
-        ----------
-        obj : pata.models.units.Units
-            Object to copmare with.
-
-        Returns
-        -------
-        dict
-
-        Example
-        -------
-        output:
-            {
-                "field_name": {"old": 0, "new": 1},
-                ...
-            }
-
-        """
-        return self.compare_models(obj)
-
 
 class UnitVersions(BASE, CommonMixin):  # type: ignore
     """ UnitVersions model. """
@@ -117,32 +93,6 @@ class UnitVersions(BASE, CommonMixin):  # type: ignore
             f"{self.unit and self.unit.id} - "
             f"{self.unit and self.unit.name}")
 
-    def diff(
-            self, obj: "UnitVersions") -> Dict[
-                str, Dict[str, Union[str, int]]]:
-        """
-        Compare with another object.
-
-        Parameters
-        ----------
-        obj : pata.models.units.UnitVersions
-            Object to copmare with.
-
-        Returns
-        -------
-        dict
-
-        Example
-        -------
-        output:
-            {
-                "field_name": {"old": 0, "new": 1},
-                ...
-            }
-
-        """
-        return self.compare_models(obj)
-
 
 class UnitChanges(BASE, CommonMixin):  # type: ignore
     """ UnitChanges model. """
@@ -167,29 +117,3 @@ class UnitChanges(BASE, CommonMixin):  # type: ignore
     def __repr__(self) -> str:
         """ String representation of model. """
         return f"Change to {self.unit.id} - {self.unit.name} for {self.day}"
-
-    def diff(
-            self, obj: "UnitChanges") -> Dict[
-                str, Dict[str, Union[str, int]]]:
-        """
-        Compare with another object.
-
-        Parameters
-        ----------
-        obj : pata.models.units.UnitChanges
-            Object to copmare with.
-
-        Returns
-        -------
-        dict
-
-        Example
-        -------
-        output:
-            {
-                "field_name": {"old": 0, "new": 1},
-                ...
-            }
-
-        """
-        return self.compare_models(obj)

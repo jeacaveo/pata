@@ -41,9 +41,7 @@ class CommonMixin():  # pylint: disable=too-few-public-methods
             if column.name not in self.reserved_fields
             )
 
-    def compare_models(
-            self, target: Any
-            ) -> Dict[str, Dict[str, Union[str, int]]]:
+    def diff(self, target: Any) -> Dict[str, Dict[str, Union[str, int]]]:
         """
         Compare current model obj with another.
 

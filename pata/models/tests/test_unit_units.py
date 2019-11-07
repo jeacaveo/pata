@@ -51,22 +51,6 @@ class UnitsCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    @patch("pata.models.units.Units.compare_models")
-    def test_diff(self, compare_mock):
-        """ Test call to comparison function. """
-        # Given
-        other_obj = Units()
-        expected_result = {}
-
-        compare_mock.return_value = expected_result
-
-        # When
-        result = Units().diff(other_obj)
-
-        # Then
-        self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(other_obj)
-
 
 class UnitVersionsCleanTests(unittest.TestCase):
     """ Tests success cases for pata.models.UnitVersions model. """
@@ -127,22 +111,6 @@ class UnitVersionsCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(str(obj), expected_result)
 
-    @patch("pata.models.units.UnitVersions.compare_models")
-    def test_diff(self, compare_mock):
-        """ Test call to comparison function. """
-        # Given
-        other_obj = UnitVersions()
-        expected_result = {}
-
-        compare_mock.return_value = expected_result
-
-        # When
-        result = UnitVersions().diff(other_obj)
-
-        # Then
-        self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(other_obj)
-
 
 class UnitChangesCleanTests(unittest.TestCase):
     """ Tests sucess cases for pata.models.UnitChanges model. """
@@ -186,19 +154,3 @@ class UnitChangesCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(str(obj), expected_result)
-
-    @patch("pata.models.units.UnitChanges.compare_models")
-    def test_diff(self, compare_mock):
-        """ Test call to comparison function. """
-        # Given
-        other_obj = UnitChanges()
-        expected_result = {}
-
-        compare_mock.return_value = expected_result
-
-        # When
-        result = UnitChanges().diff(other_obj)
-
-        # Then
-        self.assertEqual(result, expected_result)
-        compare_mock.assert_called_once_with(other_obj)
