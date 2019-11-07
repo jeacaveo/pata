@@ -306,7 +306,27 @@ def process_transaction(
 
     diff = models_diff(existing, unit)
     if update:
-        session.add(unit)
+        # Update specific fields when a field from Units model changes
+        for key, value in diff.get("units", {}).items():
+            setattr(existing, key, value.get("new"))
+
+        # Always insert a new record when UnitVersions changes
+        if diff.get("unit_versions", {}):
+            # existing.versions.append(unit.versions[0].shallow_copy())
+            # existing.versions.append(UnitVersions())
+            existing.versions.append(None)
+
+        # Always insert a new record when UnitChanges changes
+        new_changes = [
+            changes.get("day", {}).get("new")
+            for _, changes in diff.get("unit_changes", {}).items()
+            ]
+        for change in unit.changes:
+            if change.day in new_changes:
+                # existing.changes.append(change.shallow_copy())
+                # existing.changes.append(UnitChanges())
+                existing.changes.append(None)
+
     return {"update": diff} if diff else {"nochange": {}}
 
 
@@ -362,14 +382,16 @@ def run(
             diff_result[unit_name] = process_transaction(
                 session, unit, insert, update)
 
-        if set(["insert", "update"]).intersection(
-                list(diff_result.values() or [{}])[0].keys()):
+        if ((update or insert)
+                and set(["insert", "update"]).intersection(
+                    list(diff_result.values() or [{}])[0].keys())):
             session.commit()
     except SQLAlchemyError as exc:
         session.rollback()
         diff_result = {
             "error": {
                 "message": f"{exc}\nDB error. Rolling back."}}
+        pprint(diff_result)
     finally:
         session.close()
 
