@@ -312,9 +312,7 @@ def process_transaction(
 
         # Always insert a new record when UnitVersions changes
         if diff.get("unit_versions", {}):
-            # existing.versions.append(unit.versions[0].shallow_copy())
-            # existing.versions.append(UnitVersions())
-            existing.versions.append(None)
+            existing.versions.append(unit.versions[0].copy())
 
         # Always insert a new record when UnitChanges changes
         new_changes = [
@@ -323,9 +321,7 @@ def process_transaction(
             ]
         for change in unit.changes:
             if change.day in new_changes:
-                # existing.changes.append(change.shallow_copy())
-                # existing.changes.append(UnitChanges())
-                existing.changes.append(None)
+                existing.changes.append(change.copy())
 
     return {"update": diff} if diff else {"nochange": {}}
 

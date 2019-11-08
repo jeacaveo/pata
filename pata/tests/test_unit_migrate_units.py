@@ -517,6 +517,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         # Given
         session = MagicMock()
         version = MagicMock()
+        version_copy = MagicMock()
         unit = Mock(
             versions=[version],
             changes=[]
@@ -530,21 +531,22 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         session.filter_by.return_value = session
         session.first.return_value = existing
         diff_mock.return_value = expected_result.get("update")
+        version.copy.return_value = version_copy
 
         # When
         result = process_transaction(session, unit, update=True)
 
         # Then
         self.assertEqual(result, expected_result)
-        self.assertEqual(existing.versions, None)
+        self.assertEqual(existing.versions, [version_copy])
         session.assert_has_calls([
             call.query(Units),
             call.filter_by(name=unit.name),
             call.first(),
             call.first().__bool__(),
-            call.add(unit),
             ])
         diff_mock.assert_called_once_with(existing, unit)
+        version.copy.assert_called_once_with()
 
     @patch("pata.migrate_units.models_diff")
     def test_update_changes_only(self, diff_mock):
@@ -552,6 +554,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         # Given
         session = MagicMock()
         change = MagicMock(day="valid")
+        change_copy = MagicMock()
         nochange = MagicMock(day="nochange")
         unit = Mock(
             versions=[],
@@ -570,13 +573,14 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         session.filter_by.return_value = session
         session.first.return_value = existing
         diff_mock.return_value = expected_result.get("update")
+        change.copy.return_value = change_copy
 
         # When
         result = process_transaction(session, unit, update=True)
 
         # Then
         self.assertEqual(result, expected_result)
-        self.assertEqual(existing.changes, None)
+        self.assertEqual(existing.changes, [change_copy])
         session.assert_has_calls([
             call.query(Units),
             call.filter_by(name=unit.name),
@@ -584,16 +588,20 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             call.first().__bool__(),
             ])
         diff_mock.assert_called_once_with(existing, unit)
+        change.copy.assert_called_once_with()
 
     @patch("pata.migrate_units.models_diff")
     def test_update_all(self, diff_mock):
         """ Test result when models exists but no changes exist. """
         # Given
         session = MagicMock()
+        version = MagicMock()
+        version_copy = MagicMock()
         change = MagicMock(day="valid")
+        change_copy = MagicMock()
         nochange = MagicMock(day="nochange")
         unit = Mock(
-            versions=[],
+            versions=[version],
             changes=[change, nochange]
             )
         unit.configure_mock(name="unit name")
@@ -611,6 +619,8 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         session.filter_by.return_value = session
         session.first.return_value = existing
         diff_mock.return_value = expected_result.get("update")
+        version.copy.return_value = version_copy
+        change.copy.return_value = change_copy
 
         # When
         result = process_transaction(session, unit, update=True)
@@ -618,8 +628,8 @@ class ProcessTransactionCleanTests(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_result)
         self.assertEqual(existing.key, "val")
-        self.assertEqual(existing.versions, None)
-        self.assertEqual(existing.changes, None)
+        self.assertEqual(existing.versions, [version_copy])
+        self.assertEqual(existing.changes, [change_copy])
         session.assert_has_calls([
             call.query(Units),
             call.filter_by(name=unit.name),
@@ -627,6 +637,8 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             call.first().__bool__(),
             ])
         diff_mock.assert_called_once_with(existing, unit)
+        version.copy.assert_called_once_with()
+        change.copy.assert_called_once_with()
 
 
 class RunDirtyTests(unittest.TestCase):
