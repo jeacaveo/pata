@@ -1,8 +1,6 @@
 """ Test for pata.models module. """
 import unittest
 
-from mock import patch
-
 from pata.models.units import (
     UnitChanges,
     UnitVersions,

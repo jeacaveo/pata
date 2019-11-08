@@ -1,9 +1,4 @@
 """ Unit related model """
-from typing import (
-    Dict,
-    Union,
-    )
-
 from sqlalchemy import (
     Boolean,
     Column,
