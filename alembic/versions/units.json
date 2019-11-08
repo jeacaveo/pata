@@ -1,0 +1,5891 @@
+{
+    "A. R. Groans": {
+        "abilities": "At the start of your turn, destroy a random enemy unit with 8 or less health.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 8,
+            "green": 1,
+            "red": 2
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/A._R._Groans"
+        },
+        "name": "A. R. Groans",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 8
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Aegis": {
+        "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 3,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/ac/Aegis-portrait.png/280px-Aegis-portrait.png?version=777aa014f34086a39bd4c2d71fd107b0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/98/Aegis-panel.png?version=08b2e2d67a9b02960111a49a39ecc717",
+            "path": "/Aegis"
+        },
+        "name": "Aegis",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 5
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Amporilla": {
+        "abilities": "At the start of your turn, gain X for each Tarsier you have (does not count Tarsiers under construction)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 13,
+            "green": 0,
+            "red": 3
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/d8/Amporilla-portrait.png/280px-Amporilla-portrait.png?version=e7212e2b601d93057eca5483f5d7f675",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1f/Amporilla-panel.png?version=5d8cc9273c07ca6523bbb2819cde70df",
+            "path": "/Amporilla"
+        },
+        "name": "Amporilla",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Animus": {
+        "abilities": "At the start of your turn, gain RR",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/3e/Animus-portrait.png/280px-Animus-portrait.png?version=df24fc8d1a3bccdd30cad2b0b21f449d",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/d8/Animus-panel.png?version=8bd09e732bbadde2f39ecf2fc646bbaa",
+            "path": "/Animus"
+        },
+        "name": "Animus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Antima Comet": {
+        "abilities": "Build time 2 (takes 2 turns to construct) At the start of your turn, gain X for each Engineer you have, and sacrifice Antima Comet.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 3,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/2/23/AntimaComet-portrait.png/280px-AntimaComet-portrait.png?version=d12221a8970aa14ec8fee809d8d3374e",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/32/AntimaComet-panel.png?version=eb587e8a6d6f4aa6cf350bce42106a8f",
+            "path": "/Antima_Comet"
+        },
+        "name": "Antima Comet",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Apollo": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Click : Destroy any unit with 3 or less health.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-11-01": [
+                "Cost increased from 15 BBB to 17 BBB ."
+            ],
+            "2014-12-17": [
+                "Supply decreased from 4 to 1.",
+                "Buildtime increased from Build time 1 turn (default) to Build time 2 turns.",
+                "Cost decreased from 17 BBB to 13 BBB ."
+            ]
+        },
+        "costs": {
+            "blue": 3,
+            "energy": 0,
+            "gold": 13,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/7e/Apollo-portrait.png/280px-Apollo-portrait.png?version=5f5ea483b6a3d66922ebbca979865978",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/ec/Apollo-panel.png?version=7899c42f3604f97af5bf4693833a14fc",
+            "path": "/Apollo"
+        },
+        "name": "Apollo",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Arka Sodara": {
+        "abilities": "Prompt (Prompt: blocks immediately) Click : gain XXXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-02-19": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 7,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/bd/ArkaSodara-portrait.png/280px-ArkaSodara-portrait.png?version=a1049e0de2a2da22e018a255f1cb93b0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/34/ArkaSodara-panel.png?version=49db804f2480d7e29d3c612d70d64f1f",
+            "path": "/Arka_Sodara"
+        },
+        "name": "Arka Sodara",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 7
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Arms Race": {
+        "abilities": "Spell: construct a Tarsier with Build time 2 , construct a Gauss Cannon , construct a Steelsplitter , and construct 4 Engineer for your opponent",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2016-02-17": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 8,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/de/ArmsRace-portrait.png?version=0d577fbd0c299a16276510c05f8e1447",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/cf/ArmsRace-panel.png?version=a4282434f04146b803894f734d1e75f8",
+            "path": "/Arms_Race"
+        },
+        "name": "Arms Race",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Asteri Cannon": {
+        "abilities": "Fragile (Fragile: does not heal) At the start of your turn, gain XXXClick , and lose Health 3 : construct a prompt Barrier",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-11-04": [
+                "Added."
+            ],
+            "2015-02-15": [
+                "Cost increased from 16 GGG to 16 GGGG .",
+                "Ability's activation cost increased from Health 4 to Health 5 .",
+                "Health increased from Health 9 to Health 11 ."
+            ],
+            "2015-09-18": [
+                "Health increased from Health 11 to Health 16 .",
+                "Click ability now creates a Barrier instead of a Forcefield , but still costs Health 5"
+            ],
+            "2016-02-17": [
+                "Health decreased from Health 16 to Health 14 .",
+                "Click ability now costs Health 3 instead of Health 5 ."
+            ],
+            "2018-04-06": [
+                "Health increased from Health 14 to Health 16 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 16,
+            "green": 4,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/55/AsteriCannon-portrait.png/280px-AsteriCannon-portrait.png?version=9894e19f4578581cde6ed1237e17f902",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/4/43/AsteriCannon-panel.png?version=759d239f894b99cb576c4242b9198638",
+            "path": "/Asteri_Cannon"
+        },
+        "name": "Asteri Cannon",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 16
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Aurb Magnifier": {
+        "abilities": "Build time 6 (takes 6 turns to construct) Lifespan 6 (Lifespan 6: dies after 6 turns) At the start of your turn, gain 1 for each Drone you have, and restore 1 supply to each of your units whose current supply is neither full nor depleted.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 6,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 6,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 12,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Aurb_Magnifier"
+        },
+        "name": "Aurb Magnifier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 9
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Auric Impulse": {
+        "abilities": "At the start of your turn, gain 4 , and sacrifice Auric Impulse.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {
+            "2014-11-14": [
+                "Supply increased from 10 to 20."
+            ],
+            "2014-12-01": [
+                "Renamed to Auric Impulse, from Victory Bond.",
+                "New Art."
+            ],
+            "2015-02-15": [
+                "Cost changed from 5 to 4 E .",
+                "Produced resources changed from 6 to 5 E ."
+            ],
+            "2015-02-19": [
+                "Cost decreased from 4 E to 3 E .",
+                "Produced resources decreased from 5 E to 4 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 3,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/e8/AuricImpulse-portrait.png/280px-AuricImpulse-portrait.png?version=442a9ca78bdbfc85aa2d6e1ea4f20aad",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/c4/AuricImpulse-panel.png?version=d4f07b89bb81065f87c544fbe2311d43",
+            "path": "/Auric_Impulse"
+        },
+        "name": "Auric Impulse",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Auride Core": {
+        "abilities": "Click , and pay X : gain 2",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-10-11": [
+                "A bug where units like Auride Core and Thermite Core wouldn\u2019t look different after they have been clicked has been fixed."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 1,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/f2/AurideCore-portrait.png/280px-AurideCore-portrait.png?version=506cf9ffee025d5cfff2d194092b1d8b",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/ca/AurideCore-panel.png?version=b8bd305d930a275ea578a03ed67242b9",
+            "path": "/Auride_Core"
+        },
+        "name": "Auride Core",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Barrier": {
+        "abilities": "Prompt (Prompt: blocks immediately) Lifespan 1 (Lifespan 1: dies after 1 turn)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 1,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {
+            "2014-11-04": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/ba/Barrier-portrait.png/280px-Barrier-portrait.png?version=e8e4aeeeb349f5741fb3673fda32a59d",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/72/Barrier-panel.png?version=8b0deb6bce2b8c7a8925875606c50bf7",
+            "path": "/Barrier"
+        },
+        "name": "Barrier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Barrier Forge": {
+        "abilities": "Build time 0 (takes 0 turns to construct) At the start of your turn, construct a prompt Weak Barrier .",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Barrier_Forge"
+        },
+        "name": "Barrier Forge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Blastforge": {
+        "abilities": "At the start of your turn, gain B",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/62/Blastforge-portrait.png/280px-Blastforge-portrait.png?version=d94c85045f61f26f22408670fc5db4e0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/c6/Blastforge-panel.png?version=0771e13e97a975fe4b793bee868fc60b",
+            "path": "/Blastforge"
+        },
+        "name": "Blastforge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Blood Pact": {
+        "abilities": "Spell: construct 4 prompt Husk , and construct a Grimbotch with Lifespan 3 for your opponent",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-10-21": [
+                "Added."
+            ],
+            "2014-12-01": [
+                "Cost decreased from 4 R to 3 R ."
+            ],
+            "2015-12-09": [
+                "Now spawns a Grimbotch instead of a Tarsier ."
+            ],
+            "2018-04-06": [
+                "Now spawms a Grimbotch with Lifespan 3 for the opponent instead of a regular Grimbotch ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 3,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/48/BloodPact-portrait.png/280px-BloodPact-portrait.png?version=a89e7bf8ce343d47bd5c2501a42cbdf7",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/dd/BloodPact-panel.png?version=42379199f39ce2dc610f56a8267cf43b",
+            "path": "/Blood_Pact"
+        },
+        "name": "Blood Pact",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Blood Phage": {
+        "abilities": "At the start of your turn, gain 1 XClick , and pay R : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 8,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/81/BloodPhage-portrait.png/280px-BloodPhage-portrait.png?version=ef2b263f807c67947aa86c8f2ed1cd99",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1e/BloodPhage-panel.png?version=cc9f607b544482af50bf9d6df5047f5b",
+            "path": "/Blood_Phage"
+        },
+        "name": "Blood Phage",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Bloodrager": {
+        "abilities": "At the start of your turn, gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-09-18": [
+                "Supply increased from 4 to 10"
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 7,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/bd/Bloodrager-portrait.png/280px-Bloodrager-portrait.png?version=0554719dc8ee06a029e16643dea13226",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/e2/Bloodrager-panel.png?version=5d555e57f0b638ef89c72abea6cff6ec",
+            "path": "/Bloodrager"
+        },
+        "name": "Bloodrager",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Bombarder": {
+        "abilities": "Stamina 2 (Stamina 2: can only be clicked twice) Click : gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 2,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 8,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/ed/Bombarder-portrait.png/280px-Bombarder-portrait.png?version=ed8206bd12e8ab01f1a2f65218a90c42",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/76/Bombarder-panel.png?version=e14d3c920b4e6f73c921c20f70614d90",
+            "path": "/Bombarder"
+        },
+        "name": "Bombarder",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 4
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Borehole Patroller": {
+        "abilities": "When Borehole Patroller is bought, construct a Pixie . At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-06-30": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 6,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/2/27/BoreholePatroller-portrait.png/280px-BoreholePatroller-portrait.png?version=727da57bced1d6475948ab951bf03be6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1a/BoreholePatroller-panel.png?version=a8126c6b4134d2b4b9147cc632f32e48",
+            "path": "/Borehole_Patroller"
+        },
+        "name": "Borehole Patroller",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Cauterizer": {
+        "abilities": "When Cauterizer is bought, construct 4 Engineer . Click , and pay EEEE : gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-11": [
+                "Cost increased from 10 BRR to 11 BRR ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 11,
+            "green": 0,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/b9/Cauterizer-portrait.png/280px-Cauterizer-portrait.png?version=be6f29ec1a7f7f5b7feee24f2a9ad6d8",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/5d/Cauterizer-panel.png?version=bb90ff07c00bb3244e5207644fde2866",
+            "path": "/Cauterizer"
+        },
+        "name": "Cauterizer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 3
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Centrifuge": {
+        "abilities": "Build time 3 (takes 3 turns to construct) At the start of your turn, gain 3 GGBBRR , and sacrifice Centrifuge.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 3,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/64/Centrifuge-portrait.png/280px-Centrifuge-portrait.png?version=b79494a72f60657963805f423b237c82",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/00/Centrifuge-panel.png?version=2e164e0677f1484c92e2b62dc8c93e9e",
+            "path": "/Centrifuge"
+        },
+        "name": "Centrifuge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Centurion": {
+        "abilities": "Prompt (Prompt: blocks immediately) At the start of your turn, gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-02": [
+                "Cost changed from 16 GBRR to 16 GBBR ."
+            ],
+            "2014-10-11": [
+                "Cost increased from 16 GBBR to 18 GGBBR ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 18,
+            "green": 2,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/0b/Centurion-portrait.png/280px-Centurion-portrait.png?version=d19b80c9fd68376efe7c1975b4e0b140",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/aa/Centurion-panel.png?version=4af085644e36fad0c20e3fad53ad6237",
+            "path": "/Centurion"
+        },
+        "name": "Centurion",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 6
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Chieftain": {
+        "abilities": "Fragile (Fragile: does not heal) Lifespan 3 (Lifespan 3: dies after 3 turns) Click : gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 3,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-11-15": [
+                "Added."
+            ],
+            "2015-09-18": [
+                "Cost increased from 7 BGG to 8 BGG ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 8,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/7c/Chieftain-portrait.png/280px-Chieftain-portrait.png?version=2898c1f79bd6d309945c0a16d9018704",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/60/Chieftain-panel.png?version=8c259d37b9e784f98c9d681d3e8ed979",
+            "path": "/Chieftain"
+        },
+        "name": "Chieftain",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 7
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Chrono Filter": {
+        "abilities": "At the start of your turn, gain BR , and Exhaust 2 (Exhaust 2: cannot do anything until 2 turns later)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 2,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-23": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/dc/ChronoFilter-portrait.png/280px-ChronoFilter-portrait.png?version=d7ce75317d4d5eea2a3ed02413874e75",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9b/ChronoFilter-panel.png?version=1832bc0c43b0137434b3ea3dd3bd7327",
+            "path": "/Chrono_Filter"
+        },
+        "name": "Chrono Filter",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Cluster Bolt": {
+        "abilities": "Spell: construct 4 Gauss Charge , and construct a Gauss Charge for your opponent",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-04-25": [
+                "Gauss Charge constructed decreased from 5 to 4.",
+                "Gauss Charge constructed for opponent decreased from 2 to 1."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 4,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/bc/ClusterBolt-portrait.png/280px-ClusterBolt-portrait.png?version=275b60082ede7519ae319068b13b35f0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/c1/ClusterBolt-panel.png?version=086bac4b764d1915ca4ecc7ffc2915d8",
+            "path": "/Cluster_Bolt"
+        },
+        "name": "Cluster Bolt",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Colossus": {
+        "abilities": "Fragile (Fragile: does not heal) Click : gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2016-02-17": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 15,
+            "green": 1,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/31/Colossus-portrait.png?version=edf9b27587ef79fd9468b288f90f932d",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/33/Colossus-panel.png?version=b9103abe9243f7b7834bd1bd9c494b04",
+            "path": "/Colossus"
+        },
+        "name": "Colossus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 8
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Conduit": {
+        "abilities": "Fragile (Fragile: does not heal) At the start of your turn, gain G",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/98/Conduit-portrait.png/280px-Conduit-portrait.png?version=b8c279b05cf8da25f5062f36d2355e6f",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9a/Conduit-panel.png?version=fa2eb6de98ad98e6849b0edcdebabb36",
+            "path": "/Conduit"
+        },
+        "name": "Conduit",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Corpus": {
+        "abilities": "Prompt (Prompt: blocks immediately) When Corpus is bought, construct a prompt Husk . Stamina 2 (Stamina 2: can only be clicked twice) Click , and pay 4 R : construct 3 prompt Husk",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 2,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/65/Corpus-portrait.png/280px-Corpus-portrait.png?version=55d891f28ad8fcc376d6f24cc306eade",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/f9/Corpus-panel.png?version=c300fbdf3c92a1b81242e0ece27941da",
+            "path": "/Corpus"
+        },
+        "name": "Corpus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Cryo Ray": {
+        "abilities": "Fragile (Fragile: does not heal) Click , and lose Health 1 : Chill 1 (Chill 1: add 1 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-11-01": [
+                "Supply decreased from 20 to 10."
+            ],
+            "2015-01-08": [
+                "Health increased from Fragile 2 to Fragile 3.",
+                "Ability now costs Fragile 1 health to activate."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/55/CryoRay-portrait.png/280px-CryoRay-portrait.png?version=ee17fd0c8db90226d59c87dfdb2e1df0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/4/4e/CryoRay-panel.png?version=7248646f61a7ed604c4f892ffed8bbb5",
+            "path": "/Cryo_Ray"
+        },
+        "name": "Cryo Ray",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Cynestra": {
+        "abilities": "Fragile (Fragile: does not heal) At the start of your turn, gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-12-01": [
+                "Added."
+            ],
+            "2015-05-23": [
+                "Cost increased from 11 GGGR to 12 GGGR ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 12,
+            "green": 3,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/ec/Cynestra-portrait.png/280px-Cynestra-portrait.png?version=053824f2202677498df386cea53fd908",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/6f/Cynestra-panel.png?version=e61f8b8154d8a92dcca114b8723a74fd",
+            "path": "/Cynestra"
+        },
+        "name": "Cynestra",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 2
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Deadeye Operative": {
+        "abilities": "Stamina 3 (Stamina 3: can only be clicked 3 times) Click : Destroy a non-blocking Drone. (Only units named exactly 'Drone' can be destroyed.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 3,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-12-17": [
+                "Cost increased from 7 BB to 8 BB .",
+                "Is no longer a blocker.",
+                "Attack increased from X 0 to X 1.",
+                "Ability now costs X 1 to active.",
+                "Health decreased from Health 3 to Health 2."
+            ],
+            "2015-02-15": [
+                "Cost increased from 8 BB to 11 BB .",
+                "Attack increased from X 1 to X 2.",
+                "Ability's activation cost increased from X 1 to X 2.",
+                "Health increased from Health 2 to Health 4."
+            ],
+            "2015-03-11": [
+                "Cost changed to 4 BB plus consuming a Steelsplitter ."
+            ],
+            "2015-10-15": [
+                "Stamina Stamina 3 added."
+            ],
+            "2016-02-17": [
+                "Cost changed from 4 BB plus consuming a Steelsplitter to 5 BB .",
+                "HP decreased from Health 4 to Health 3 .",
+                "No longer attacks.",
+                "Now blocks.",
+                "No longer requires attack to be spent when sniping drones."
+            ],
+            "2016-06-10": [
+                "Cost decreased from 5 BB to 4 BB .",
+                "HP decreased from Health 3 to Health 1 ."
+            ],
+            "2016-09-23": [
+                "Cost increased from 4 BB to 5 BB .",
+                "HP increased from Health 1 to Health 2 ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/af/DeadeyeOperative-portrait.png/280px-DeadeyeOperative-portrait.png?version=fdf2ab3de311796c3c6b8e86da5fd80a",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/13/DeadeyeOperative-panel.png?version=f948eba69555f125cf116d0a211e54b1",
+            "path": "/Deadeye_Operative"
+        },
+        "name": "Deadeye Operative",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Deep Impact": {
+        "abilities": "Build time 3 (takes 3 turns to construct) Spell: at the start of your next turn, destroy all enemy units capable of producing any amount of Gold.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 3,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 20,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Deep_Impact"
+        },
+        "name": "Deep Impact",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Defense Grid": {
+        "abilities": "Lifespan 7 (Lifespan 7: dies after 7 turns) At the start of your turn, construct a Drone",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 7,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 3,
+            "energy": 0,
+            "gold": 16,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/c/c4/DefenseGrid-portrait.png/280px-DefenseGrid-portrait.png?version=6e150c699e3c8aac404dcddbb3b84d72",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/97/DefenseGrid-panel.png?version=091863f4d86822e9df83f4052e04e236",
+            "path": "/Defense_Grid"
+        },
+        "name": "Defense Grid",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 7
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Doomed Drone": {
+        "abilities": "Lifespan 4 (Lifespan 4: dies after 4 turns) Click : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 4,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-01-08": [
+                "Lifespan increased from Lifespan 3 to Lifespan 4."
+            ],
+            "2015-09-18": [
+                "Supply decreased from 20 to 10."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 2,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/05/DoomedDrone-portrait.png/280px-DoomedDrone-portrait.png?version=ab50a7f18784a81ab762b7ec33d282c3",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/f3/DoomedDrone-panel.png?version=94850e7041bfad3ca4eb9c2638c17f7d",
+            "path": "/Doomed_Drone"
+        },
+        "name": "Doomed Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Doomed Mech": {
+        "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) Click : gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 5,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-12-09": [
+                "Cost increased from 8 BB to 9 BB ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 9,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/c/ca/DoomedMech-portrait.png/280px-DoomedMech-portrait.png?version=fe49d2eab560911a7e445c42bc89a304",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/23/DoomedMech-panel.png?version=5d017ac7a75637c8eb6a1b0a33d8a579",
+            "path": "/Doomed_Mech"
+        },
+        "name": "Doomed Mech",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 5
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Doomed Wall": {
+        "abilities": "Prompt (Prompt: blocks immediately) Lifespan 3 (Lifespan 3: dies after 3 turns)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 3,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 7,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/e1/DoomedWall-portrait.png/280px-DoomedWall-portrait.png?version=7b97292e4212f09c6b3cad12abcae6cf",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/35/DoomedWall-panel.png?version=3fbfc3d1c243e2c2cbf6dfcb9db34f40",
+            "path": "/Doomed_Wall"
+        },
+        "name": "Doomed Wall",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Doomsplitter": {
+        "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) Click : Gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 5,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Doomsplitter"
+        },
+        "name": "Doomsplitter",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Drake": {
+        "abilities": "At the start of your turn, gain XXClick , and consume a Blastforge: gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-11": [
+                "Cost increased from 14 BBB to 15 BBB ."
+            ],
+            "2014-12-17": [
+                "Cost increased from 15 BBB to 16 BBB ."
+            ],
+            "2015-05-23": [
+                "Cost increased from 16 BBB to 17 BBB ."
+            ],
+            "2015-08-08": [
+                "Cost decreased from 17 BBB to 12 BB . Attack decreased from X 3 to X 2 (still sacrificing a Blastforge and doing 2 additional damage when clicked). Health decreased from Health 5 to Health 4 ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 12,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/4/45/Drake-portrait.png?version=cfec30be8808b78e88b5651954e74865",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/b/b1/Drake-panel.png?version=286646ec14d040313f06a4aa69255d76",
+            "path": "/Drake"
+        },
+        "name": "Drake",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Drone": {
+        "abilities": "Click : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 3,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/a6/Drone-portrait.png/280px-Drone-portrait.png?version=2d178fc8b4112c90fb32d807e2344993",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9e/Drone-panel.png?version=b1aecf297c3d66f8ee4bd315ae6eca5c",
+            "path": "/Drone"
+        },
+        "name": "Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "EMP": {
+        "abilities": "Spell: at the start of your next turn, destroy all enemy units capable of producing any amount of Attack.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 40,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/EMP"
+        },
+        "name": "EMP",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Ebb Turbine": {
+        "abilities": "At the start of your turn, gain 2 Click , and consume a Drone: gain 3 E",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-03-22": [
+                "Added to the game."
+            ],
+            "2015-05-23": [
+                "Health increased from 4 Health to 5 Health .",
+                "Supply increased from 4 to 10.",
+                "Instead of producing 5 E upon Click , Ebb Turbine now produces 1 automatically at the start of the turn and 4 E upon being clicked."
+            ],
+            "2015-10-15": [
+                "Start-of-turn ability now gives 2 instead of 1 .",
+                "Click ability now gives 3 E instead of 4 E .",
+                "Health decreased from 5 Health to 4 Health ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 1,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/8a/EbbTurbine-portrait.png/280px-EbbTurbine-portrait.png?version=a060366ade4e807a638ac7ab2d7489ce",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/af/EbbTurbine-panel.png?version=dfa3638666fe73df5697559bca9afc9a",
+            "path": "/Ebb_Turbine"
+        },
+        "name": "Ebb Turbine",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Electrovore": {
+        "abilities": "Click , and pay E : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/ef/Electrovore-portrait.png/280px-Electrovore-portrait.png?version=5aa8528b883ce2470cf55cb566b186e9",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/02/Electrovore-panel.png?version=74fd4994e65bbb0feab6df5f9cbcf5ac",
+            "path": "/Electrovore"
+        },
+        "name": "Electrovore",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Endostructor": {
+        "abilities": "Build time 0 (takes 0 turns to construct)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Endostructor"
+        },
+        "name": "Endostructor",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 6
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Endotherm Kit": {
+        "abilities": "Spell: construct 4 Frostbite with Build time 4 , and construct 4 Cryo Ray with Build time 4",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 3,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/e8/EndothermKit-portrait.png/280px-EndothermKit-portrait.png?version=c452f5bdb1818e4d24fd826ca9458167",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/0b/EndothermKit-panel.png?version=f1e67bb4de1f92be6bad642a392b5e39",
+            "path": "/Endotherm_Kit"
+        },
+        "name": "Endotherm Kit",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Energy Matrix": {
+        "abilities": "Prompt (Prompt: blocks immediately)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2015-09-18": [
+                "Cost decreased from 9 BB to 8 BB .",
+                "No longer comes with a Pixie ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 8,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/df/EnergyMatrix-portrait.png/280px-EnergyMatrix-portrait.png?version=c18e5882419faceb8f6f29605a47cd77",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/fc/EnergyMatrix-panel.png?version=23210353f894cb3286098e42ee0f6678",
+            "path": "/Energy_Matrix"
+        },
+        "name": "Energy Matrix",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 5
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Engineer": {
+        "abilities": "At the start of your turn, gain E",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/db/Engineer-portrait.png/280px-Engineer-portrait.png?version=05212e2d1e3ac053410093aed2eb70d6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/01/Engineer-panel.png?version=474e3bd88d48d5fc777ea6ab6dcbc188",
+            "path": "/Engineer"
+        },
+        "name": "Engineer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Eviscerator": {
+        "abilities": "Build time 0 (takes 0 turns to construct) At the start of your turn, gain XXX .",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Eviscerator"
+        },
+        "name": "Eviscerator",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 6
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Exostructor": {
+        "abilities": "Build time 0 (takes 0 turns to construct)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Exostructor"
+        },
+        "name": "Exostructor",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 6
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Feral Warden": {
+        "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/4b/FeralWarden-portrait.png/280px-FeralWarden-portrait.png?version=225f6ed4bb17c345f2099ae1a4070eb6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1a/FeralWarden-panel.png?version=7953e1c695c28a943c2d9ecb3e71ec4e",
+            "path": "/Feral_Warden"
+        },
+        "name": "Feral Warden",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Ferritin Sac": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Click , and sacrifice Ferritin Sac: gain 1 B",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-09-19": [
+                "Added to the game"
+            ],
+            "2015-12-09": [
+                "Click ability now produces 1 B instead of B ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/46/FerritinSac-portrait.png/280px-FerritinSac-portrait.png?version=65336181c9371619e202c3dbd81ede34",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/23/FerritinSac-panel.png?version=9e35cc155a857ee07bf99f6cf111ebe0",
+            "path": "/Ferritin_Sac"
+        },
+        "name": "Ferritin Sac",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Fire Spinner": {
+        "abilities": "At the start of your turn, gain X 40",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 20
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Fire_Spinner"
+        },
+        "name": "Fire Spinner",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 40,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Fission Turret": {
+        "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) At the start of your turn, gain XClick , pay EEE , and sacrifice Fission Turret: gain GGG",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 5,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-12-01": [
+                "Added."
+            ],
+            "2015-05-23": [
+                "Lifespan increased from Lifespan 4 to Lifespan 5 . Click ability cost reduced from E 4 energy to E 3, but produces GGG instead of GGGG ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/79/FissionTurret-portrait.png/280px-FissionTurret-portrait.png?version=397e187d321db9357d1f049db92df554",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/6f/FissionTurret-panel.png?version=051b865cd418b63b96c8a8e999dd87cb",
+            "path": "/Fission_Turret"
+        },
+        "name": "Fission Turret",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Flame Animus": {
+        "abilities": "Build time 2 (takes 2 turns to construct) At the start of your turn, gain RX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-02": [
+                "Cost decreased from 8 B to 7 B ."
+            ],
+            "2015-12-09": [
+                "Cost decreased from 7 B to 5 B .",
+                "Buildtime increased from Build time 1 to Build time 2 ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/79/FlameAnimus-portrait.png/280px-FlameAnimus-portrait.png?version=93cc49549f7d3de067d094b5a5865a46",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/a9/FlameAnimus-panel.png?version=4c48639a3b0483f6854e149173ba3970",
+            "path": "/Flame_Animus"
+        },
+        "name": "Flame Animus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Forcefield": {
+        "abilities": "As an additional cost to buy Forcefield, consume a Drone (the Drone must be assigned). Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/0c/Forcefield-portrait.png/280px-Forcefield-portrait.png?version=d5c628eb060f4a318e01c2a8723fa9e8",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/de/Forcefield-panel.png?version=b90d61bfc9e9daba6a6731433f1eb030",
+            "path": "/Forcefield"
+        },
+        "name": "Forcefield",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Frost Brooder": {
+        "abilities": "Lifespan 6 (Lifespan 6: dies after 6 turns) At the start of your turn, construct a Frostbite with Build time 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 6,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-11-11": [
+                "Added."
+            ],
+            "2014-12-01": [
+                "Lifespan decreased from Lifespan 10 to Lifespan 8."
+            ],
+            "2014-12-17": [
+                "Cost increased from 4 RR to 5 RR .",
+                "Lifespan increased from Lifespan 8 to Lifespan 9."
+            ],
+            "2015-02-15": [
+                "Lifespan decreased from Lifespan 9 to Lifespan 7."
+            ],
+            "2015-06-30": [
+                "Removed temporarily."
+            ],
+            "2015-07-17": [
+                "Re-added to the game.",
+                "Cost decreased from 5 RR to 4 RR .",
+                "Frostbites now have lifespan Lifespan 3 ."
+            ],
+            "2015-09-18": [
+                "Cost increased from 4 RR to 5 RR .",
+                "Lifespan decreased from Lifespan 7 to Lifespan 6."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/eb/FrostBrooder-portrait.png/280px-FrostBrooder-portrait.png?version=acaecfce4e34874450b1a06acf3d5258",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/e8/FrostBrooder-panel.png?version=560252d10952e28712a48e88def60d2d",
+            "path": "/Frost_Brooder"
+        },
+        "name": "Frost Brooder",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Frostbite": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Click , and sacrifice Frostbite: Chill 3 (Chill 3: add 3 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {
+            "2015-06-30": [
+                "Build time increased from Build time 1 to Build time 2 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/04/Frostbite-portrait.png/280px-Frostbite-portrait.png?version=45f1a2e061512d94430d40c7b4e5254d",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/e9/Frostbite-panel.png?version=206fb22f0ad31346b649302a9f206918",
+            "path": "/Frostbite"
+        },
+        "name": "Frostbite",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Galvani Drone": {
+        "abilities": "Frontline (Frontline: can be attacked directly) Click , and pay E : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-08-08": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 1,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/63/GalvaniDrone-portrait.png/280px-GalvaniDrone-portrait.png?version=a584a532fd75e16b812cc1a9b59c09ee",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/2d/GalvaniDrone-panel.png?version=13f2aebdb4eb371eb95b62be6dd15439",
+            "path": "/Galvani_Drone"
+        },
+        "name": "Galvani Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Gauss Cannon": {
+        "abilities": "Fragile (Fragile: does not heal) At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/1/1f/GaussCannon-portrait.png/280px-GaussCannon-portrait.png?version=1a529bf4544fed78bb34ce52fcd9c609",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/ca/GaussCannon-panel.png?version=12bb33715c779fcae7ad7a951f0e6105",
+            "path": "/Gauss_Cannon"
+        },
+        "name": "Gauss Cannon",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 5
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Gauss Charge": {
+        "abilities": "At the start of your turn, gain X , and sacrifice Gauss Charge.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/c/cb/GaussCharge-portrait.png/280px-GaussCharge-portrait.png?version=1e7f844d6ec989a8a878b8333a46c620",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9c/GaussCharge-panel.png?version=9060cb9c53b1b4f8fc6741f0293efbe1",
+            "path": "/Gauss_Charge"
+        },
+        "name": "Gauss Charge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Gauss Fabricator": {
+        "abilities": "Fragile (Fragile: does not heal) Lifespan 8 (Lifespan 8: dies after 8 turns) At the start of your turn, construct a Gauss Cannon",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 8,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-09-18": [
+                "Cost decreased from 13 GGGG to 12 GGGG .",
+                "Health decreased from Health 13 to Health 10 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 12,
+            "green": 4,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/84/GaussFabricator-portrait.png/280px-GaussFabricator-portrait.png?version=e399a3805ff71e3a25645a5dc86c9e6c",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/23/GaussFabricator-panel.png?version=e3975da08c6976166f19aa4d62b11854",
+            "path": "/Gauss_Fabricator"
+        },
+        "name": "Gauss Fabricator",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 10
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Gaussite Symbiote": {
+        "abilities": "At the start of your turn, gain GXClick , pay GGG , and sacrifice Gaussite Symbiote: construct 6 Gauss Charge",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-11-01": [
+                "Cost decreased from 8 RR to 7 RR ."
+            ],
+            "2016-02-17": [
+                "Cost increased from 7 RR to 8 RR .",
+                "Ability now produces 6 Gauss Charge instead of 5 Gauss Charge ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 8,
+            "green": 0,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/f7/GaussiteSymbiote-portrait.png/280px-GaussiteSymbiote-portrait.png?version=2012fb477910b80f22b50e1de19179c4",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/7d/GaussiteSymbiote-panel.png?version=b4257ff305b34902994e3b7d4ea6b00c",
+            "path": "/Gaussite_Symbiote"
+        },
+        "name": "Gaussite Symbiote",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Gilded Drone": {
+        "abilities": "Start of turn: gain 2",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 3,
+            "gold": 4,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Gilded_Drone"
+        },
+        "name": "Gilded Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Glaciator": {
+        "abilities": "Build time 8 (takes 8 turns to construct) At the start of your turn, gain XXX At the start of your turn, freeze all enemy units (they cannot block this turn).",
+        "attributes": {
+            "blocker": false,
+            "build_time": 8,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 8,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Glaciator"
+        },
+        "name": "Glaciator",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 8
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Grenade Mech": {
+        "abilities": "When Grenade Mech is bought, construct 3 Pixie . At the start of your turn, gain XClick , pay 1 , and consume a Blastforge: construct 3 Pixie",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 10,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/07/GrenadeMech-portrait.png/280px-GrenadeMech-portrait.png?version=e3f32c3c6f90b73ffca73ae7c4514c40",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/ce/GrenadeMech-panel.png?version=66e2cb62c478037a8aab3c8b85c7ecdb",
+            "path": "/Grenade_Mech"
+        },
+        "name": "Grenade Mech",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Grimbotch": {
+        "abilities": "Lifespan 4 (Lifespan 4: dies after 4 turns) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 4,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/ab/Grimbotch-portrait.png/280px-Grimbotch-portrait.png?version=0b7460677c2ebc563327bc84463a56f6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/60/Grimbotch-panel.png?version=046724abf2752a7835d6640ed8c6aa7d",
+            "path": "/Grimbotch"
+        },
+        "name": "Grimbotch",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Gunbot": {
+        "abilities": "Build time 0 (takes 0 turns to construct) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Gunbot"
+        },
+        "name": "Gunbot",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Gunbot Forge": {
+        "abilities": "Build time 0 (takes 0 turns to construct) At the start of your turn, construct a",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Gunbot_Forge"
+        },
+        "name": "Gunbot Forge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Hannibull": {
+        "abilities": "Frontline (Frontline: can be attacked directly) At the start of your turn, gain XClick : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-09-13": [
+                "Cost increased from 9 BR to 10 BRR ."
+            ],
+            "2014-10-04": [
+                "Health increased from Health 5 to Health 6."
+            ],
+            "2014-10-11": [
+                "Cost decreased from 10 BRR to 9 BR ."
+            ],
+            "2015-05-23": [
+                "Cost increased from 9 BR to 10 BR . Health increased from Health 6 to Health 7. Now does 1 damage at the start of the turn, and a 2nd damage when clicked (formerly, it did 0 damage at the start of the turn, and 2 damage when clicked)."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 10,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/98/Hannibull-portrait.png/280px-Hannibull-portrait.png?version=cfe460aba7ae3e82bd5a9c3b04bed9d4",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/f2/Hannibull-panel.png?version=90bfafd0ef5b1efd68e395b3d4a6788f",
+            "path": "/Hannibull"
+        },
+        "name": "Hannibull",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 7
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Hellhound": {
+        "abilities": "When Hellhound is bought, construct an Engineer . At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/b3/Hellhound-portrait.png/280px-Hellhound-portrait.png?version=833ca5847343904493918ea79c42e389",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/eb/Hellhound-panel.png?version=0328760a41d405389a2590c26d2d72b8",
+            "path": "/Hellhound"
+        },
+        "name": "Hellhound",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Husk": {
+        "abilities": "Prompt (Prompt: blocks immediately)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/3a/Husk-portrait.png/280px-Husk-portrait.png?version=af163b47319281074e58184f467f5ce3",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/d8/Husk-panel.png?version=26f74d0a8a88d1fc6f882bba39542e68",
+            "path": "/Husk"
+        },
+        "name": "Husk",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Iceblade Golem": {
+        "abilities": "Frontline (Frontline: can be attacked directly) At the start of your turn, gain XClick : Chill 2 (Chill 2: add 2 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-10-11": [
+                "Health increased from Health 5 Health to Health 6."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 7,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/f4/IcebladeGolem-portrait.png/280px-IcebladeGolem-portrait.png?version=1cc6670149d49c7bce4998d00859cc64",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/ff/IcebladeGolem-panel.png?version=9bc2fcda7828e261ec8727ba20447a2c",
+            "path": "/Iceblade_Golem"
+        },
+        "name": "Iceblade Golem",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 6
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Immaculon": {
+        "abilities": "At the start of your turn, gain X for each Drone you have and Exhaust 2 (Exhaust 2: cannot do anything until 2 turns later)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 2,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 5,
+            "gold": 25,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Immaculon"
+        },
+        "name": "Immaculon",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Immolite": {
+        "abilities": "Click : gain X , and Exhaust 2 (Exhaust 2: disabled until 2 turns from now)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 2,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {
+            "2014-12-01": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 3,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/ef/Immolite-portrait.png/280px-Immolite-portrait.png?version=843f2eeb8afa0b1e99d059de8681f4ce",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/cd/Immolite-panel.png?version=3d8c6a592ba8003e6423fb6b3c04b2f4",
+            "path": "/Immolite"
+        },
+        "name": "Immolite",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Infusion Grid": {
+        "abilities": "Click , pay R , and sacrifice Infusion Grid: construct 4 prompt Husk",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/63/InfusionGrid-portrait.png/280px-InfusionGrid-portrait.png?version=4aa1c6dc978c41fa80dcb894696fff06",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/c5/InfusionGrid-panel.png?version=9e7c3b7f1642a9ed4b0ad086763288a6",
+            "path": "/Infusion_Grid"
+        },
+        "name": "Infusion Grid",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Innervi Field": {
+        "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Lifespan 3 (Lifespan 3: dies after 3 turns) This unit has Health 5 maximum health. At the start of the turn, restore Health 1 .",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 3,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/52/InnerviField-portrait.png/280px-InnerviField-portrait.png?version=8dba1890300fc799922e014a4e912170",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/5f/InnerviField-panel.png?version=0f224ffdcd4eca8810b830907e43a537",
+            "path": "/Innervi_Field"
+        },
+        "name": "Innervi Field",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Iso Kronus": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Fragile (Fragile: does not heal) At the start of your turn, gain XX , and Exhaust 2 (Exhaust 2: cannot do anything until 2 turns later)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 2,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/89/IsoKronus-portrait.png/280px-IsoKronus-portrait.png?version=cf04fe4bbf379aa245fdbede08f5fecd",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/66/IsoKronus-panel.png?version=0a093d3d526f13f0be593a2e3e7249b3",
+            "path": "/Iso_Kronus"
+        },
+        "name": "Iso Kronus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 5
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Kinetic Driver": {
+        "abilities": "Lifespan 6 (Lifespan 6: dies after 6 turns) At the start of your turn, gain XClick , pay 2 , and sacrifice Kinetic Driver: Destroy any Animus, Blastforge, or Conduit.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 6,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2015-03-22": [
+                "Added to the game."
+            ],
+            "2015-05-23": [
+                "Cost of Click ability reduced from 4 to 3 ."
+            ],
+            "2015-10-15": [
+                "Cost of Click ability reduced from 3 to 2 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/39/KineticDriver-portrait.png/280px-KineticDriver-portrait.png?version=431cd594fd0e81b1723f6f49a2002f93",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/3d/KineticDriver-panel.png?version=fc59b9cde155b52a631f1c8a187cd822",
+            "path": "/Kinetic_Driver"
+        },
+        "name": "Kinetic Driver",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Lancetooth": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Click : gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-09-19": [
+                "Added to the game."
+            ],
+            "2015-12-09": [
+                "Cost decreased from 8 BX to 7 BX ."
+            ],
+            "2016-02-17": [
+                "Cost changed from 7 BX to 6 BXX ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/f0/Lancetooth-portrait.png/280px-Lancetooth-portrait.png?version=dbbdb39a8cc71660bfdf476bd835b090",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/d2/Lancetooth-panel.png?version=7266229b2350c4bd2601ed64e415a86e",
+            "path": "/Lancetooth"
+        },
+        "name": "Lancetooth",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Lucina Spinos": {
+        "abilities": "At the start of your turn, gain XXXXClick , pay R , and consume a Drone: construct a Perforator",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-09-29": [
+                "Cost increased from 16 RRRR to 18 RRRR ."
+            ],
+            "2014-10-11": [
+                "Ability's activation cost changed from R to sacrifice a Drone.",
+                "Limited stamina of Stamina 6 has been removed."
+            ],
+            "2015-02-15": [
+                "Cost decreased from 18 RRRR to 17 RRRR ."
+            ],
+            "2018-04-06": [
+                "Click ability now costs R in addition to sacrificing a Drone."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 17,
+            "green": 0,
+            "red": 4
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/39/LucinaSpinos-portrait.png/280px-LucinaSpinos-portrait.png?version=22efcde7596c6700e5f25b4521979aa6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/3f/LucinaSpinos-panel.png?version=2da2ddd21007b563d4255eebea768eb5",
+            "path": "/Lucina_Spinos"
+        },
+        "name": "Lucina Spinos",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Lunarch HQ": {
+        "abilities": "( Colorless unit )",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Lunarch_HQ"
+        },
+        "name": "Lunarch HQ",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Mahar Rectifier": {
+        "abilities": "Fragile (Fragile: does not heal) Click : gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-02-19": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 11,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/1/11/MaharRectifier-portrait.png/280px-MaharRectifier-portrait.png?version=51e5cdde839855e709423658ef002f49",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/aa/MaharRectifier-panel.png?version=5827838a2b4bfefaec1a7a23ffa2fd82",
+            "path": "/Mahar_Rectifier"
+        },
+        "name": "Mahar Rectifier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 5
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Manticore": {
+        "abilities": "As an additional cost to buy Manticore, consume a Steelsplitter. At the start of your turn, gain XXClick , and pay XX : gain 3",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 3,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/23/Manticore-portrait.png?version=6fe218f0bfa41d65abc403426b5f021a",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/97/Manticore-panel.png?version=8d0a806928ff0035e6de89dece3270e3",
+            "path": "/Manticore"
+        },
+        "name": "Manticore",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Mega Drone": {
+        "abilities": "Click : gain 4",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 3,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/1/13/MegaDrone-portrait.png/280px-MegaDrone-portrait.png?version=7405eb0ae82ec8a8142a36dc8fe97ea9",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/65/MegaDrone-panel.png?version=9164408f70fad539c0eafc0c61e11b25",
+            "path": "/Mega_Drone"
+        },
+        "name": "Mega Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Militia": {
+        "abilities": "At the start of your turn, gain XClick , and pay X : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-05-23": [
+                "Health increased from Health 2 to Health 4 ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/4d/Militia-portrait.png/280px-Militia-portrait.png?version=18d10b545a9198c92cafc4b18dd7f9bb",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/b/bb/Militia-panel.png?version=37763de03ebece25aa86c2a6e6b164c8",
+            "path": "/Militia"
+        },
+        "name": "Militia",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Mobile Animus": {
+        "abilities": "Start of turn, gain R . Click: pay 3 and sacrifice Mobile Animus to construct a prompt Rhino",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/5f/MobileAnimus-portrait.png/280px-MobileAnimus-portrait.png?version=469af5766f229c691b87a44e94631874",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/f6/MobileAnimus-panel.png?version=f6514f2f6b0e8dfed8e2d50c4a421f5e",
+            "path": "/Mobile_Animus"
+        },
+        "name": "Mobile Animus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Nitrocybe": {
+        "abilities": "Build time 2 (takes 2 turns to construct) Click , and sacrifice Nitrocybe: gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {
+            "2015-05-01": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/fd/Nitrocybe-portrait.png/280px-Nitrocybe-portrait.png?version=e34044898cd67ad15567f5ad584128e0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/4/42/Nitrocybe-panel.png?version=94bad5f9a8b9523d74ea83f788d48ebd",
+            "path": "/Nitrocybe"
+        },
+        "name": "Nitrocybe",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Nivo Charge": {
+        "abilities": "Lifespan 1 (Lifespan 1: dies after 1 turn) Click , and sacrifice Nivo Charge: Chill 5 (Chill 5: add 5 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 1,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-03-22": [
+                "Added to the game."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/d7/NivoCharge-portrait.png/280px-NivoCharge-portrait.png?version=d367e83056beef9592a328b814faa6e1",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/e8/NivoCharge-panel.png?version=1c41a83a7edcdebbadd10335441ab559",
+            "path": "/Nivo_Charge"
+        },
+        "name": "Nivo Charge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Odin": {
+        "abilities": "When Odin is bought, construct 3 Steelsplitter . Click , and consume a Steelsplitter: gain XXXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-10-11": [
+                "Cost increased from 18 BBB to 21 BBB ."
+            ],
+            "2015-08-08": [
+                "Cost decreased from 21 BBB to 19 BBB , health decreased from Health 5 to Health 4 ."
+            ],
+            "2015-12-09": [
+                "Cost increased from 19 BBB to 20 BBB"
+            ],
+            "2019-01-14": [
+                "Health decreased from Health 4 to Health 3 ."
+            ]
+        },
+        "costs": {
+            "blue": 3,
+            "energy": 0,
+            "gold": 20,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/0b/Odin-portrait.png/280px-Odin-portrait.png?version=4a427aa2a6a18e4601ab557a9ba1b260",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/68/Odin-panel.png?version=c1f1d2fbad373d9dc8ab99711a71b178",
+            "path": "/Odin"
+        },
+        "name": "Odin",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Omega Splitter": {
+        "abilities": "Click : gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-11": [
+                "Cost increased from 13 BBB to 14 BBB ."
+            ],
+            "2016-06-10": [
+                "Cost increased from 14 BBB to 15 BBB"
+            ]
+        },
+        "costs": {
+            "blue": 3,
+            "energy": 0,
+            "gold": 15,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/5c/OmegaSplitter-portrait.png/280px-OmegaSplitter-portrait.png?version=23050eb7a9a8ec0f1668bdde31023ee0",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/69/OmegaSplitter-panel.png?version=29f21c3f0719a002f1caa6f44542a6d1",
+            "path": "/Omega_Splitter"
+        },
+        "name": "Omega Splitter",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 6
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Ossified Drone": {
+        "abilities": "As an additional cost to buy Ossified Drone, consume a Drone. At the start of your turn, gain 1 Click , pay R , and consume a Drone: construct an Ossified Drone",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-10-11": [
+                "Cost changed from 6 RR to 6 ER ."
+            ],
+            "2014-12-17": [
+                "Cost decreased from 6 ER to 5 ER ."
+            ],
+            "2015-02-15": [
+                "Cost changed from 5 RE to 2 R + sacrifice a Drone."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/04/OssifiedDrone-portrait.png/280px-OssifiedDrone-portrait.png?version=9a7dca536b2a223c6722570e098c56bd",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9e/OssifiedDrone-panel.png?version=84b93ea224dc2059501ac19c37dfac4c",
+            "path": "/Ossified_Drone"
+        },
+        "name": "Ossified Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Overwork": {
+        "abilities": "As an additional cost to buy Overwork, consume a Drone . Spell: gain 2",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Overwork"
+        },
+        "name": "Overwork",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 0
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Oxide Mixer": {
+        "abilities": "Lifespan 4 (Lifespan 4: dies after 4 turns) At the start of your turn, construct a Pixie",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 4,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2016-02-17": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 3,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/da/OxideMixer-portrait.png?version=bf115afb5db67fd0539a449c346cb7e2",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1a/OxideMixer-panel.png?version=d2dc5fe4a12d5795fdba23496d2a885d",
+            "path": "/Oxide_Mixer"
+        },
+        "name": "Oxide Mixer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Perforator": {
+        "abilities": "Click , and pay R : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 3,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/3b/Perforator-portrait.png/280px-Perforator-portrait.png?version=0de51bd92b4e9f8fb85ea425b4eac2c9",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/3a/Perforator-panel.png?version=16221f825a396dbf59776e59c53da9a9",
+            "path": "/Perforator"
+        },
+        "name": "Perforator",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Photonic Fibroid": {
+        "abilities": "Prompt (Prompt: blocks immediately) At the start of your turn, gain XX and sacrifice Photonic Fibroid.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 3,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/05/Photonic_Fibroid-portrait.png/280px-Photonic_Fibroid-portrait.png?version=521aecccc24f73ba70d1c33a95caa26c",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/d/d9/Photonic_Fibroid-panel.png?version=b195eeef3b3c1c951a98bd4ed7fbe8d0",
+            "path": "/Photonic_Fibroid"
+        },
+        "name": "Photonic Fibroid",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 2
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Pixie": {
+        "abilities": "Click , and sacrifice Pixie: gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 20
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 1,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/6a/Pixie-portrait.png/280px-Pixie-portrait.png?version=4e963857506abe20f9edd39ebba58927",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/93/Pixie-panel.png?version=ffb5a37c4e83babbba40b87e707789ac",
+            "path": "/Pixie"
+        },
+        "name": "Pixie",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Plasmafier": {
+        "abilities": "Fragile (Fragile: does not heal) Click , and consume a Drone: gain XXXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-09-23": [
+                "Cost increased from 12 GGB to 12 GGGB ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 12,
+            "green": 3,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/41/Plasmafier-portrait.png/280px-Plasmafier-portrait.png?version=281b5ab11173ebad4ddae639f8849e52",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/23/Plasmafier-panel.png?version=9a25ebaddc2c8cc918a51d3be391faaf",
+            "path": "/Plasmafier"
+        },
+        "name": "Plasmafier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 4
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Plexo Cell": {
+        "abilities": "As an additional cost to buy Plexo Cell, consume a Drone. Prompt (Prompt: blocks immediately) Lifespan 1 (Lifespan 1: dies after 1 turn)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 1,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-11-04": [
+                "Added."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 2,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/b3/PlexoCell-portrait.png/280px-PlexoCell-portrait.png?version=a6b670f7573c69cdc9e3049764475122",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/54/PlexoCell-panel.png?version=abce3834ef9265e8a1c6abdcdc5afdc0",
+            "path": "/Plexo_Cell"
+        },
+        "name": "Plexo Cell",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Polywall": {
+        "abilities": "Prompt (Prompt: blocks immediately) Frontline (Frontline: can be attacked directly)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 10,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/e2/Polywall-portrait.png/280px-Polywall-portrait.png?version=e2ca6436f4bb9d333e5239bd0fda6af9",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/c/c6/Polywall-panel.png?version=5b090af529d1c34f60217bb277d1bb6e",
+            "path": "/Polywall"
+        },
+        "name": "Polywall",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 6
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Protoplasm": {
+        "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Click , and sacrifice Protoplasm: gain XXXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 7,
+            "green": 2,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/48/Protoplasm-portrait.png/280px-Protoplasm-portrait.png?version=ec604114857d545f25103204b7205f62",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/71/Protoplasm-panel.png?version=44875af7c360e098dc85eeae7b0fe03e",
+            "path": "/Protoplasm"
+        },
+        "name": "Protoplasm",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 4
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Redeemer": {
+        "abilities": "When Redeemer is bought, construct 6 Gauss Charge with Build time 3 for your opponent. Click : gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2015-02-19": [
+                "Added to the game."
+            ],
+            "2015-04-07": [
+                "Cost changed from 8 GGB to 7 GGGB ."
+            ],
+            "2015-09-18": [
+                "Cost decreased from 7 GGGB to 5 GGB .",
+                "Instead of constructing 4 Gauss Charge for the opponent, purchasing a Redeemer now constructs 6 Gauss Charges: 2 with Build time 1 , 2 with Build time 2 , and 2 with Build time 3 ."
+            ],
+            "2015-09-22": [
+                "Redeemer temporarily removed from the game."
+            ],
+            "2015-09-28": [
+                "Redeemer re-added to game.",
+                "Cost increased from 5 GGB to 6 GGB .",
+                "The 6 Gauss Charge constructed when purchasing a Redeemer are now distributed as follows: 3 with Build time 1 and 3 with Build time 2 ."
+            ],
+            "2015-10-13": [
+                "Redeemer temporarily removed from the game."
+            ],
+            "2015-10-15": [
+                "Redeemer re-added to game.",
+                "Cost increased from 6 GGB to 9 GGB .",
+                "Now gives opponent 5 Gauss Charge with Build time 3 ."
+            ],
+            "2016-05-27": [
+                "Cost decreased from 9 GGB to 8 GGB .",
+                "Now gives opponent 6 Gauss Charge with Build time 3 instead of 5."
+            ],
+            "2018-04-06": [
+                "Cost changed from 8 GGB to 10 GB ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 10,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/1/17/Redeemer-portrait.png/280px-Redeemer-portrait.png?version=e70990f75da934d610a55cef39d2c01d",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/2/2f/Redeemer-panel.png?version=6e0ba6ffce60a9e132ce734c4f8097f9",
+            "path": "/Redeemer"
+        },
+        "name": "Redeemer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 4
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Resophore": {
+        "abilities": "Build time 5 (takes 5 turns to construct) Fragile (Fragile: does not heal) At the start of your turn, gain X for each Forcefield you have.",
+        "attributes": {
+            "blocker": false,
+            "build_time": 5,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-04-02": [
+                "Officially added to the game after being the survivor of the April Fools units."
+            ],
+            "2015-04-16": [
+                "Cost decreased from 11 GGG + consume a Drone to 10 GG .",
+                "HP increased from Health 2 to Health 4 .",
+                "No longer does +1 X at start of the turn.",
+                "No longer a defender."
+            ],
+            "2015-05-23": [
+                "Build time increased from Build time 1 to Build time 6 .",
+                "Cost decreased from 10 GG to 1 GR ."
+            ],
+            "2015-06-30": [
+                "Build time decreased from Build time 6 to Build time 5 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/02/Resophore-portrait.png/280px-Resophore-portrait.png?version=e65cb0dfefb9bd2c7bf79490d9e7ac04",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/72/Resophore-panel.png?version=2baf41140874d607883b2a74b7699f4b",
+            "path": "/Resophore"
+        },
+        "name": "Resophore",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Rhino": {
+        "abilities": "Prompt (Prompt: blocks immediately) Stamina 2 (Stamina 2: can only be clicked twice) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 2,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/4c/Rhino-portrait.png/280px-Rhino-portrait.png?version=ec56fd53a390fb6b85d142c6ade94dad",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/58/Rhino-panel.png?version=2f889f2c6dc0c391f2e1b08b0b5a4a08",
+            "path": "/Rhino"
+        },
+        "name": "Rhino",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Savior": {
+        "abilities": "As an additional cost to buy Savior, consume 6 Drones. Build time 4 (takes 4 turns to construct) At the start of your turn, gain 1 for each Drone you have. Click , and consume a Drone: construct a Plasmafier",
+        "attributes": {
+            "blocker": false,
+            "build_time": 4,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-25": [
+                "Added."
+            ],
+            "2014-11-01": [
+                "Cost decreased from 12 to 11 ."
+            ],
+            "2014-11-15": [
+                "Removed."
+            ],
+            "2015-09-18": [
+                "Re-added, with abilities completely changed."
+            ],
+            "2015-12-09": [
+                "Start of turn damage removed (from X 2 ).",
+                "Buildtime reduced from Build time 8 to Build time 4.",
+                "Cost changed from 9 to 6 .",
+                "Now sacrifices 6 Drone when purchased.",
+                "HP reduced from 8 to 6."
+            ],
+            "2018-04-06": [
+                "No longer fragile.",
+                "HP reduced from Fragile 6 to Health 4."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/78/Savior-portrait.png/280px-Savior-portrait.png?version=d0255b1c6c508fa64c57a44b87d700c2",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/18/Savior-panel.png?version=c4f01fb882b3910156887cb457ca2cbf",
+            "path": "/Savior"
+        },
+        "name": "Savior",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Scorchilla": {
+        "abilities": "Build time 3 (takes 3 turns to construct) Fragile (Fragile: does not heal) Click : gain XXX , and Exhaust 3 (Exhaust 3: disabled until 3 turns from now)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 3,
+            "exhaust_ability": 3,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 3,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/95/Scorchilla-portrait.png/280px-Scorchilla-portrait.png?version=a83bde04a0acc3af8479217089939354",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/e/ec/Scorchilla-panel.png?version=84d46684fa05a50ae0ec769c5a24bc60",
+            "path": "/Scorchilla"
+        },
+        "name": "Scorchilla",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 3
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Sentinel": {
+        "abilities": "Fragile (Fragile: does not heal) Stamina 3 (Stamina 3: can only be clicked 3 times) Click : gain X , and construct an Engineer",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 3,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-10-11": [
+                "Stamina increased from Stamina 3 to Stamina 4."
+            ],
+            "2015-09-18": [
+                "Cost decreased from 8 GR to 7 GR .",
+                "Stamina decreased from Stamina 4 to Stamina 3 ."
+            ],
+            "2019-01-14": [
+                "Cost decreased from 7 GR to 6 GR .",
+                "Fragile health reduced from 4 to 3."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 6,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/3/3c/Sentinel-portrait.png/280px-Sentinel-portrait.png?version=c2e89297f8b616e8f2d94fbaf9b91064",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/4/41/Sentinel-panel.png?version=782b5202e1d2de9bce029cd6a8f8025a",
+            "path": "/Sentinel"
+        },
+        "name": "Sentinel",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Shadowfang": {
+        "abilities": "At the start of your turn, gain XX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 8,
+            "green": 0,
+            "red": 3
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/f8/Shadowfang-portrait.png/280px-Shadowfang-portrait.png?version=1ee47964c831823787f54f261b8822ec",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/8/8c/Shadowfang-panel.png?version=89f4ddd9a4e401e004c0d8e0ec006d2d",
+            "path": "/Shadowfang"
+        },
+        "name": "Shadowfang",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Shard": {
+        "abilities": "Build time 0 (takes 0 turns to construct)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Shard"
+        },
+        "name": "Shard",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Shiver Yeti": {
+        "abilities": "Prompt (Prompt: blocks immediately) Click : Chill 2 (Chill 2: add 2 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/89/ShiverYeti-portrait.png/280px-ShiverYeti-portrait.png?version=5c4d593ba4977570e09537309a7e3f36",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/7e/ShiverYeti-panel.png?version=e4ec3d1452492017849bc88725245f85",
+            "path": "/Shiver_Yeti"
+        },
+        "name": "Shiver Yeti",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Shredder": {
+        "abilities": "Frontline (Frontline: can be attacked directly) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/92/Shredder-portrait.png/280px-Shredder-portrait.png?version=14e269f11779c8e627e1207fe922f033",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/a0/Shredder-panel.png?version=557347c6417fb5d5e57f37a92f8ba8f1",
+            "path": "/Shredder"
+        },
+        "name": "Shredder",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Steelforge": {
+        "abilities": "As an additional cost to buy Steelforge, consume a Blastforge. At the start of your turn, gain BBClick , pay 1 BB , and consume a Drone: construct a Steelsplitter",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-09-13": [
+                "Renamed to Steelforge, from Conscriptor.",
+                "Produces B ."
+            ],
+            "2014-10-02": [
+                "Cost decreased from 4 + sacrifice a Blastforge to 3 + sacrifice a Blastforge."
+            ],
+            "2015-02-15": [
+                "Cost decreased from 3 + sacrifice a Blastforge to 2 + sacrifice a Blastforge."
+            ],
+            "2015-06-30": [
+                "Cost increased from 2 + sacrifice a Blastforge to 4 + sacrifice a Blastforge.",
+                "Blue production increased from B to BB .",
+                "Click ability cost changed from 2 B to 1 BB ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/93/Steelforge-portrait.png/280px-Steelforge-portrait.png?version=45c2306f542847862cb9d5b7759efca6",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/a4/Steelforge-panel.png?version=06774b77f16d832801695d361f166393",
+            "path": "/Steelforge"
+        },
+        "name": "Steelforge",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Steelsplitter": {
+        "abilities": "Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/7/75/Steelsplitter-portrait.png/280px-Steelsplitter-portrait.png?version=13f92c0674354bb3366ce81455907b6a",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/a4/Steelsplitter-panel.png?version=2d96b2abb1ca2c7a51079ee2aed62a7c",
+            "path": "/Steelsplitter"
+        },
+        "name": "Steelsplitter",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Synthesizer": {
+        "abilities": "At the start of your turn, gain GGClick , and pay GGG : gain BB",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 6,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/2/20/Synthesizer-portrait.png/280px-Synthesizer-portrait.png?version=be1dba477da3e2c8264297503ee69e01",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/35/Synthesizer-panel.png?version=8530ff46cbbb61d6b8c546a325eab474",
+            "path": "/Synthesizer"
+        },
+        "name": "Synthesizer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Tantalum Ray": {
+        "abilities": "Fragile (Fragile: does not heal) At the start of your turn, gain XClick , and lose Health 3 : construct a Gauss Charge",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-06-30": [
+                "Added to the game."
+            ],
+            "2015-09-18": [
+                "Health decreased from Health 10 to Health 9 ."
+            ],
+            "2018-04-06": [
+                "Health increased from Health 9 to Health 11 .",
+                "Ability now costs Health 3 instead of Health 2 per click."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 7,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/a2/TantalumRay-portrait.png/280px-TantalumRay-portrait.png?version=158e2431b1a40a64e0014b52c5fa8238",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/a/a9/TantalumRay-panel.png?version=940cf149f4ba29e8ef0909b415041e2d",
+            "path": "/Tantalum_Ray"
+        },
+        "name": "Tantalum Ray",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 11
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Tarsier": {
+        "abilities": "Build time 2 (takes 2 turns to construct) At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 4,
+            "green": 0,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/b7/Tarsier-portrait.png/280px-Tarsier-portrait.png?version=c8c4094b283fae4d87d5efb758f9a90e",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/7d/Tarsier-panel.png?version=f2369dfacfe824c51dcbc1ed9b2f0ce6",
+            "path": "/Tarsier"
+        },
+        "name": "Tarsier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Tatsu Nullifier": {
+        "abilities": "At the start of your turn, gain XXClick : Chill 5 (Chill 5: add 5 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-11-01": [
+                "Health decreased from Health 3 to Health 2."
+            ],
+            "2015-08-08": [
+                "Cost increased from 11 RRRR to 12 RRRR ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 12,
+            "green": 0,
+            "red": 4
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/bc/TatsuNullifier-portrait.png/280px-TatsuNullifier-portrait.png?version=3eda2402871b7d9d633c06f95973bb6c",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/34/TatsuNullifier-panel.png?version=ae126aaa8e140bfdc05af528da157ecf",
+            "path": "/Tatsu_Nullifier"
+        },
+        "name": "Tatsu Nullifier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Tesla Coil": {
+        "abilities": "When Tesla Coil is bought, construct 2 Engineer . Fragile (Fragile: does not heal) Click , and consume an Engineer: gain XXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-09-23": [
+                "Cost changed from 11 GB to 10 GGB ."
+            ],
+            "2014-11-15": [
+                "Supply decreased from 10 to 4."
+            ],
+            "2015-05-23": [
+                "Cost increased from 10 GGB to 12 GGB .",
+                "Comes with 3 Engineers instead of 2 when bought."
+            ],
+            "2015-10-15": [
+                "Cost decreased from 12 GGB to 11 GGB .",
+                "Comes with 2 Engineer instead of 3 when bought."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 11,
+            "green": 2,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/67/TeslaCoil-portrait.png/280px-TeslaCoil-portrait.png?version=d91d5efe7c05044bab7b92390ae9a041",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/5b/TeslaCoil-panel.png?version=59c88fb82e2922c484fa5d9e424e9a1f",
+            "path": "/Tesla_Coil"
+        },
+        "name": "Tesla Coil",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 3
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "The Gift": {
+        "abilities": "Spell: gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/The_Gift"
+        },
+        "name": "The Gift",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 0
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "The Wincer": {
+        "abilities": "Build time 3 (takes 3 turns to construct) Fragile (Fragile: does not heal) Click , and consume 5 Drones: gain X 15 , and Exhaust 3 (Exhaust 3: disabled until 3 turns from now)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 3,
+            "exhaust_ability": 3,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-03-22": [
+                "Added to the game."
+            ],
+            "2015-04-07": [
+                "Cost increased from 8 GBRR to 9 GBRR ."
+            ],
+            "2015-04-16": [
+                "Cost increased from 9 GBRR to 10 GBBR ."
+            ],
+            "2015-05-23": [
+                "Cost decreased from 10 GBBR to 9 GBBR ."
+            ],
+            "2015-09-18": [
+                "Cost decreased from 9 GBBR to 8 GBBR ."
+            ],
+            "2015-12-09": [
+                "Cost increased from 8 GBBR to 9 GBBR ."
+            ]
+        },
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 9,
+            "green": 1,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/a6/TheWincer-portrait.png/280px-TheWincer-portrait.png?version=bd7e83c68f2a4963bfb376bc4604747b",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/71/TheWincer-panel.png?version=8602327e658093dd572171cad835d7e2",
+            "path": "/The_Wincer"
+        },
+        "name": "The Wincer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 15,
+            "health": 5
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Thermite Core": {
+        "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) Click , and pay XX : construct two Pixie",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 8,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2014-10-04": [
+                "Added."
+            ],
+            "2014-10-11": [
+                "A bug where units like Auride Core and Thermite Core wouldn't look different after they have been clicked has been fixed."
+            ],
+            "2014-11-01": [
+                "Lifespan decreased from Lifespan 10 to Lifespan 7."
+            ],
+            "2016-06-10": [
+                "Lifespan increased from Lifespan 7 to Lifespan 8."
+            ],
+            "2018-04-06": [
+                "Click ability changed from click, pay X , and construct a Pixie to click, pay X 2 , and construct two Pixie .",
+                "Lifespan decreased from Lifespan 8 to Lifespan 5."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 1,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/4a/ThermiteCore-portrait.png/280px-ThermiteCore-portrait.png?version=2fed71976553bf9497abef046cb2d2df",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/3c/ThermiteCore-panel.png?version=94de33424a6b6762e9e9185c3ae721ae",
+            "path": "/Thermite_Core"
+        },
+        "name": "Thermite Core",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Thorium Dynamo": {
+        "abilities": "As an additional cost to buy Thorium Dynamo, consume 3 Drones. Build time 2 (takes 2 turns to construct) Fragile (Fragile: does not heal) At the start of your turn, gain 5 GClick , and pay GGG : gain 3",
+        "attributes": {
+            "blocker": false,
+            "build_time": 2,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {
+            "2015-06-30": [
+                "Added to the game."
+            ],
+            "2015-07-11": [
+                "Click ability changed from pay GGG , get 4 to pay GGG , get 3 ."
+            ],
+            "2015-12-09": [
+                "HP decreased from Health 10 to Health 8 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/60/ThoriumDynamo-portrait.png/280px-ThoriumDynamo-portrait.png?version=bbb798b3ba82f91bb7829197ebd301ed",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/b/be/ThoriumDynamo-panel.png?version=f9faa92bf0d41d0e60a02dc73081b541",
+            "path": "/Thorium_Dynamo"
+        },
+        "name": "Thorium Dynamo",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 8
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Thunderhead": {
+        "abilities": "Lifespan 3 (Lifespan 3: dies after 3 turns) Frontline (Frontline: can be attacked directly) At the start of your turn, gain XXXX",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 3,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-08-08": [
+                "Added to the game."
+            ],
+            "2015-12-09": [
+                "Attack decreased from X 5 to X 4 .",
+                "HP increased from Health 10 to Health 11 ."
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 15,
+            "green": 5,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/56/Thunderhead-portrait.png/280px-Thunderhead-portrait.png?version=b1d299885535b259479e955c3b9a390b",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/b/b8/Thunderhead-panel.png?version=d41df640c0aa382c38cf037f93e418b5",
+            "path": "/Thunderhead"
+        },
+        "name": "Thunderhead",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 11
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Tia Thurnax": {
+        "abilities": "As an additional cost to buy Tia Thurnax, consume 7 Drones. Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Stamina 3 (Stamina 3: can only be clicked 3 times) Click : gain X 7",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 3,
+            "supply": 1
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 7,
+            "green": 3,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/d/d5/TiaThurnax-portrait.png/280px-TiaThurnax-portrait.png?version=dab65d9b4a1e046d62ae79b9447b3614",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/7/75/TiaThurnax-panel.png?version=2b2ba0e7c3ee9d0c8261f84effa686b5",
+            "path": "/Tia_Thurnax"
+        },
+        "name": "Tia Thurnax",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 7,
+            "health": 4
+        },
+        "type": 7,
+        "unit_spell": "Unit"
+    },
+    "Tough Barrier": {
+        "abilities": "Prompt (Prompt: blocks immediately)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Tough_Barrier"
+        },
+        "name": "Tough Barrier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Tough Gunbot": {
+        "abilities": "Build time 0 (takes 0 turns to construct) Click : gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Tough_Gunbot"
+        },
+        "name": "Tough Gunbot",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Trinity Drone": {
+        "abilities": "As an additional cost to buy Trinity Drone, consume 2 Drones. Fragile (Fragile: does not heal) At the start of your turn, gain 3 Click , and pay G : gain 1",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-08-08": [
+                "Cost decreased from 2 EG + consume 2 Drone to 2 G + consume 2 Drone ."
+            ],
+            "2015-12-09": [
+                "Cost increased from 2 G + consume 2 Drone to 2 EG + consume 2 Drone .",
+                "Added Click ability, convert G to 1 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 1,
+            "gold": 2,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/a/a1/TrinityDrone-portrait.png/280px-TrinityDrone-portrait.png?version=e11d2f95c729f96bb0965ab7058486b4",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/13/TrinityDrone-panel.png?version=3727c920c89d800a4f1f850363668710",
+            "path": "/Trinity_Drone"
+        },
+        "name": "Trinity Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 5
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Tyranno Smorcus": {
+        "abilities": "Start of turn: gain X . Click: pay RR to gain an additional X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 2
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/4/4d/TyrannoSmorcus-portrait.png/280px-TyrannoSmorcus-portrait.png?version=6db77835c319a321e48976e197079aeb",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/6d/TyrannoSmorcus-panel.png?version=34befde384a741de13d8d48b3cf23234",
+            "path": "/Tyranno_Smorcus"
+        },
+        "name": "Tyranno Smorcus",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 2
+        },
+        "type": 5,
+        "unit_spell": "Unit"
+    },
+    "Urban Sentry": {
+        "abilities": "Start of turn: gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/5/5b/UrbanSentry-portrait.png/280px-UrbanSentry-portrait.png?version=5e5cb919293162ec5bdda9841e500e85",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/6/6e/UrbanSentry-panel.png?version=03761af208a7debd04a806a22b1af970",
+            "path": "/Urban_Sentry"
+        },
+        "name": "Urban Sentry",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Vai Mauronax": {
+        "abilities": "At the start of your turn, gain XXXClick , and pay X : Chill 7 (Chill 7: add 7 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-05-01": [
+                "Added to the game."
+            ],
+            "2015-05-23": [
+                "Cost decreased from 15 BRRR to 14 BRRRR .",
+                "Chill ability increased from Chill 6 to Chill 7 ."
+            ],
+            "2016-02-17": [
+                "Cost decreased from 14 BRRRR to 13 BRRRR"
+            ]
+        },
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 13,
+            "green": 0,
+            "red": 4
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/1/18/VaiMauronax-portrait.png/280px-VaiMauronax-portrait.png?version=adbf033fcbc1c4fc7acd5a4fdd2928f9",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/0b/VaiMauronax-panel.png?version=4378b5401d35a9e22cf823c2cecdfc79",
+            "path": "/Vai_Mauronax"
+        },
+        "name": "Vai Mauronax",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 3,
+            "health": 6
+        },
+        "type": 8,
+        "unit_spell": "Unit"
+    },
+    "Valkyrion": {
+        "abilities": "Click , gain XXXX , and construct 2 Barriers with Exhaust 1 for your opponent",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 12,
+            "green": 2,
+            "red": 1
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/0b/Valkyrion-portrait.png/280px-Valkyrion-portrait.png?version=3752d2cef3b63f1877812931b2059074",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1c/Valkyrion-panel.png?version=37052ad882330df4631ed28d544eb16e",
+            "path": "/Valkyrion"
+        },
+        "name": "Valkyrion",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 4,
+            "health": 4
+        },
+        "type": 9,
+        "unit_spell": "Unit"
+    },
+    "Vel'Kar": {
+        "abilities": "Build time 0 (takes 0 turns to construct) At the start of your turn, construct a Shard . Click , and consume 6 Shards: Construct an Eviscerator .",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vel%27kar"
+        },
+        "name": "Vel'Kar",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 10
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Venge Cannon": {
+        "abilities": "As an additional cost to buy Venge Cannon, consume 3 Drones. Fragile (Fragile: does not heal) At the start of your turn, gain XXClick , lose Health 2 , and pay GGGG : construct 3 Gauss Charge",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2014-10-02": [
+                "Click ability's activation cost increased from GGG to GGGG ."
+            ],
+            "2014-10-11": [
+                "Cost increased from 3 GG + sacrifice 3 Drones to 3 GGG + sacrifice 3 Drones.",
+                "Click ability's activation cost decreased from GGGG to GGG ."
+            ],
+            "2015-05-23": [
+                "Health increased from Health 8 to Health 9 ."
+            ],
+            "2015-09-18": [
+                "Cost decreased from 3 GGG + sacrifice 3 Drones to 1 GGG + sacrifice 3 Drones.",
+                "Click ability's activation cost increased from GGG to GGGG ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 1,
+            "green": 3,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/f/fe/VengeCannon-portrait.png/280px-VengeCannon-portrait.png?version=965693142ecb708c3f0df10e05adb672",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/3/3c/VengeCannon-panel.png?version=d34fe07acdeff8f0c4b276a525bc6958",
+            "path": "/Venge_Cannon"
+        },
+        "name": "Venge Cannon",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 2,
+            "health": 9
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Vile Doombot": {
+        "abilities": "Lifespan 3 (Lifespan 3: dies after 3 turns) At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 3,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Doombot"
+        },
+        "name": "Vile Doombot",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 2
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vile Engineer": {
+        "abilities": "( Colorless unit )",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Engineer"
+        },
+        "name": "Vile Engineer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vile Gunbot": {
+        "abilities": "At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Gunbot"
+        },
+        "name": "Vile Gunbot",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vile Mech": {
+        "abilities": "At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Mech"
+        },
+        "name": "Vile Mech",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 4
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vile Tarsier": {
+        "abilities": "At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Tarsier"
+        },
+        "name": "Vile Tarsier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vile Wall": {
+        "abilities": "At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Vile_Wall"
+        },
+        "name": "Vile Wall",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Vivid Drone": {
+        "abilities": "As an additional cost to buy Vivid Drone, consume 2 Drones. At the start of your turn, gain 3",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {
+            "2015-01-08": [
+                "Cost increased from 4 EEE to 4 EEE + sacrifice 3 Drones.",
+                "Gold production increased from 2 to 5 .",
+                "Gold production changed from click-action to start-action.",
+                "Is no longer a blocker."
+            ],
+            "2015-12-09": [
+                "Cost increased from 4 EEE + sacrifice 3 Drone to 4 EEE + sacrifice 4 Drone .",
+                "Gold production increased from 5 to 6 per turn."
+            ],
+            "2016-12-30": [
+                "Cost changed to 2 EE + consume 2 Drone .",
+                "Gold production changed to 3 per turn.",
+                "Supply increased from 4 to 10."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 2,
+            "gold": 2,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/0/02/VividDrone-portrait.png/280px-VividDrone-portrait.png?version=9f2b639d1a88c32abff470bba26bcd62",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/50/VividDrone-panel.png?version=ecbf8c415b4bd52541445e09759f212b",
+            "path": "/Vivid_Drone"
+        },
+        "name": "Vivid Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Wall": {
+        "abilities": "Prompt (Prompt: blocks immediately)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 1,
+            "energy": 0,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/e/e5/Wall-portrait.png/280px-Wall-portrait.png?version=8cb0e807b748301f33b982d8fed529c7",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/5/50/Wall-panel.png?version=94c5f08fe0231d35c9f35f84a851c517",
+            "path": "/Wall"
+        },
+        "name": "Wall",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 4,
+        "unit_spell": "Unit"
+    },
+    "Weak Barrier": {
+        "abilities": "Prompt (Prompt: blocks immediately)",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 0
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 0,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": null,
+            "panel": null,
+            "path": "/Weak_Barrier"
+        },
+        "name": "Weak Barrier",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 1
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Wild Drone": {
+        "abilities": "Frontline (Frontline: can be attacked directly) At the start of your turn, gain 2",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 4
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 0,
+            "energy": 2,
+            "gold": 5,
+            "green": 0,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/8/81/WildDrone-portrait.png/280px-WildDrone-portrait.png?version=50b9b0265beeb5d6a6c9ebd9b57c073f",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/0/03/WildDrone-panel.png?version=e6397ffc613d935734c6ad0c587523fc",
+            "path": "/Wild_Drone"
+        },
+        "name": "Wild Drone",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 3
+        },
+        "type": 1,
+        "unit_spell": "Unit"
+    },
+    "Xaetron": {
+        "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) This unit has Health 12 maximum health. At the start of the turn, restore Health 4 . Click , and lose Health 7 : construct 5 Gauss Charge",
+        "attributes": {
+            "blocker": false,
+            "build_time": 0,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2015-05-01": [
+                "Added to the game."
+            ],
+            "2015-05-23": [
+                "Click ability now converts Health 7 to 5 Gauss Charge instead of 7 Gauss Charge ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 11,
+            "green": 5,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/6/6b/Xaetron-portrait.png/280px-Xaetron-portrait.png?version=71139ae8e8c224b2ef414ed93572599e",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/1/1c/Xaetron-panel.png?version=05cd3092c4c8371cf1ddffd77ecc029d",
+            "path": "/Xaetron"
+        },
+        "name": "Xaetron",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 0,
+            "health": 4
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    },
+    "Xeno Guardian": {
+        "abilities": "At the start of your turn, gain X",
+        "attributes": {
+            "blocker": false,
+            "build_time": 1,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 10
+        },
+        "change_history": {},
+        "costs": {
+            "blue": 2,
+            "energy": 0,
+            "gold": 5,
+            "green": 1,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/9/9a/XenoGuardian-portrait.png/280px-XenoGuardian-portrait.png?version=e2ed3a95bfce7225151b9189c3055135",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/9/9c/XenoGuardian-panel.png?version=fabba5ee898886b1f1019df60b5298ed",
+            "path": "/Xeno_Guardian"
+        },
+        "name": "Xeno Guardian",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 1,
+            "health": 4
+        },
+        "type": 6,
+        "unit_spell": "Unit"
+    },
+    "Zemora Voidbringer": {
+        "abilities": "Build time 6 (takes 6 turns to construct) Fragile (Fragile: does not heal) Click , and pay GGGGGGGG : gain 8 X 8",
+        "attributes": {
+            "blocker": false,
+            "build_time": 6,
+            "exhaust_ability": 0,
+            "exhaust_turn": 0,
+            "fragile": false,
+            "frontline": false,
+            "lifespan": 0,
+            "prompt": false,
+            "stamina": 0,
+            "supply": 1
+        },
+        "change_history": {
+            "2014-10-14": [
+                "Added."
+            ],
+            "2014-11-01": [
+                "Cost increased from 4 GG to 6 GG ."
+            ],
+            "2015-12-09": [
+                "Cost decreased from 6 GG to 5 GG .",
+                "Ability changed from pay G 8 for 8 X 8 to G 7 for 7 X 7 ."
+            ],
+            "2016-02-17": [
+                "Cost increased from 5 GG to 5 GGG .",
+                "Ability changed from pay G 7 for 7 X 7 to G 8 for 8 X 8 ."
+            ]
+        },
+        "costs": {
+            "blue": 0,
+            "energy": 0,
+            "gold": 5,
+            "green": 3,
+            "red": 0
+        },
+        "links": {
+            "image": "https://gamepedia.cursecdn.com/prismata_gamepedia/thumb/b/bb/ZemoraVoidbringer-portrait.png/280px-ZemoraVoidbringer-portrait.png?version=a452a3fd81250abd5ad4a3d6d16fdaa4",
+            "panel": "https://gamepedia.cursecdn.com/prismata_gamepedia/f/f4/ZemoraVoidbringer-panel.png?version=07e5416bab80a20433b155f1a1cdadda",
+            "path": "/Zemora_Voidbringer"
+        },
+        "name": "Zemora Voidbringer",
+        "position": "Middle Far Right",
+        "stats": {
+            "attack": 8,
+            "health": 20
+        },
+        "type": 3,
+        "unit_spell": "Unit"
+    }
+}
