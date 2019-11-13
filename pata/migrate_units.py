@@ -372,7 +372,7 @@ def run(
         }
 
     """
-    engine = create_engine(get_database_url(DATABASES.get("sqlite")))
+    engine = create_engine(get_database_url(DATABASES.get("sqlite") or {}))
     session_class = sessionmaker(bind=engine)
     session = session_class()
     try:
