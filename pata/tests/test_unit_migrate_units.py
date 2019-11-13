@@ -647,7 +647,9 @@ class RunDirtyTests(unittest.TestCase):
     @patch("pata.migrate_units.load_to_models")
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
-    def test_rollback(self, engine_mock, make_session_mock, model_mock):
+    @patch("pata.migrate_units.get_database_url")
+    def test_rollback(
+            self, db_mock, engine_mock, make_session_mock, model_mock):
         """
         Test result when when exception is raised.
 
@@ -656,10 +658,12 @@ class RunDirtyTests(unittest.TestCase):
         """
         # Given
         data = {"key1": "val1"}
+        database_url = "test db url"
         engine = MagicMock()
         session = MagicMock()
         expected_result = {"error": {"message": "()\nDB error. Rolling back."}}
 
+        db_mock.return_value = database_url
         engine_mock.return_value = engine
         make_session_mock.return_value = session
         model_mock.side_effect = SQLAlchemyError()
@@ -669,7 +673,12 @@ class RunDirtyTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
+        db_mock.assert_called_once_with({
+            "engine": "sqlite", "driver": "", "username": "",
+            "password": "", "host": "", "port": "",
+            "database": "pata.sqlite",
+            })
+        engine_mock.assert_called_once_with(database_url)
         make_session_mock.assert_called_once_with(bind=engine)
         session.assert_has_calls([
             call(),
@@ -681,27 +690,38 @@ class RunDirtyTests(unittest.TestCase):
 class RunCleanTests(unittest.TestCase):
     """ Tests success cases for pata.migrate_units.run """
 
+    def setUp(self):
+        """ Global variables """
+        self.database_url = "test db url"
+        self.engine = MagicMock()
+        self.session = MagicMock()
+        self.db_config = {
+            "engine": "sqlite", "driver": "", "username": "", "password": "",
+            "host": "", "port": "", "database": "pata.sqlite",
+            }
+
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
-    def test_empty(self, engine_mock, make_session_mock):
+    @patch("pata.migrate_units.get_database_url")
+    def test_empty(self, db_mock, engine_mock, make_session_mock):
         """ Test result when data is empty. """
         # Given
         data = {}
-        engine = MagicMock()
-        session = MagicMock()
         expected_result = {}
 
-        engine_mock.return_value = engine
-        make_session_mock.return_value = session
+        db_mock.return_value = self.database_url
+        engine_mock.return_value = self.engine
+        make_session_mock.return_value = self.session
 
         # When
         result = run(data)
 
         # Then
         self.assertEqual(result, expected_result)
-        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
-        make_session_mock.assert_called_once_with(bind=engine)
-        session.assert_has_calls([
+        db_mock.assert_called_once_with(self.db_config)
+        engine_mock.assert_called_once_with(self.database_url)
+        make_session_mock.assert_called_once_with(bind=self.engine)
+        self.session.assert_has_calls([
             call(),
             call().close(),
             ])
@@ -710,16 +730,16 @@ class RunCleanTests(unittest.TestCase):
     @patch("pata.migrate_units.load_to_models")
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
-    def test_diff(
-            self, engine_mock, make_session_mock, model_mock, process_mock):
+    @patch("pata.migrate_units.get_database_url")
+    def test_diff(  # pylint: disable=too-many-arguments
+            self, db_mock, engine_mock,
+            make_session_mock, model_mock, process_mock):
         """ Test result when no insert or update. """
         # Given
         data = {
             "key1": "val1",
             "key2": "val2",
             }
-        engine = MagicMock()
-        session = MagicMock()
         unit1 = MagicMock()
         unit2 = MagicMock()
         expected_result = {
@@ -727,8 +747,9 @@ class RunCleanTests(unittest.TestCase):
             "key2": {"nochange": {}},
             }
 
-        engine_mock.return_value = engine
-        make_session_mock.return_value = session
+        db_mock.return_value = self.database_url
+        engine_mock.return_value = self.engine
+        make_session_mock.return_value = self.session
         model_mock.side_effect = [unit1, unit2]
         process_mock.side_effect = [{"nochange": {}}, {"nochange": {}}]
 
@@ -737,9 +758,10 @@ class RunCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
-        make_session_mock.assert_called_once_with(bind=engine)
-        session.assert_has_calls([
+        db_mock.assert_called_once_with(self.db_config)
+        engine_mock.assert_called_once_with(self.database_url)
+        make_session_mock.assert_called_once_with(bind=self.engine)
+        self.session.assert_has_calls([
             call(),
             call().close(),
             ])
@@ -748,24 +770,24 @@ class RunCleanTests(unittest.TestCase):
             call("val2"),
             ])
         process_mock.assert_has_calls([
-            call(session(), unit1, False, False),
-            call(session(), unit2, False, False),
+            call(self.session(), unit1, False, False),
+            call(self.session(), unit2, False, False),
             ])
 
     @patch("pata.migrate_units.process_transaction")
     @patch("pata.migrate_units.load_to_models")
     @patch("pata.migrate_units.sessionmaker")
     @patch("pata.migrate_units.create_engine")
-    def test_changes(
-            self, engine_mock, make_session_mock, model_mock, process_mock):
+    @patch("pata.migrate_units.get_database_url")
+    def test_changes(  # pylint: disable=too-many-arguments
+            self, db_mock, engine_mock,
+            make_session_mock, model_mock, process_mock):
         """ Test result when insert or update are required. """
         # Given
         data = {
             "key1": "val1",
             "key2": "val2",
             }
-        engine = MagicMock()
-        session = MagicMock()
         unit1 = MagicMock()
         unit2 = MagicMock()
         expected_result = {
@@ -773,8 +795,9 @@ class RunCleanTests(unittest.TestCase):
             "key2": {"update": {}},
             }
 
-        engine_mock.return_value = engine
-        make_session_mock.return_value = session
+        db_mock.return_value = self.database_url
+        engine_mock.return_value = self.engine
+        make_session_mock.return_value = self.session
         model_mock.side_effect = [unit1, unit2]
         process_mock.side_effect = [{"insert": {}}, {"update": {}}]
 
@@ -783,9 +806,10 @@ class RunCleanTests(unittest.TestCase):
 
         # Then
         self.assertEqual(result, expected_result)
-        engine_mock.assert_called_once_with("sqlite:///pata.sqlite")
-        make_session_mock.assert_called_once_with(bind=engine)
-        session.assert_has_calls([
+        db_mock.assert_called_once_with(self.db_config)
+        engine_mock.assert_called_once_with(self.database_url)
+        make_session_mock.assert_called_once_with(bind=self.engine)
+        self.session.assert_has_calls([
             call(),
             call().commit(),
             call().close(),
@@ -795,8 +819,8 @@ class RunCleanTests(unittest.TestCase):
             call("val2"),
             ])
         process_mock.assert_has_calls([
-            call(session(), unit1, True, True),
-            call(session(), unit2, True, True),
+            call(self.session(), unit1, True, True),
+            call(self.session(), unit2, True, True),
             ])
 
 

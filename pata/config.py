@@ -14,7 +14,7 @@ DATABASES = {
         "password": "",
         "host": "",
         "port": "",
-        "database": "/pata.sqllite",
+        "database": "pata.sqlite",
         },
     }
 

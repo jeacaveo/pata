@@ -23,6 +23,10 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 
+from pata.config import (
+    DATABASES,
+    get_database_url,
+    )
 from pata.models.units import (
     UnitChanges,
     Units,
@@ -368,7 +372,7 @@ def run(
         }
 
     """
-    engine = create_engine("sqlite:///pata.sqlite")
+    engine = create_engine(get_database_url(DATABASES.get("sqlite")))
     session_class = sessionmaker(bind=engine)
     session = session_class()
     try:
