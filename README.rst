@@ -45,3 +45,10 @@ Databases configuration
 - Apply everything until latest migration:
 
   alembic upgrade head
+
+Command
+-------
+
+- Execute the following command to get help on how to use the units migration command:
+
+  python pata/migrate_units.py -h
