@@ -35,9 +35,10 @@ class CommonMixin():  # pylint: disable=too-few-public-methods
         tuple(str)
 
         """
-        return (
+        return (  # type: ignore
             column.name
-            for column in self.metadata.tables[self.__tablename__].columns
+            for column in self.metadata.tables[  # type: ignore
+                self.__tablename__].columns
             if column.name not in self.reserved_fields
             )
 

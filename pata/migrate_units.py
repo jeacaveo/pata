@@ -382,15 +382,16 @@ def run(
             diff_result[unit_name] = process_transaction(
                 session, unit, insert, update)
 
+        actions = list(diff_result.values() or [{}])[0].keys()  # type: ignore
         if ((update or insert)
-                and set(["insert", "update"]).intersection(
-                    list(diff_result.values() or [{}])[0].keys())):
+                and set(["insert", "update"]).intersection(actions)):
             session.commit()
     except SQLAlchemyError as exc:
         session.rollback()
         diff_result = {
             "error": {
-                "message": f"{exc}\nDB error. Rolling back."}}
+                "message": f"{exc}\nDB error. Rolling back."}  # type: ignore
+            }
         pprint(diff_result)
     finally:
         session.close()
