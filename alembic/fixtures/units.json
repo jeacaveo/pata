@@ -38,14 +38,14 @@
     "Aegis": {
         "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -230,14 +230,14 @@
     "Arka Sodara": {
         "abilities": "Prompt (Prompt: blocks immediately) Click : gain XXXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 1
         },
@@ -314,7 +314,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -497,14 +497,14 @@
     "Barrier": {
         "abilities": "Prompt (Prompt: blocks immediately) Lifespan 1 (Lifespan 1: dies after 1 turn)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 1,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 20
         },
@@ -734,7 +734,7 @@
     "Bombarder": {
         "abilities": "Stamina 2 (Stamina 2: can only be clicked twice) Click : gain XXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -770,7 +770,7 @@
     "Borehole Patroller": {
         "abilities": "When Borehole Patroller is bought, construct a Pixie . At the start of your turn, gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -810,7 +810,7 @@
     "Cauterizer": {
         "abilities": "When Cauterizer is bought, construct 4 Engineer . Click , and pay EEEE : gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -886,14 +886,14 @@
     "Centurion": {
         "abilities": "Prompt (Prompt: blocks immediately) At the start of your turn, gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 1
         },
@@ -929,11 +929,11 @@
     "Chieftain": {
         "abilities": "Fragile (Fragile: does not heal) Lifespan 3 (Lifespan 3: dies after 3 turns) Click : gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 3,
             "prompt": false,
@@ -1053,11 +1053,11 @@
     "Colossus": {
         "abilities": "Fragile (Fragile: does not heal) Click : gain XXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -1097,7 +1097,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -1129,14 +1129,14 @@
     "Corpus": {
         "abilities": "Prompt (Prompt: blocks immediately) When Corpus is bought, construct a prompt Husk . Stamina 2 (Stamina 2: can only be clicked twice) Click , and pay 4 R : construct 3 prompt Husk",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 2,
             "supply": 4
         },
@@ -1169,7 +1169,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -1213,7 +1213,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -1252,7 +1252,7 @@
     "Deadeye Operative": {
         "abilities": "Stamina 3 (Stamina 3: can only be clicked 3 times) Click : Destroy a non-blocking Drone. (Only units named exactly 'Drone' can be destroyed.)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1362,7 +1362,7 @@
     "Defense Grid": {
         "abilities": "Lifespan 7 (Lifespan 7: dies after 7 turns) At the start of your turn, construct a Drone",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1398,7 +1398,7 @@
     "Doomed Drone": {
         "abilities": "Lifespan 4 (Lifespan 4: dies after 4 turns) Click : gain 1",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1441,7 +1441,7 @@
     "Doomed Mech": {
         "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) Click : gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1481,14 +1481,14 @@
     "Doomed Wall": {
         "abilities": "Prompt (Prompt: blocks immediately) Lifespan 3 (Lifespan 3: dies after 3 turns)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 3,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -1517,7 +1517,7 @@
     "Doomsplitter": {
         "abilities": "Lifespan 5 (Lifespan 5: dies after 5 turns) Click : Gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1602,7 +1602,7 @@
     "Drone": {
         "abilities": "Click : gain 1",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1724,7 +1724,7 @@
     "Electrovore": {
         "abilities": "Click , and pay E : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1832,14 +1832,14 @@
     "Energy Matrix": {
         "abilities": "Prompt (Prompt: blocks immediately)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 4
         },
@@ -1873,7 +1873,7 @@
     "Engineer": {
         "abilities": "At the start of your turn, gain E",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -1981,14 +1981,14 @@
     "Feral Warden": {
         "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Click : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -2183,14 +2183,14 @@
     "Forcefield": {
         "abilities": "As an additional cost to buy Forcefield, consume a Drone (the Drone must be assigned). Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 20
         },
@@ -2326,7 +2326,7 @@
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
             "prompt": false,
             "stamina": 0,
@@ -2365,7 +2365,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -2437,7 +2437,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 8,
             "prompt": false,
@@ -2554,7 +2554,7 @@
     "Glaciator": {
         "abilities": "Build time 8 (takes 8 turns to construct) At the start of your turn, gain XXX At the start of your turn, freeze all enemy units (they cannot block this turn).",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 8,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -2626,7 +2626,7 @@
     "Grimbotch": {
         "abilities": "Lifespan 4 (Lifespan 4: dies after 4 turns) Click : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -2734,12 +2734,12 @@
     "Hannibull": {
         "abilities": "Frontline (Frontline: can be attacked directly) At the start of your turn, gain XClick : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
             "prompt": false,
             "stamina": 0,
@@ -2823,14 +2823,14 @@
     "Husk": {
         "abilities": "Prompt (Prompt: blocks immediately)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 20
         },
@@ -2864,7 +2864,7 @@
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
             "prompt": false,
             "stamina": 0,
@@ -2935,7 +2935,7 @@
     "Immolite": {
         "abilities": "Click : gain X , and Exhaust 2 (Exhaust 2: disabled until 2 turns from now)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 2,
             "exhaust_turn": 0,
@@ -2975,7 +2975,7 @@
     "Infusion Grid": {
         "abilities": "Click , pay R , and sacrifice Infusion Grid: construct 4 prompt Husk",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3011,14 +3011,14 @@
     "Innervi Field": {
         "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Lifespan 3 (Lifespan 3: dies after 3 turns) This unit has Health 5 maximum health. At the start of the turn, restore Health 1 .",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 3,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -3051,7 +3051,7 @@
             "build_time": 2,
             "exhaust_ability": 0,
             "exhaust_turn": 2,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -3129,7 +3129,7 @@
     "Lancetooth": {
         "abilities": "Build time 2 (takes 2 turns to construct) Click : gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 2,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3261,11 +3261,11 @@
     "Mahar Rectifier": {
         "abilities": "Fragile (Fragile: does not heal) Click : gain XX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -3337,7 +3337,7 @@
     "Mega Drone": {
         "abilities": "Click : gain 4",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3449,7 +3449,7 @@
     "Nitrocybe": {
         "abilities": "Build time 2 (takes 2 turns to construct) Click , and sacrifice Nitrocybe: gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 2,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3529,7 +3529,7 @@
     "Odin": {
         "abilities": "When Odin is bought, construct 3 Steelsplitter . Click , and consume a Steelsplitter: gain XXXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3581,7 +3581,7 @@
     "Omega Splitter": {
         "abilities": "Click : gain XXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3624,7 +3624,7 @@
     "Ossified Drone": {
         "abilities": "As an additional cost to buy Ossified Drone, consume a Drone. At the start of your turn, gain 1 Click , pay R , and consume a Drone: construct an Ossified Drone",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3749,7 +3749,7 @@
     "Perforator": {
         "abilities": "Click , and pay R : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -3785,14 +3785,14 @@
     "Photonic Fibroid": {
         "abilities": "Prompt (Prompt: blocks immediately) At the start of your turn, gain XX and sacrifice Photonic Fibroid.",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -3857,11 +3857,11 @@
     "Plasmafier": {
         "abilities": "Fragile (Fragile: does not heal) Click , and consume a Drone: gain XXXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -3897,14 +3897,14 @@
     "Plexo Cell": {
         "abilities": "As an additional cost to buy Plexo Cell, consume a Drone. Prompt (Prompt: blocks immediately) Lifespan 1 (Lifespan 1: dies after 1 turn)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 1,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -3937,14 +3937,14 @@
     "Polywall": {
         "abilities": "Prompt (Prompt: blocks immediately) Frontline (Frontline: can be attacked directly)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -3973,14 +3973,14 @@
     "Protoplasm": {
         "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Click , and sacrifice Protoplasm: gain XXXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -4009,7 +4009,7 @@
     "Redeemer": {
         "abilities": "When Redeemer is bought, construct 6 Gauss Charge with Build time 3 for your opponent. Click : gain XXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -4083,7 +4083,7 @@
             "build_time": 5,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4132,14 +4132,14 @@
     "Rhino": {
         "abilities": "Prompt (Prompt: blocks immediately) Stamina 2 (Stamina 2: can only be clicked twice) Click : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 2,
             "supply": 10
         },
@@ -4228,11 +4228,11 @@
     "Scorchilla": {
         "abilities": "Build time 3 (takes 3 turns to construct) Fragile (Fragile: does not heal) Click : gain XXX , and Exhaust 3 (Exhaust 3: disabled until 3 turns from now)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 3,
             "exhaust_ability": 3,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4264,11 +4264,11 @@
     "Sentinel": {
         "abilities": "Fragile (Fragile: does not heal) Stamina 3 (Stamina 3: can only be clicked 3 times) Click : gain X , and construct an Engineer",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4384,14 +4384,14 @@
     "Shiver Yeti": {
         "abilities": "Prompt (Prompt: blocks immediately) Click : Chill 2 (Chill 2: add 2 chill to target until next turn. Units with chill greater than or equal to their health cannot block.)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -4420,12 +4420,12 @@
     "Shredder": {
         "abilities": "Frontline (Frontline: can be attacked directly) Click : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
             "prompt": false,
             "stamina": 0,
@@ -4508,7 +4508,7 @@
     "Steelsplitter": {
         "abilities": "Click : gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -4584,7 +4584,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4710,7 +4710,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4797,7 +4797,7 @@
             "build_time": 3,
             "exhaust_ability": 3,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4905,7 +4905,7 @@
             "build_time": 2,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -4947,12 +4947,12 @@
     "Thunderhead": {
         "abilities": "Lifespan 3 (Lifespan 3: dies after 3 turns) Frontline (Frontline: can be attacked directly) At the start of your turn, gain XXXX",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 3,
             "prompt": false,
             "stamina": 0,
@@ -4991,14 +4991,14 @@
     "Tia Thurnax": {
         "abilities": "As an additional cost to buy Tia Thurnax, consume 7 Drones. Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) Stamina 3 (Stamina 3: can only be clicked 3 times) Click : gain X 7",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 3,
             "supply": 1
         },
@@ -5027,14 +5027,14 @@
     "Tough Barrier": {
         "abilities": "Prompt (Prompt: blocks immediately)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 0
         },
@@ -5103,7 +5103,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -5179,7 +5179,7 @@
     "Urban Sentry": {
         "abilities": "Start of turn: gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -5262,7 +5262,7 @@
     "Valkyrion": {
         "abilities": "Click , gain XXXX , and construct 2 Barriers with Exhaust 1 for your opponent",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -5338,7 +5338,7 @@
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
@@ -5421,14 +5421,14 @@
     "Vile Engineer": {
         "abilities": "( Colorless unit )",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 0
         },
@@ -5565,7 +5565,7 @@
     "Vile Wall": {
         "abilities": "At the start of your turn, gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -5653,14 +5653,14 @@
     "Wall": {
         "abilities": "Prompt (Prompt: blocks immediately)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 10
         },
@@ -5689,14 +5689,14 @@
     "Weak Barrier": {
         "abilities": "Prompt (Prompt: blocks immediately)",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 0
         },
@@ -5730,7 +5730,7 @@
             "exhaust_ability": 0,
             "exhaust_turn": 0,
             "fragile": false,
-            "frontline": false,
+            "frontline": true,
             "lifespan": 0,
             "prompt": false,
             "stamina": 0,
@@ -5761,14 +5761,14 @@
     "Xaetron": {
         "abilities": "Prompt (Prompt: blocks immediately) Fragile (Fragile: does not heal) This unit has Health 12 maximum health. At the start of the turn, restore Health 4 . Click , and lose Health 7 : construct 5 Gauss Charge",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 0,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
-            "prompt": false,
+            "prompt": true,
             "stamina": 0,
             "supply": 1
         },
@@ -5804,7 +5804,7 @@
     "Xeno Guardian": {
         "abilities": "At the start of your turn, gain X",
         "attributes": {
-            "blocker": false,
+            "blocker": true,
             "build_time": 1,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
@@ -5844,7 +5844,7 @@
             "build_time": 6,
             "exhaust_ability": 0,
             "exhaust_turn": 0,
-            "fragile": false,
+            "fragile": true,
             "frontline": false,
             "lifespan": 0,
             "prompt": false,
