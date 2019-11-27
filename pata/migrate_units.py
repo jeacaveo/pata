@@ -390,7 +390,7 @@ def run(
                 session, unit, insert, update)
 
         diff_changes = (any(filter(
-            lambda item: "insert" in item or "update" in item,
+            lambda item: "insert" in item or "update" in item,  # type: ignore
             diff_result.values())))
         if (update or insert) and diff_changes:
             session.commit()
