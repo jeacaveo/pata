@@ -1,4 +1,6 @@
 """ Command line tool to migrate data into pata.models.units models """
+from sys import path
+path.insert(0, "/data/data/com.termux/files/home/src/prismata/pata")
 import json
 import os
 import sys
