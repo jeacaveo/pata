@@ -423,7 +423,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
 
     @patch("pata.migrate_units.models_diff")
     def test_update_diff(self, diff_mock):
-        """ Test result when models exists but no changes exist. """
+        """ Test result when models exists and changes exist. """
         # Given
         session = MagicMock()
         unit = Mock(
@@ -432,7 +432,7 @@ class ProcessTransactionCleanTests(unittest.TestCase):
             )
         unit.configure_mock(name="unit name")
         existing = MagicMock()
-        expected_result = {"update": {"key": "val"}}
+        expected_result = {"update": {"units": "val"}}
 
         session.query.return_value = session
         session.filter_by.return_value = session

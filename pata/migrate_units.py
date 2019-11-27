@@ -327,7 +327,12 @@ def process_transaction(
             if change.day in new_changes:
                 existing.changes.append(change.copy())
 
-    return {"update": diff} if diff else {"nochange": {}}
+    updated = (
+        diff.get("units")
+        or diff.get("unit_versions")
+        or diff.get("unit_changes")
+        )
+    return {"update": diff} if updated else {"nochange": {}}
 
 
 def run(
@@ -382,9 +387,10 @@ def run(
             diff_result[unit_name] = process_transaction(
                 session, unit, insert, update)
 
-        actions = list(diff_result.values() or [{}])[0].keys()  # type: ignore
-        if ((update or insert)
-                and set(["insert", "update"]).intersection(actions)):
+        diff_changes = (any(filter(
+            lambda item: "insert" in item or "update" in item,  # type: ignore
+            diff_result.values())))
+        if (update or insert) and diff_changes:
             session.commit()
     except SQLAlchemyError as exc:
         session.rollback()
