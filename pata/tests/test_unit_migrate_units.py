@@ -69,7 +69,7 @@ class LoadVersionDirtyTests(unittest.TestCase):
         """ Test fail message when file doesn't exist. """
         # Given
         file_path = "/path/to/file"
-        expected_result = False, {"message": "File doesn't exist"}
+        expected_result = {}
 
         isfile_mock.return_value = False
 
@@ -89,7 +89,7 @@ class LoadVersionDirtyTests(unittest.TestCase):
         file_path = "/path/to/file"
         file_mock = MagicMock()
         file_content = MagicMock()
-        expected_result = False, {"message": "Invalid format"}
+        expected_result = {}
 
         isfile_mock.return_value = True
         open_mock.return_value = open_mock
@@ -125,7 +125,7 @@ class LoadVersionCleanTests(unittest.TestCase):
         file_mock = MagicMock()
         file_content = MagicMock()
         expected_json = {"key": "val"}
-        expected_result = True, expected_json
+        expected_result = expected_json
 
         isfile_mock.return_value = True
         open_mock.return_value = open_mock
@@ -832,9 +832,9 @@ class RunCommandDirtyTests(unittest.TestCase):
         """ Test error when loading version. """
         # Given
         path = "/path/to/file"
-        expected_result = {"message": "error message"}
+        expected_result = {"status": "Done"}
 
-        version_mock.return_value = False, expected_result
+        version_mock.return_value = {}
 
         # When
         result = run_command(path)
@@ -854,9 +854,9 @@ class RunCommandCleanTests(unittest.TestCase):
         # Given
         path = "/path/to/file"
         data = MagicMock()
-        expected_result = {}
+        expected_result = {"status": "Done"}
 
-        version_mock.return_value = True, data
+        version_mock.return_value = data
         run_mock.return_value = MagicMock()
 
         # When
@@ -877,7 +877,7 @@ class RunCommandCleanTests(unittest.TestCase):
         diff = MagicMock()
         expected_result = diff
 
-        version_mock.return_value = True, data
+        version_mock.return_value = data
         run_mock.return_value = diff
 
         # When

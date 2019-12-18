@@ -14,7 +14,6 @@ from typing import (
     Any,
     Dict,
     List,
-    Tuple,
     Union,
     )
 
@@ -73,14 +72,8 @@ def create_parser(args: List[str]) -> Namespace:
 
 def load_version(
         path: str
-        ) -> Tuple[
-            bool,
-            Dict[
-                str,
-                Union[
-                    str,
-                    int,
-                    Dict[str, Union[str, int, bool, List[str]]]]]]:
+        ) -> Dict[
+            str, Union[str, int, Dict[str, Union[str, int, bool, List[str]]]]]:
     """
     Load information for units from JSON file.
 
@@ -91,18 +84,20 @@ def load_version(
 
     Returns
     -------
-    tuple(bool, dict)
+    dict
 
     """
     if not os.path.isfile(path):
-        return False, {"message": "File doesn't exist"}
+        # return {"message": "File doesn't exist"}
+        return {}
 
     try:
         with open(path, "r") as data_file:
             data = data_file.read()
-        return True, json.loads(data)
+        return json.loads(data)
     except json.decoder.JSONDecodeError:
-        return False, {"message": "Invalid format"}
+        # return {"message": "Invalid format"}
+        return {}
 
 
 def load_to_models(data: Dict[str, Any]) -> Units:
@@ -116,7 +111,7 @@ def load_to_models(data: Dict[str, Any]) -> Units:
 
     Returns
     -------
-    tuple(Units, UnitVersions, list(UnitChanges))
+    obj: pata.models.units.Units
 
     Example
     -------
@@ -208,9 +203,7 @@ def load_to_models(data: Dict[str, Any]) -> Units:
     return unit
 
 
-def models_diff(
-        base: Units, unit: Units
-        ) -> Dict[str, Any]:
+def models_diff(base: Units, unit: Units) -> Dict[str, Any]:
     """
     Get all differences for a unit and its related models.
 
@@ -428,11 +421,8 @@ def run_command(
     dict
 
     """
-    is_valid, data = load_version(path)
-    if is_valid:
-        result = run(data, insert=insert, update=update)
-        return result if diff else {}
-    return data
+    changes = run(load_version(path), insert=insert, update=update)
+    return changes if diff else {"status": "Done"}
 
 
 # Executed when ran from the command line.
