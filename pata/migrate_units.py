@@ -70,10 +70,7 @@ def create_parser(args: List[str]) -> Namespace:
     return parser_obj.parse_args(args)
 
 
-def load_version(
-        path: str
-        ) -> Dict[
-            str, Union[str, int, Dict[str, Union[str, int, bool, List[str]]]]]:
+def load_version(path: str) -> Any:
     """
     Load information for units from JSON file.
 
@@ -331,7 +328,7 @@ def process_transaction(
 def run(
         data: Dict[str, Any],
         insert: bool = False, update: bool = False
-        ) -> Dict[str, Dict[str, Any]]:
+        ) -> Dict[str, Any]:
     """
     Insert/Update information in data into the database.
 
