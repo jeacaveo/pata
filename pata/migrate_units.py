@@ -9,7 +9,7 @@ from argparse import (
     )
 from collections import defaultdict
 from datetime import date
-from pprint import pprint
+from pprint import pformat
 from typing import (
     Any,
     Dict,
@@ -25,6 +25,8 @@ from sqlalchemy.orm.session import Session
 from pata.config import (
     DATABASES,
     get_database_url,
+    LOGGER as logger,
+    ROOT_LOGGER as root_logger,
     )
 from pata.models.units import (
     UnitChanges,
@@ -85,7 +87,7 @@ def load_version(path: str) -> Any:
 
     """
     if not os.path.isfile(path):
-        # return {"message": "File doesn't exist"}
+        logger.error("File doesn't exist")
         return {}
 
     try:
@@ -93,7 +95,7 @@ def load_version(path: str) -> Any:
             data = data_file.read()
         return json.loads(data)
     except json.decoder.JSONDecodeError:
-        # return {"message": "Invalid format"}
+        logger.error("Invalid format")
         return {}
 
 
@@ -153,6 +155,8 @@ def load_to_models(data: Dict[str, Any]) -> Units:
         }
 
     """
+    logger.info("Loading %s into model", data.get("name"))
+
     # Units
     links = data.get("links") or {}
     unit = Units(
@@ -370,6 +374,7 @@ def run(
     engine = create_engine(get_database_url(DATABASES.get("sqlite") or {}))
     session_class = sessionmaker(bind=engine)
     session = session_class()
+    logger.info("Session: Opened")
     try:
         diff_result = {}
         for unit_name, unit_data in data.items():
@@ -380,16 +385,15 @@ def run(
         diff_changes = (any(filter(
             lambda item: "insert" in item or "update" in item,  # type: ignore
             diff_result.values())))
+        logger.info("Diff/Changes:\n%s", pformat(diff_result))
         if (update or insert) and diff_changes:
             session.commit()
+            logger.info("Session: Committed")
     except SQLAlchemyError as exc:
         session.rollback()
-        diff_result = {
-            "error": {
-                "message": f"{exc}\nDB error. Rolling back."}  # type: ignore
-            }
-        pprint(diff_result)
+        logger.error("DB error. Rolling back.\n%s", exc)
     finally:
+        logger.info("Session: Closed")
         session.close()
 
     return diff_result
@@ -418,6 +422,7 @@ def run_command(
     dict
 
     """
+    logger.info("Loading units from: %s", path)
     changes = run(load_version(path), insert=insert, update=update)
     return changes if diff else {"status": "Done"}
 
@@ -425,5 +430,7 @@ def run_command(
 # Executed when ran from the command line.
 if __name__ == "__main__":
     PARSER = create_parser(sys.argv[1:])
-    pprint(
-        run_command(PARSER.source, PARSER.diff, PARSER.insert, PARSER.update))
+    root_logger.info(
+        pformat(
+            run_command(
+                PARSER.source, PARSER.diff, PARSER.insert, PARSER.update)))

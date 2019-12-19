@@ -1,4 +1,9 @@
 """ Global configurations for pata. """
+from logging import (
+    config as loggingConfig,
+    getLogger,
+    )
+from os import path
 from typing import Dict
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -14,9 +19,16 @@ DATABASES = {
         "password": "",
         "host": "",
         "port": "",
-        "database": "pata.sqlite",
+        "database": "db.sqlite",
         },
     }
+
+CURRENT_DIR = path.dirname(path.abspath(__file__))
+loggingConfig.fileConfig(
+    path.join(CURRENT_DIR, "logging.conf"),
+    defaults={"logfilename": path.join(CURRENT_DIR, "../log")})
+LOGGER = getLogger("pata")
+ROOT_LOGGER = getLogger("root")
 
 
 def get_database_url(data: Dict[str, str]) -> str:

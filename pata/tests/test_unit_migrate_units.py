@@ -1,5 +1,6 @@
 """ Tests for pata.migrate_units """
 # pylint: disable=protected-access
+import logging
 import unittest
 
 from datetime import date
@@ -25,6 +26,9 @@ from pata.migrate_units import (
 from pata.models.units import (
     UnitChanges, Units, UnitVersions,
     )
+
+
+logging.disable()
 
 
 class ParserCleanTests(unittest.TestCase):
@@ -661,7 +665,7 @@ class RunDirtyTests(unittest.TestCase):
         database_url = "test db url"
         engine = MagicMock()
         session = MagicMock()
-        expected_result = {"error": {"message": "()\nDB error. Rolling back."}}
+        expected_result = {}
 
         db_mock.return_value = database_url
         engine_mock.return_value = engine
@@ -676,7 +680,7 @@ class RunDirtyTests(unittest.TestCase):
         db_mock.assert_called_once_with({
             "engine": "sqlite", "driver": "", "username": "",
             "password": "", "host": "", "port": "",
-            "database": "pata.sqlite",
+            "database": "db.sqlite",
             })
         engine_mock.assert_called_once_with(database_url)
         make_session_mock.assert_called_once_with(bind=engine)
@@ -697,7 +701,7 @@ class RunCleanTests(unittest.TestCase):
         self.session = MagicMock()
         self.db_config = {
             "engine": "sqlite", "driver": "", "username": "", "password": "",
-            "host": "", "port": "", "database": "pata.sqlite",
+            "host": "", "port": "", "database": "db.sqlite",
             }
 
     @patch("pata.migrate_units.sessionmaker")
